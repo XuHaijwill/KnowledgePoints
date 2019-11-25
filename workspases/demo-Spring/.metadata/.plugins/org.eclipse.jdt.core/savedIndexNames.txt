@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+D:\workspaces\git_resources\KnowledgePoints\workspases\demo-Spring\.metadata\.plugins\org.eclipse.jdt.core
+899451315.index
