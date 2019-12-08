@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+D:\workspaces\git_resources\KnowledgePoints\workspases\demo-Spring\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1486438910.index
+288678406.index
+388530064.index
+3520127636.index
+899451315.index
+545099412.index
+348134887.index
+3897962658.index

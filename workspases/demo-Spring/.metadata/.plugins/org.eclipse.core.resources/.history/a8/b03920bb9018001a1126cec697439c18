@@ -1,0 +1,27 @@
+package com.test.spring.springmvc_test_one;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+ * Hello world!
+ *
+ */
+@Controller
+@RequestMapping("/springmvc")
+public class App {
+	
+	private static final String SUCCESS = "success";
+	
+	//µÚÒ»¸ö²âÊÔ
+	@RequestMapping("helloworld")
+	public String helloWorld() {
+		return SUCCESS;
+	}
+	
+	@RequestMapping("/testRequestMapping")
+	public String testRequestMapping() {
+		System.out.println("testRequestMapping");
+		return SUCCESS;
+	}
+}
