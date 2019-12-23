@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="springmvc-test-one">
-        <property name="context-root" value="springmvc-test-one"/>
-    </wb-module>
-</project-modules>

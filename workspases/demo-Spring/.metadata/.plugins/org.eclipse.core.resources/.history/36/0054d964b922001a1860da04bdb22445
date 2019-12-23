@@ -1,0 +1,5 @@
+package com.test.spring.springmvc_test_one.view;
+
+public class HelloView {
+
+}
