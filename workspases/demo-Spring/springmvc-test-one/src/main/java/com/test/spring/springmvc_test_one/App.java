@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.test.spring.springmvc_test_one.entities.Employee;
 import com.test.spring.springmvc_test_one.entities.User;
 
 /**
@@ -304,6 +305,13 @@ public class App {
 	public String testRedirect(){
 		System.out.println("testRedirect");
 		return "redirect:/index.jsp";
+	}
+	
+	@RequestMapping("/testConversionServiceConverer")
+	public String testConverter(@RequestParam("employee") Employee employee){
+		System.out.println("save: " + employee);
+		//employeeDao.save(employee);
+		return "redirect:/emps";
 	}
 	
 }

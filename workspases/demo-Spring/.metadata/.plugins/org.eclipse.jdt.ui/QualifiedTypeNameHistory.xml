@@ -14,4 +14,8 @@
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.SessionAttributes"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
+<fullyQualifiedTypeName name="org.springframework.core.convert.converter.Converter"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="com.test.spring.springmvc_test_one.entities.Department"/>
+<fullyQualifiedTypeName name="com.test.spring.springmvc_test_one.entities.Employee"/>
 </qualifiedTypeNameHistroy>

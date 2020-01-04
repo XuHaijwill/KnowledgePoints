@@ -111,5 +111,12 @@
 	<a href="springmvc/testRedirect">Test Redirect</a>
 	<br><br>
 	
+	<form action="springmvc/testConversionServiceConverer" method="POST">
+		<!-- lastname-email-gender-department.id 例如: GG-gg@atguigu.com-0-105 -->
+		Employee: <input type="text" name="employee"/>
+		<input type="submit" value="Submit"/>
+	</form>
+	<br><br>
+	
 </body>
 </html>

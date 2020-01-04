@@ -35,9 +35,21 @@
 	<mvc:view-controller path="/success" view-name="success"/>
 	
 	<!-- 在实际开发中通常都需配置 mvc:annotation-driven 标签 -->
-	<mvc:annotation-driven></mvc:annotation-driven>
+	<!-- <mvc:annotation-driven></mvc:annotation-driven> -->
 	
 	<mvc:default-servlet-handler/>
+	
+	<mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>	
+	
+	<!-- 配置 ConversionService -->
+	<bean id="conversionService"
+		class="com.test.spring.springmvc_test_one.converters.EmployeeConverter">
+		<property name="converters">
+			<set>
+				<ref bean="employeeConverter"/>
+			</set>
+		</property>	
+	</bean>
 
 	
 
