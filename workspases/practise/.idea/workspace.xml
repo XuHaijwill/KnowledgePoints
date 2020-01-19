@@ -2,6 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7420148-906b-4647-8bfd-e9d3e1434a53" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/3.5-rc-2/file-changes/last-build.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/buildOutputCleanup/built.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/buildOutputCleanup/cache.properties.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/gradle/wrapper/gradle-wrapper.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/out/production/classes/com/xhjc/io/IOTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../ConfigurationFiles/notes/javaBase/java日志体系.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BaseDemoMaven/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/buildOutputCleanup/cache.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/gradle/wrapper/gradle-wrapper.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/gradlew" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/gradlew.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/out/production/resources/io/test001.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/settings.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/src/main/java/com/xhjc/io/IOTest.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/src/main/resources/io/test001.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/JavaBaseDemo/.gradle/" />
@@ -72,17 +91,27 @@
         <entry file="file://$PROJECT_DIR$/JavaBaseDemo/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IOTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IOTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaBaseDemo/src/main/java/com/xhjc/io/IOTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BaseDemoMaven/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -519,6 +548,7 @@
         <option value="$PROJECT_DIR$/JavaBaseDemo/build.gradle" />
         <option value="$PROJECT_DIR$/JavaBaseDemo/src/main/resources/io/600.xml" />
         <option value="$PROJECT_DIR$/JavaBaseDemo/src/main/java/com/xhjc/io/IOTest.java" />
+        <option value="$PROJECT_DIR$/BaseDemoMaven/pom.xml" />
       </list>
     </option>
   </component>
@@ -805,16 +835,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579420513274</updated>
-      <workItem from="1579420522589" duration="5531000" />
+      <workItem from="1579420522589" duration="5957000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5531000" />
+    <option name="totallyTimeSpent" value="5957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.76480263" sideWeight="0.5030257" order="-1" side_tool="true" content_ui="tabs" />
@@ -829,7 +858,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6611842" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -899,7 +928,7 @@
     <entry file="file://$PROJECT_DIR$/JavaBaseDemo/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -923,7 +952,15 @@
     <entry file="file://$PROJECT_DIR$/JavaBaseDemo/src/main/java/com/xhjc/io/IOTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseDemoMaven/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
