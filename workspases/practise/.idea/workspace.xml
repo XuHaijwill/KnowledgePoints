@@ -1,31 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7420148-906b-4647-8bfd-e9d3e1434a53" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/3.5-rc-2/file-changes/last-build.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/buildOutputCleanup/built.bin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/buildOutputCleanup/cache.properties.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/gradle/wrapper/gradle-wrapper.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/out/production/classes/com/xhjc/io/IOTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../ConfigurationFiles/notes/javaBase/java日志体系.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BaseDemoMaven/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/.gradle/buildOutputCleanup/cache.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/gradlew" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/gradlew.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/out/production/resources/io/test001.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/settings.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/src/main/java/com/xhjc/io/IOTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JavaBaseDemo/src/main/resources/io/test001.xml" />
-    </list>
+    <list default="true" id="d7420148-906b-4647-8bfd-e9d3e1434a53" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/JavaBaseDemo/.gradle/" />
     <ignored path="$PROJECT_DIR$/JavaBaseDemo/build/" />
     <ignored path="$PROJECT_DIR$/JavaBaseDemo/out/" />
+    <ignored path="$PROJECT_DIR$/BaseDemoMaven/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,12 +87,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BaseDemoMaven/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="202">
+              <caret line="34" column="16" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MAVEN/com.xhjc:BaseDemo-Maven:1.0-SNAPSHOT" pinned="false" current-in-tab="true">
+        <entry file="uml://MAVEN/com.xhjc:BaseDemo-Maven:1.0-SNAPSHOT">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>MAVEN</ID>
+              <OriginalElement>com.xhjc:BaseDemo-Maven:1.0-SNAPSHOT</OriginalElement>
+              <nodes>
+                <node x="0.0" y="0.0">com.xhjc:BaseDemo-Maven:1.0-SNAPSHOT</node>
+                <node x="219.0" y="0.0">junit:junit:jar:4.11</node>
+                <node x="355.0" y="0.0">junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="com.xhjc:BaseDemo-Maven:1.0-SNAPSHOT" target="junit:junit:jar:4.11">
+                  <point x="69.5" y="-0.0" />
+                  <point x="-28.0" y="-0.0" />
+                </edge>
+                <edge source="junit:junit:jar:4.11" target="junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3">
+                  <point x="28.0" y="-0.0" />
+                  <point x="-58.0" y="-0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="235.5" y="15.0" />
+              <SelectedNodes>
+                <node>com.xhjc:BaseDemo-Maven:1.0-SNAPSHOT</node>
+                <node>junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3</node>
+              </SelectedNodes>
+              <Categories />
+              <VISIBILITY>All</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -572,13 +585,15 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="548" />
     <option name="y" value="68" />
     <option name="width" value="899" />
     <option name="height" value="675" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -599,67 +614,25 @@
           <expand>
             <path>
               <item name="JavaBaseDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaBaseDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="BaseDemoMaven" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JavaBaseDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaBaseDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="BaseDemoMaven" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JavaBaseDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaBaseDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="BaseDemoMaven" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JavaBaseDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaBaseDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="BaseDemoMaven" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBaseDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaBaseDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBaseDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaBaseDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xhjc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBaseDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaBaseDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xhjc" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBaseDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaBaseDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaBaseDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaBaseDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -835,15 +808,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579420513274</updated>
-      <workItem from="1579420522589" duration="5957000" />
+      <workItem from="1579420522589" duration="6607000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5957000" />
+    <option name="totallyTimeSpent" value="6607000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.76480263" sideWeight="0.5030257" order="-1" side_tool="true" content_ui="tabs" />
@@ -858,15 +831,17 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6611842" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.76480263" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -959,9 +934,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BaseDemoMaven/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="202">
+          <caret line="34" column="16" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/com.xhjc:BaseDemo-Maven:1.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.xhjc:BaseDemo-Maven:1.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">com.xhjc:BaseDemo-Maven:1.0-SNAPSHOT</node>
+            <node x="219.0" y="0.0">junit:junit:jar:4.11</node>
+            <node x="355.0" y="0.0">junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.xhjc:BaseDemo-Maven:1.0-SNAPSHOT" target="junit:junit:jar:4.11">
+              <point x="69.5" y="-0.0" />
+              <point x="-28.0" y="-0.0" />
+            </edge>
+            <edge source="junit:junit:jar:4.11" target="junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3">
+              <point x="28.0" y="-0.0" />
+              <point x="-58.0" y="-0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="235.5" y="15.0" />
+          <SelectedNodes>
+            <node>com.xhjc:BaseDemo-Maven:1.0-SNAPSHOT</node>
+            <node>junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3</node>
+          </SelectedNodes>
+          <Categories />
+          <VISIBILITY>All</VISIBILITY>
         </state>
       </provider>
     </entry>
