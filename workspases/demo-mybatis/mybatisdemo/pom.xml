@@ -72,6 +72,18 @@
             <version>3.5.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-maven-plugin</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.mybatis.caches/mybatis-ehcache -->
         <dependency>
             <groupId>org.mybatis.caches</groupId>

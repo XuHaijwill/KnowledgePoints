@@ -20,3 +20,11 @@ idea需要安装lombok插件
 ![cach](img/mybatis-cach.jpg)
 
 先查二级缓存在查一级缓存
+
+## 逆向工程
+
+[mybatis逆向工程开发文档](http://mybatis.org/generator/configreference/xmlconfig.html "点击跳转")
+
+[mybatis逆向工程的DEMO的Github地址](https://github.com/mybatis/generator "点击跳转")
+
+[测试DEMO-Github地址](https://github.com/mybatis/generator "点击跳转")
