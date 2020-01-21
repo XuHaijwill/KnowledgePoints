@@ -159,4 +159,12 @@ public class FileHandleDemo {
         }
     }
 
+    @Test
+    public void testFile(){
+        File file = new File("D:\\text\\text01\\test02");
+        if(!file.exists()){
+            file.mkdirs();
+        }
+    }
+
 }
