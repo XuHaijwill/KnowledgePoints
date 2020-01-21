@@ -1,5 +1,3 @@
-[TOC]目录
-
 # mybatis
 ## 网址
 https://mybatis.org/mybatis-3/
@@ -27,4 +25,4 @@ idea需要安装lombok插件
 
 [mybatis逆向工程的DEMO的Github地址](https://github.com/mybatis/generator "点击跳转")
 
-[测试DEMO-Github地址](https://github.com/mybatis/generator "点击跳转")
+[测试Demo-Github地址](https://github.com/mybatis/generator "点击跳转")
