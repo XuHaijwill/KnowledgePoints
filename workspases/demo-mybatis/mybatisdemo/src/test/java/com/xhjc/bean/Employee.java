@@ -4,7 +4,7 @@ import org.apache.ibatis.type.Alias;
 
 import java.io.Serializable;
 
-@Alias("emp")
+//@Alias("emp")
 public class Employee implements Serializable{
 	
 	private Integer id;

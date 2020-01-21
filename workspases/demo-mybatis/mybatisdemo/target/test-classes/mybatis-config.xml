@@ -4,6 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
+
+
     <!--
 		1、mybatis可以使用properties来引入外部properties配置文件的内容；
 		resource：引入类路径下的资源
@@ -43,6 +45,15 @@
 
         <!-- 3、批量起别名的情况下，使用@Alias注解为某个类型指定新的别名 -->
     </typeAliases>
+
+    <!--plugins：注册插件  -->
+    <plugins>
+        <plugin interceptor="com.xhjc.plugin.dao.MyFirstPlugin">
+            <property name="username" value="root"/>
+            <property name="password" value="123456"/>
+        </plugin>
+        <plugin interceptor="com.xhjc.plugin.dao.MySecondPlugin"></plugin>
+    </plugins>
 
     <environments default="dev_mysql">
         <environment id="dev_mysql">
@@ -97,10 +108,13 @@
                                 比较重要的，复杂的Dao接口我们来写sql映射文件
                                 不重要，简单的Dao接口为了开发快速可以使用注解；
                 -->
-       <!--<mapper  resource="mybatis/UserMapper.xml"></mapper>-->
+    <!--  <mapper  resource="com/xhjc/plugin/EmployeeMapper.xml"></mapper>-->
       <!--  <mapper class="com.jiagouedu.UserMapper"></mapper>-->
         <!-- 批量注册： -->
-        <package name="com.xhjc.cach.dao"/>
+       <!-- <package name="com.xhjc.cach.dao"/>-->
+       <package name="com.xhjc.plugin.dao"/>
     </mappers>
+
+
 
 </configuration>

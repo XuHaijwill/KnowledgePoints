@@ -27,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HelloWorld.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/helloworld/HelloWorld.java">
+      <file leaf-file-name="AppTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/plugin/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="513">
+              <caret line="61" column="26" lean-forward="true" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,6 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="spring-beans.schema" />
         <option value="Class" />
       </list>
     </option>
@@ -52,6 +54,7 @@
     <findStrings>
       <find>openSession</find>
       <find>StatementHandler</find>
+      <find>plugins</find>
     </findStrings>
     <replaceStrings>
       <replace>com.xhjc.bean.Employee</replace>
@@ -87,8 +90,6 @@
         <option value="$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/demo/UserTest.java" />
         <option value="$PROJECT_DIR$/mybatisdemo/pom.xml" />
         <option value="$PROJECT_DIR$/mybatisdemo/src/test/resoueces/com/xhjc/cach/dao/EmployeeMapper.xml" />
-        <option value="$PROJECT_DIR$/mybatisdemo/src/test/resoueces/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/bean/Employee.java" />
         <option value="$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/bean/Department.java" />
         <option value="$PROJECT_DIR$/mybatisdemo/src/test/resoueces/com/xhjc/cach/dao/DepartmentMapper.xml" />
         <option value="$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/cach/AppCachTest.java" />
@@ -105,6 +106,14 @@
         <option value="$PROJECT_DIR$/ssmdemo/src/main/java/com/xhjc/controller/EmployeeController.java" />
         <option value="$PROJECT_DIR$/ssmdemo/pom.xml" />
         <option value="$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/helloworld/HelloWorld.java" />
+        <option value="$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/plugin/MyFirstPlugin.java" />
+        <option value="$PROJECT_DIR$/mybatisdemo/src/test/resoueces/com/xhjc/plugin/EmployeeMapper.xml" />
+        <option value="$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/plugin/dao/EmployeeMapper.java" />
+        <option value="$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/bean/Employee.java" />
+        <option value="$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/plugin/dao/MyFirstPlugin.java" />
+        <option value="$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/plugin/AppTest.java" />
+        <option value="$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/plugin/dao/MySecondPlugin.java" />
+        <option value="$PROJECT_DIR$/mybatisdemo/src/test/resoueces/mybatis-config.xml" />
       </list>
     </option>
   </component>
@@ -152,9 +161,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="548" />
-    <option name="y" value="68" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="447" />
+    <option name="y" value="36" />
     <option name="width" value="899" />
     <option name="height" value="675" />
   </component>
@@ -173,8 +182,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,7 +232,118 @@
               <item name="mybatisdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xhjc" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo-mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatisdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xhjc" type="462c0819:PsiDirectoryNode" />
+              <item name="cach" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo-mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatisdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xhjc" type="462c0819:PsiDirectoryNode" />
+              <item name="cach" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo-mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatisdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xhjc" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo-mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatisdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xhjc" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo-mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatisdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="resoueces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo-mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatisdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resoueces" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo-mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatisdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resoueces" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xhjc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo-mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatisdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resoueces" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xhjc" type="462c0819:PsiDirectoryNode" />
+              <item name="cach" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo-mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatisdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resoueces" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xhjc" type="462c0819:PsiDirectoryNode" />
+              <item name="cach" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo-mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatisdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resoueces" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xhjc" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo-mybatis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mybatisdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resoueces" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xhjc" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,7 +392,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -286,19 +406,20 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/ssmdemo/src/main/java/com/xhjc" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\demo-mybatis\mybatisdemo\src\test\resoueces\com\xhjc\plugin\dao" />
+      <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\demo-mybatis\mybatisdemo\src\test\resoueces\com\xhjc\cach\dao" />
+      <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\demo-mybatis\mybatisdemo\src\test" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.xhjc.demo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\demo-mybatis\mybatisdemo\src\test\java\com\xhjc\plugin\dao" />
       <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\demo-mybatis\ssmdemo\src\main\webapp" />
       <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\demo-mybatis\ssmdemo\src\main\resources" />
       <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\demo-mybatis\ssmdemo\src\main\java\com\xhjc\service" />
       <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\demo-mybatis\ssmdemo\src\main\java\com\xhjc\dao" />
-      <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\demo-mybatis\ssmdemo\src\main\java\com\xhjc\controller" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\demo-mybatis\mybatisdemo\src\test\resoueces\com\xhjc\cach\dao" />
-      <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\demo-mybatis\mybatisdemo\src\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -313,7 +434,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HelloWorld.test01">
+  <component name="RunManager" selected="JUnit.AppTest.test01">
     <configuration name="AppCachTest.testFirstLevelCache" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -327,6 +448,31 @@
       <option name="PACKAGE_NAME" value="com.xhjc.cach" />
       <option name="MAIN_CLASS_NAME" value="com.xhjc.cach.AppCachTest" />
       <option name="METHOD_NAME" value="testFirstLevelCache" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="AppTest.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.xhjc.plugin.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="mybatisdemo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.xhjc.plugin" />
+      <option name="MAIN_CLASS_NAME" value="com.xhjc.plugin.AppTest" />
+      <option name="METHOD_NAME" value="test01" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -530,14 +676,16 @@
         </option>
       </MavenSettings>
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Maven.ssmdeno" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.AppCachTest.testFirstLevelCache" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.HelloWorld.test01" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.AppTest.test01" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HelloWorld.test01" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AppTest.test01" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HelloWorld.test01" />
       </list>
     </recent_temporary>
   </component>
@@ -561,52 +709,54 @@
       <workItem from="1578488758587" duration="134000" />
       <workItem from="1578524802350" duration="4325000" />
       <workItem from="1579399917905" duration="2099000" />
+      <workItem from="1579568855229" duration="3790000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppCachTest_testSecondLevelCache - 2019.12.28 at 09h 11m 58s.xml">
-      <configuration name="AppCachTest.testSecondLevelCache" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2020.01.21 at 16h 31m 17s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppCachTest_testSecondLevelCache - 2019.12.28 at 09h 12m 40s.xml">
-      <configuration name="AppCachTest.testSecondLevelCache" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2020.01.21 at 16h 32m 34s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppCachTest_testSecondLevelCache - 2019.12.28 at 09h 13m 50s.xml">
-      <configuration name="AppCachTest.testSecondLevelCache" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2020.01.21 at 16h 33m 36s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppCachTest_testSecondLevelCache - 2019.12.28 at 09h 14m 47s.xml">
-      <configuration name="AppCachTest.testSecondLevelCache" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2020.01.21 at 16h 34m 16s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppCachTest_testSecondLevelCache - 2019.12.28 at 09h 15m 32s.xml">
-      <configuration name="AppCachTest.testSecondLevelCache" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2020.01.21 at 16h 34m 57s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppCachTest_testSecondLevelCache02 - 2019.12.28 at 09h 18m 07s.xml">
-      <configuration name="AppCachTest.testSecondLevelCache02" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2020.01.21 at 16h 36m 06s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppCachTest_testSecondLevelCache02 - 2019.12.28 at 09h 18m 23s.xml">
-      <configuration name="AppCachTest.testSecondLevelCache02" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2020.01.21 at 16h 36m 21s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppCachTest_testSecondLevelCache02 - 2019.12.28 at 09h 21m 16s.xml">
-      <configuration name="AppCachTest.testSecondLevelCache02" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2020.01.21 at 16h 36m 50s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppCachTest_testSecondLevelCache02 - 2019.12.28 at 09h 27m 44s.xml">
-      <configuration name="AppCachTest.testSecondLevelCache02" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2020.01.21 at 16h 37m 53s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HelloWorld_test01 - 2020.01.06 at 08h 15m 09s.xml">
-      <configuration name="HelloWorld.test01" configurationId="JUnit" />
+    <history-entry file="AppTest_test01 - 2020.01.21 at 16h 39m 51s.xml">
+      <configuration name="AppTest.test01" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27639000" />
+    <option name="totallyTimeSpent" value="31429000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6666667" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6666667" sideWeight="0.5030257" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -615,16 +765,17 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57799673" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8784893" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30937973" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37367624" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -634,7 +785,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -701,96 +851,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ssmdemo/src/main/webapp/index.html" />
-    <entry file="file://$PROJECT_DIR$/ssmdemo/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssmdemo/src/main/resources/rebel.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssmdemo/src/main/java/com/xhjc/controller/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssmdemo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/mapper/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="19" column="65" lean-forward="false" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/demo/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/demo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/helloworld.java" />
-    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/cach/AppCachTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1058">
-          <caret line="28" column="10" lean-forward="false" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/eclipseNeon4.6/jdk1.8.0_60/src.zip!/org/xml/sax/helpers/DefaultHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="989">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/eclipseNeon4.6/jdk1.8.0_60/src.zip!/org/xml/sax/InputSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6509">
-          <caret line="312" column="0" lean-forward="false" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/.m2/repositoryMine/org/mybatis/mybatis/3.5.0/mybatis-3.5.0-sources.jar!/org/apache/ibatis/builder/xml/XMLMapperEntityResolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/.m2/repositoryMine/org/mybatis/mybatis/3.5.0/mybatis-3.5.0-sources.jar!/org/apache/ibatis/io/ClassLoaderWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/.m2/repositoryMine/org/mybatis/mybatis/3.5.0/mybatis-3.5.0-sources.jar!/org/apache/ibatis/io/Resources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1748">
-          <caret line="98" column="28" lean-forward="false" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -871,13 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/.m2/repositoryMine/org/mybatis/mybatis/3.5.0/mybatis-3.5.0-sources.jar!/org/apache/ibatis/binding/MapperProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="57" column="29" lean-forward="true" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/.m2/repositoryMine/org/mybatis/mybatis/3.5.0/mybatis-3.5.0-sources.jar!/org/apache/ibatis/reflection/ParamNameResolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -924,7 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5382">
           <caret line="275" column="40" lean-forward="false" selection-start-line="275" selection-start-column="33" selection-end-line="275" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,7 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1265">
           <caret line="87" column="61" lean-forward="false" selection-start-line="87" selection-start-column="61" selection-end-line="87" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,7 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5704">
           <caret line="273" column="13" lean-forward="false" selection-start-line="273" selection-start-column="13" selection-end-line="273" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,7 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="45" column="41" lean-forward="false" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1472">
           <caret line="93" column="29" lean-forward="false" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,15 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/.m2/repositoryMine/org/mybatis/mybatis/3.5.0/mybatis-3.5.0-sources.jar!/org/apache/ibatis/executor/statement/StatementHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,7 +1023,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="38" column="59" lean-forward="false" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -988,7 +1030,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,7 +1037,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="562" column="62" lean-forward="false" selection-start-line="562" selection-start-column="62" selection-end-line="562" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1004,7 +1044,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-297">
           <caret line="92" column="23" lean-forward="false" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,7 +1067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1044,7 +1082,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1052,14 +1089,165 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="290" column="15" lean-forward="false" selection-start-line="290" selection-start-column="15" selection-end-line="290" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/helloworld/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="53">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/.m2/repositoryMine/org/mybatis/mybatis/3.5.0/mybatis-3.5.0-sources.jar!/org/apache/ibatis/plugin/Interceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/.m2/repositoryMine/org/mybatis/mybatis/3.5.0/mybatis-3.5.0-sources.jar!/org/apache/ibatis/executor/statement/StatementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/resoueces/com/xhjc/cach/dao/DepartmentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1577496062421" expanded="true" signature="432:495" ph="select id,de... tbl_dept" />
+            <marker date="1577496062421" expanded="true" signature="1372:1556" ph="SELECT d.id tbl_dept" />
+            <marker date="1577496062421" expanded="true" signature="2022:2070" ph="select id,de... tbl_dept" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/resoueces/mybatis/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1577236027645" expanded="true" signature="305:340" ph="select * fro... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/.m2/repositoryMine/org/mybatis/mybatis/3.5.0/mybatis-3.5.0-sources.jar!/org/apache/ibatis/binding/MapperProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/plugin/dao/EmployeeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/bean/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/plugin/dao/MyFirstPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="35" column="65" lean-forward="false" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/plugin/dao/MySecondPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/resoueces/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="54" column="48" lean-forward="false" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/resoueces/com/xhjc/plugin/dao/EmployeeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="84" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="84" />
+          <folding>
+            <marker date="1579595575014" expanded="true" signature="443:519" ph="select id,la... tbl_employee" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/resoueces/com/xhjc/cach/dao/EmployeeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-138">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1577491934418" expanded="true" signature="1140:1199" ph="select * fro... tbl_employee" />
+            <marker date="1577491934418" expanded="true" signature="1341:1382" ph="select * fro... tbl_employee" />
+            <marker date="1577491934418" expanded="true" signature="1587:1646" ph="select * fro... tbl_employee" />
+            <marker date="1577491934418" expanded="true" signature="1791:1858" ph="select * fro... ${tableName}" />
+            <marker date="1577491934418" expanded="true" signature="2028:2097" ph="select * fro... tbl_employee" />
+            <marker date="1577491934418" expanded="true" signature="2178:2221" ph="select * fro... tbl_employee" />
+            <marker date="1577491934418" expanded="true" signature="2334:2377" ph="select * fro... tbl_employee" />
+            <marker date="1577491934418" expanded="true" signature="2475:2569" ph="select EMPLO... employees" />
+            <marker date="1577491934418" expanded="true" signature="2993:3083" ph="insert into tbl_employee... " />
+            <marker date="1577491934418" expanded="true" signature="4131:4228" ph="update tbl_e... " />
+            <marker date="1577491934418" expanded="true" signature="4322:4361" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/eclipseNeon4.6/jdk1.8.0_60/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="1431" column="30" lean-forward="false" selection-start-line="1431" selection-start-column="30" selection-end-line="1431" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/.m2/repositoryMine/org/mybatis/mybatis/3.5.0/mybatis-3.5.0-sources.jar!/org/apache/ibatis/io/ClassLoaderWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/.m2/repositoryMine/org/mybatis/mybatis/3.5.0/mybatis-3.5.0-sources.jar!/org/apache/ibatis/io/Resources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="99" column="21" lean-forward="false" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mybatisdemo/src/test/java/com/xhjc/plugin/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="61" column="26" lean-forward="true" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
