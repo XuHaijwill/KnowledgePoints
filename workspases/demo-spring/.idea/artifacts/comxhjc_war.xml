@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="comxhjc:war">
+    <output-path>$PROJECT_DIR$/comxhjc/target</output-path>
+    <root id="archive" name="com.xhjc.war">
+      <element id="artifact" artifact-name="comxhjc:war exploded" />
+    </root>
+  </artifact>
+</component>
