@@ -25,7 +25,6 @@ public class BeanDefinitionReaderExample {
         Resource resource = loder.getResource("spring.xml");
         // 装载构建Bean的定义
         reader.loadBeanDefinitions(resource);
-
         register.getAliases("hey");
         register.getBeanDefinition("hey");
         System.out.println(Arrays.toString(register.getBeanDefinitionNames()));
