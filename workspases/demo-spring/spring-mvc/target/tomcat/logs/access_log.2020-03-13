@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [13/Mar/2020:07:53:11 +0800] "GET / HTTP/1.1" 200 3050 http-bio-8082-exec-1 991
+0:0:0:0:0:0:0:1 - - [13/Mar/2020:07:53:11 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8082-exec-3 17
+0:0:0:0:0:0:0:1 - - [13/Mar/2020:07:53:13 +0800] "GET /springmvc/testRedirect HTTP/1.1" 302 - http-bio-8082-exec-4 54
+0:0:0:0:0:0:0:1 - - [13/Mar/2020:07:53:13 +0800] "GET /index.jsp HTTP/1.1" 200 3050 http-bio-8082-exec-5 1
+0:0:0:0:0:0:0:1 - - [13/Mar/2020:07:53:15 +0800] "GET /springmvc/testView HTTP/1.1" 404 1005 http-bio-8082-exec-6 13
+0:0:0:0:0:0:0:1 - - [13/Mar/2020:07:53:20 +0800] "POST /springmvc/testModelAttribute HTTP/1.1" 200 507 http-bio-8082-exec-7 162
