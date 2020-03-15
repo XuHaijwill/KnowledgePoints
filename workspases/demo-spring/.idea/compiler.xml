@@ -9,6 +9,7 @@
         <module name="comxhjc" />
         <module name="spring-base" />
         <module name="spring-mvc" />
+        <module name="spring-mvc-one" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="comxhjc" target="1.8" />
       <module name="spring-base" target="1.8" />
       <module name="spring-mvc" target="1.8" />
+      <module name="spring-mvc-one" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
