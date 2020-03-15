@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author Tommy
- *         Created by Tommy on 2018/8/31
+ * Created by Tommy on 2018/8/31
  **/
 public class SimpleControl implements Controller {
     @Override
