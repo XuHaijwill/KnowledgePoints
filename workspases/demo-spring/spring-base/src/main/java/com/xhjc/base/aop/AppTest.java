@@ -28,6 +28,8 @@ public class AppTest {
         int result = arithmeticCalculator.add(11, 12);
         System.out.println("result:" + result);
 
+        result = arithmeticCalculator.div(1000, 0);
+        System.out.println("result:" + result);
 
     }
 }

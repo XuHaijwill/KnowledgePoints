@@ -1,9 +1,7 @@
 package com.xhjc.base.aop;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -17,16 +15,32 @@ import java.util.Arrays;
 @Component
 public class LoggingAspect {
 
-    @Before("execution(public int com.xhjc.base.aop.ArithmeticCalculator.*(int,int))")
+    //切点重用
+    @Pointcut("execution(public int com.xhjc.base.aop.ArithmeticCalculator.*(..))")
+    public void declareJoinPointExpression(){
+
+    }
+
+    @Before("declareJoinPointExpression()")
     public void beforeMethod(JoinPoint joinPoint){
         String methodName = joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
         System.out.println("The method " + methodName + " begins with " + Arrays.asList(args));
     }
 
-    @After("execution(* com.xhjc.base.aop.*.*(..))")
+    @After("declareJoinPointExpression()")
     public void afterMethod(JoinPoint joinPoint){
         String methodName = joinPoint.getSignature().getName();
         System.out.println("The method " + methodName + " ends");
     }
+
+    @AfterReturning(value = "declareJoinPointExpression()",returning = "result")
+    public void afterReturning(JoinPoint joinPoint,Object result){
+        String methodName = joinPoint.getSignature().getName();
+        System.out.println("The method " + methodName + " ends with " + result);
+    }
+
+    
+
+
 }
