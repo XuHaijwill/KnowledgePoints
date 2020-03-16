@@ -40,7 +40,7 @@ public class LoggingAspect {
         System.out.println("The method " + methodName + " ends with " + result);
     }
 
-    
+
 
 
 }
