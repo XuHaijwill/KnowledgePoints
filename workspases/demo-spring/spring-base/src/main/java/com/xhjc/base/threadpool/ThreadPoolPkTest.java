@@ -17,7 +17,12 @@ public class ThreadPoolPkTest {
         Long start= System.currentTimeMillis();
         final List<Integer> list=new ArrayList<Integer>();
         ExecutorService executorService =  Executors.newSingleThreadExecutor();
+
         final Random random=new Random();
+
+        /**
+         * 线程池 一个线程做10000次
+         */
         for(int i=0;i<10000;i++){
             final int j=i;
             executorService.execute(new Runnable() {
