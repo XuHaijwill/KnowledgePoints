@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: com.xhjc.demo.UserTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.173 s <<< FAILURE! - in com.xhjc.demo.UserTest
+testXML(com.xhjc.demo.UserTest)  Time elapsed: 4.173 s  <<< ERROR!
+org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in mybatis/UserMapper.xml
+### The error may involve com.xhjc.demo.UserMapper.selectUser
+### The error occurred while executing a query
+### Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.xhjc.demo.UserTest.testXML(UserTest.java:35)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.xhjc.demo.UserTest.testXML(UserTest.java:35)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.xhjc.demo.UserTest.testXML(UserTest.java:35)
+

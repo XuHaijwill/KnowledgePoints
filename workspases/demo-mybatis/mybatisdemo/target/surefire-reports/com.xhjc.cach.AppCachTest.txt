@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.xhjc.cach.AppCachTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.467 s <<< FAILURE! - in com.xhjc.cach.AppCachTest
+testSecondLevelCache02(com.xhjc.cach.AppCachTest)  Time elapsed: 0.384 s  <<< ERROR!
+org.apache.ibatis.binding.BindingException: Type interface com.xhjc.cach.dao.DepartmentMapper is not known to the MapperRegistry.
+	at com.xhjc.cach.AppCachTest.testSecondLevelCache02(AppCachTest.java:148)
+
+testFirstLevelCache(com.xhjc.cach.AppCachTest)  Time elapsed: 0.023 s  <<< ERROR!
+org.apache.ibatis.binding.BindingException: Type interface com.xhjc.cach.dao.EmployeeMapper is not known to the MapperRegistry.
+	at com.xhjc.cach.AppCachTest.testFirstLevelCache(AppCachTest.java:35)
+
+testSecondLevelCache(com.xhjc.cach.AppCachTest)  Time elapsed: 0.02 s  <<< ERROR!
+org.apache.ibatis.binding.BindingException: Type interface com.xhjc.cach.dao.EmployeeMapper is not known to the MapperRegistry.
+	at com.xhjc.cach.AppCachTest.testSecondLevelCache(AppCachTest.java:73)
+
