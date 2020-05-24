@@ -6,20 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="microcloudapi" />
-        <module name="microcloudconsumer" />
-        <module name="microcloudeureka" />
-        <module name="microcloudproviderproduct" />
-        <module name="microcloudsecurity" />
+        <module name="microcloud-api" />
+        <module name="microcloud-consumer" />
+        <module name="microcloud-eureka" />
+        <module name="microcloud-provider-product" />
+        <module name="microcloud-security" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="microcloud" target="1.8" />
-      <module name="microcloudapi" target="1.8" />
-      <module name="microcloudconsumer" target="1.8" />
-      <module name="microcloudeureka" target="1.8" />
-      <module name="microcloudproviderproduct" target="1.8" />
-      <module name="microcloudsecurity" target="1.8" />
+      <module name="microcloud-api" target="1.8" />
+      <module name="microcloud-consumer" target="1.8" />
+      <module name="microcloud-eureka" target="1.8" />
+      <module name="microcloud-provider-product" target="1.8" />
+      <module name="microcloud-security" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
