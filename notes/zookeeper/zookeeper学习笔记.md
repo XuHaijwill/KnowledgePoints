@@ -10,7 +10,7 @@ https://www.linuxidc.com/Linux/2018-03/151327.htm
 
 
 
-启动zkserver：
+zkserver启动及状态查询：
 
 ./zkServer.sh start
 
