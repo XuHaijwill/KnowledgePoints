@@ -27,3 +27,85 @@ idea需要安装lombok插件
 [mybatis逆向工程的DEMO的Github地址](https://github.com/mybatis/generator "点击跳转")
 
 [测试Demo-Github地址](https://github.com/mybatis/generator "点击跳转")
+
+### 参考配置
+
+[参考配置generatorConfig.xml](sources/generatorConfig.xml)
+
+参数说明：https://www.cnblogs.com/personsiglewine/p/12867465.html
+
+### 1.代码实现方式
+
+```xml
+<!--逆向工程代码实现依赖-->
+		<dependency>
+			<groupId>org.mybatis.generator</groupId>
+			<artifactId>mybatis-generator-core</artifactId>
+			<version>1.3.7</version>
+		</dependency>
+```
+
+```java
+import org.mybatis.generator.api.MyBatisGenerator;
+import org.mybatis.generator.config.Configuration;
+import org.mybatis.generator.config.xml.ConfigurationParser;
+import org.mybatis.generator.internal.DefaultShellCallback;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MybatisGenerator {
+
+    public void generator() throws Exception{
+        List<String> warnings = new ArrayList<String>();
+        boolean overwrite = true;
+        //指定 逆向工程配置文件
+        File configFile = new File("D:\\project\\水阳江\\syj-fetc\\fetc-ams\\src\\main\\resources\\generatorConfig.xml");
+        ConfigurationParser cp = new ConfigurationParser(warnings);
+        Configuration config = cp.parseConfiguration(configFile);
+        DefaultShellCallback callback = new DefaultShellCallback(overwrite);
+        MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config,
+                callback, warnings);
+        myBatisGenerator.generate(null);
+    }
+
+    public static void main(String[] args) throws Exception {
+        try {
+            MybatisGenerator generatorSqlmap = new MybatisGenerator();
+            generatorSqlmap.generator();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### 2.插件实现（IDEA）
+
+pom文件中导入插件
+
+```xml
+<plugin>
+	<groupId>org.mybatis.generator</groupId>
+	<artifactId>mybatis-generator-maven-plugin</artifactId>
+	<version>1.3.2</version>
+	<configuration>
+		<verbose>true</verbose>
+		<overwrite>true</overwrite>
+	</configuration>
+</plugin>
+```
+
+配置运行
+
+![配置参数](D:\xhj\git\github\KnowledgePoints\notes\mybatis\img\mg01.png)
+
+点击运行即可
+
+### FAQ
+
+1.代码不生成，无报错日志
+
+![](D:\xhj\git\github\KnowledgePoints\notes\mybatis\img\MG02.png)
+

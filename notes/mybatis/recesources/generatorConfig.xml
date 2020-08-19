@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <!-- 
+    <classPathEntry location="C:/Users/Yuan/.m2/repository/org/postgresql/postgresql/9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.jar" /> 
+    -->
+    <classPathEntry location="D:\.m2\repository\org\postgresql\postgresql\9.4-1201-jdbc41/postgresql-9.4-1201-jdbc41.jar" />
+    
+    <context id="context1" targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+
+        <!-- 云端数据库 --><!--  -->
+<!--        <jdbcConnection driverClass="org.postgresql.Driver"-->
+<!--            connectionURL="jdbc:postgresql://180.76.187.237:5432/hfedit-fetc-db-test-yangqiao"-->
+<!--            userId="fetc" password="fetc-db@hfedit.com">-->
+<!--       </jdbcConnection>    src/main/java-->
+        <!-- 本地数据库 -->
+        <jdbcConnection driverClass="org.postgresql.Driver"
+            connectionURL="jdbc:postgresql://192.168.1.4:5433/syj-fetc-db"
+            userId="postgres" password="Sunny_2020">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.hfedit.fetc.ams.db.initpojo"
+            targetProject="D:\project\水阳江\syj-fetc\fetc-ams\src\main\java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.hfedit.fetc.ams.db.initmapper"
+            targetProject="D:\project\水阳江\syj-fetc\fetc-ams\src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator targetPackage="com.hfedit.fetc.ams.db.initdao"
+            targetProject="D:\project\水阳江\syj-fetc\fetc-ams\src\main\java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- =============== Begin: 船闸信息相关(By:Sunf) ================ -->
+        <table tableName="smsmessage" domainObjectName="SmsMessage1111" schema="etc"
+               enableInsert="true" enableUpdateByPrimaryKey="true"
+               enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+               enableSelectByExample="true" enableDeleteByExample="true"
+               enableCountByExample="true" enableUpdateByExample="true">
+        </table>
+        <!-- basic.shiplock: 船闸基本信息表 --><!-- 
+        <table tableName="shiplock" domainObjectName="ShipLock" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- basic.shiplockext: 船闸扩展信息表 -->
+        <!-- 【注意：生成ShipLockExtMapper.xml文件后，需要修改该文件（该表中的geom字段为basic.geometry类型）】
+              1. 用 basic.st_astext(geom) as geom 替换 Base_Column_List 中的 geom
+              1. 用 basic.st_geomfromtext(#{geom,jdbcType=OTHER}) 替换 #{geom,jdbcType=OTHER}
+         --><!-- 
+        <table tableName="shiplockext" domainObjectName="ShipLockExt" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- basic.shiplockclass: 船闸类型表 --><!-- 
+        <table tableName="shiplockclass" domainObjectName="ShipLockClass" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- basic.lane: 航线信息表 --><!-- 
+        <table tableName="lane" domainObjectName="Lane" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- basic.lane: 行政区划表 --><!-- 
+        <table tableName="administrativedivision" domainObjectName="AdministrativeDivision" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- =============== End: 船闸信息相关(By:Sunf) ================ -->
+        
+        <!-- =============== Begin: 岗位管理相关(By:Sunf) ================ -->
+        <!-- basic.post: 岗位管理表 --><!-- 【有自定义代码注意保存】
+        <table tableName="post" domainObjectName="Post" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- basic.privilege: 权限表 --><!-- 
+        <table tableName="privilege" domainObjectName="Privilege" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- basic.privilegecategory: 岗位权限类别表 --><!-- 
+        <table tableName="privilegecategory" domainObjectName="PrivilegeCategory" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- basic.postprivilege: 岗位权限关联表 --><!-- 
+        <table tableName="postprivilege" domainObjectName="PostPrivilege" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- =============== End: 岗位管理相关(By:Sunf) ================ -->
+
+        <!-- =============== Begin: 闸室信息相关(By:Sunf) ================ -->
+        <!-- basic.lockchamber: 闸室表 --><!-- 
+        <table tableName="lockchamber" domainObjectName="LockChamber" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- =============== End: 闸室信息相关(By:Sunf) ================ -->
+
+        <!-- =============== Begin: 参数设置相关(By:Sunf) ================ -->
+        <!-- basic.shipclass: 船舶类型表 --><!-- 
+        <table tableName="shipclass" domainObjectName="ShipClass" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- basic.weighttonclass: 载重吨类型表 --><!-- 
+        <table tableName="weighttonclass" domainObjectName="WeighttonClass" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- basic.feerate: 过闸费率表 --><!-- 
+        <table tableName="feerate" domainObjectName="FeeRate" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- basic.serialnumber: 待闸序号号码表 --><!-- 
+        <table tableName="serialnumber" domainObjectName="SerialNumber" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- basic.priority: 过闸优先级表 --><!-- 
+        <table tableName="priority" domainObjectName="Priority" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- =============== End: 参数设置相关(By:Sunf) ================ -->
+
+        <!-- =============== Begin: 通知设置相关(By:Sunf) ================ -->
+        <!-- notify.type: 通知类型表 --><!-- 
+        <table tableName="type" domainObjectName="Type" schema="notify" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- notify.template: 通知模板表 --><!-- 
+        <table tableName="template" domainObjectName="Template" schema="notify" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- =============== End: 通知设置相关(By:Sunf) ================ -->
+
+        <!-- =============== Begin: 船舶建档相关(By:Sunf) ================ -->
+        <!-- basic.certificatetype: 证件类型表 --><!-- 
+        <table tableName="certificatetype" domainObjectName="CertificateType" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- basic.attachmenttype: 附件类型表 --><!-- 
+        <table tableName="attachmenttype" domainObjectName="AttachmentType" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- records.attachment: 附件信息表 --><!-- 
+        <table tableName="attachment" domainObjectName="Attachment" schema="records" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- records.ship: 船舶基本信息表 --><!-- 
+        <table tableName="ship" domainObjectName="Ship" schema="records" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- records.shipext: 船舶扩展信息表 --><!--  -->
+        <!-- <table tableName="shipext" domainObjectName="ShipExt" schema="records"
+            enableInsert="true" enableCountByExample="true"
+            enableSelectByPrimaryKey="true" enableSelectByExample="true"
+            enableUpdateByPrimaryKey="true" enableUpdateByExample="true"
+            enableDeleteByPrimaryKey="true" enableDeleteByExample="true">
+        </table> -->
+        <!-- records.shipweightton: 船舶载重吨表 --><!-- 
+        <table tableName="shipweightton" domainObjectName="ShipWeightton" schema="records" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- =============== End: 船舶建档相关(By:Sunf) ================ -->
+
+        <!-- =============== Begin: ETC 业务相关(By:Sunf) ================ -->
+        <!-- etc.etcbusinessinfo: 船舶ETC业务信息表 --><!-- 
+        <table tableName="etcbusinessinfo" domainObjectName="EtcBusinessInfo" schema="etc" 
+            enableInsert="true" enableCountByExample="true"
+            enableSelectByPrimaryKey="true" enableSelectByExample="true"
+            enableUpdateByPrimaryKey="true" enableUpdateByExample="true"
+            enableDeleteByPrimaryKey="true" enableDeleteByExample="true">
+        </table> -->
+        <!-- =============== End: ETC 业务相关(By:Sunf) ================ -->
+
+        <!-- =============== Begin: 历史记录相关(By:Sunf) ================ -->
+        <!-- history.recordoperation: 档案操作历史表 --><!-- 
+        <table tableName="recordoperation" domainObjectName="RecordOperation" schema="history" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- =============== End: 历史记录相关(By:Sunf) ================ -->
+
+        <!-- =============== Begin: 运营管理相关(By:Sunf) ================ -->
+        <!-- operating.workshift: 工作班次表 --><!-- 
+        <table tableName="workshift" domainObjectName="WorkShift" schema="operating" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table>--> 
+        <!-- operating.blacklist: 黑名单表 --><!-- 
+        <table tableName="blacklist" domainObjectName="Blacklist" schema="operating" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table>--> 
+        <!-- operating.blacklistedship: 黑名单船舶表 --><!-- 
+        <table tableName="blacklistedship" domainObjectName="BlacklistedShip" schema="operating" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table>--> 
+        <!-- =============== End: 历史记录相关(By:Sunf) ================ -->
+
+        <!-- =============== Begin: 过闸登记相关(By:Sunf) ================ -->
+        <!-- orders.passlockorder: 过闸订单表 --><!-- 
+        <table tableName="passlockorder" domainObjectName="PasslockOrder" schema="orders" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> --> 
+        <!-- orders.passlockorderalter: 过闸订单变更表 --><!-- 
+        <table tableName="passlockorderalter" domainObjectName="PasslockOrderAlter" schema="orders" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> --> 
+        <!-- orders.sourcetype: 订单来源类型表 --><!-- 
+        <table tableName="sourcetype" domainObjectName="SourceType" schema="orders" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table>--> 
+        <!-- scheduling.passlocksort: 过闸船舶排序表 --><!-- 
+        <table tableName="passlocksort" domainObjectName="PasslockSort" schema="scheduling" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table>--> 
+        <!-- =============== End: 过闸登记相关(By:Sunf) ================ -->
+
+        <!-- =============== Begin: 过闸收费相关(By:Sunf) ================ -->
+        <!-- fee.ordertransaction: 订单交易信息表 --> <!-- 
+        <table tableName="ordertransaction" domainObjectName="OrderTransaction" schema="fee" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- fee.manualtransactiondetail: 人工收费交易详情表 --><!-- 
+        <table tableName="manualtransactiondetail" domainObjectName="ManualTransactionDetail" schema="fee" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table>--> 
+        <!-- fee.deducttransactiondetail: 抵扣收费交易详情表 --><!--
+        <table tableName="deducttransactiondetail" domainObjectName="DeductTransactionDetail" schema="fee" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> --> 
+        <!-- fee.paymentmethod: 支付方式表 --><!-- 
+        <table tableName="paymentmethod" domainObjectName="PaymentMethod" schema="fee" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table>--> 
+        <!-- =============== End: 历史记录相关(By:Sunf) ================ -->
+
+        <!-- =============== Begin: 船闸调度相关(By:Sunf) ================ -->
+        <!-- scheduling.passlocksort: 过闸船舶排序表 --><!-- 
+        <table tableName="passlocksort" domainObjectName="PasslockSort" schema="scheduling" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table>--> 
+        <!-- scheduling.passlockscheduling: 闸次表 --><!-- 
+        <table tableName="passlockscheduling" domainObjectName="PasslockScheduling" schema="scheduling" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- scheduling.passlockschedulingdetail: 闸次详情表 --><!--
+        <table tableName="passlockschedulingdetail" domainObjectName="PasslockSchedulingDetail" schema="scheduling" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> --> 
+        <!-- =============== End: 船闸调度相关(By:Sunf) ================ -->
+
+        <!-- =============== Begin: 系统参数设置相关(By:Sunf) ================ -->
+        <!-- basic.systemconfig: 系统参数设置表 --><!-- 
+        <table tableName="systemconfig" domainObjectName="SystemConfig" schema="basic" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- =============== End: 系统参数设置相关(By:Sunf) ================ -->
+
+        <!-- =============== Begin: 发票管理相关(By:Sunf) ================ -->
+        <!-- fee.invoice: 发票信息表 --><!-- 
+        <table tableName="invoice" domainObjectName="Invoice" schema="fee" 
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableDeleteByPrimaryKey="true" enableSelectByPrimaryKey="true"
+            enableSelectByExample="true" enableDeleteByExample="true"
+            enableCountByExample="true" enableUpdateByExample="true">
+        </table> -->
+        <!-- =============== End: 发票管理相关(By:Sunf) ================ -->
+    </context>
+</generatorConfiguration>
