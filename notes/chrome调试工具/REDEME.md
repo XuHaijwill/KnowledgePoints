@@ -23,11 +23,11 @@ http://idea.imsxm.com/
 
 2.配置参数
 
-![msg](D:\Users\115110\Desktop\chrome调试工具\imgs\config-1.png)
+![msg](imgs\config-1.png)
 
-![msg](D:\Users\115110\Desktop\chrome调试工具\imgs\config-2.png)
+![msg](imgs\config-2.png)
 
-![msg](D:\Users\115110\Desktop\chrome调试工具\imgs\config-3.png)
+![msg](imgs\config-3.png)
 
 ## chrome安装
 
@@ -39,8 +39,8 @@ https://www.google.cn/intl/zh-CN/chrome/?brand=CHBD&gclid=EAIaIQobChMIo72N7b-d6w
 
 ## chrome生成crx
 
-![msg](D:\Users\115110\Desktop\chrome调试工具\imgs\chrome-ex01.png)
+![msg](imgs\chrome-ex01.png)
 
-![msg](D:\Users\115110\Desktop\chrome调试工具\imgs\chrome-ex02.png)
+![msg](imgs\chrome-ex02.png)
 
 C:\Users\115110\AppData\Local\Google\Chrome\User Data\Default\Extensions\hmhgeddbohgjknpmjagkdomcpobmllji\2.0.10_0
