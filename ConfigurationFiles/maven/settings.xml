@@ -52,7 +52,7 @@ under the License.
    | Default: ${user.home}/.m2/repository
   <localRepository>/path/to/local/repo</localRepository>
   -->
-    <localRepository>D:\.m2\repositoryMine</localRepository>
+    <localRepository>D:\.m2\repository</localRepository>
 
 
   <!-- interactiveMode
@@ -82,6 +82,7 @@ under the License.
      | Specifies a further group identifier to use for plugin lookup.
     <pluginGroup>com.your.plugins</pluginGroup>
     -->
+	<pluginGroup>org.mortbay.jetty</pluginGroup>
   </pluginGroups>
 
   <!-- proxies
@@ -132,6 +133,11 @@ under the License.
       <passphrase>optional; leave empty if not used.</passphrase>
     </server>
     -->
+	<server>
+      <id>XuHaijwill</id>
+      <username>XuHaijwill</username>
+      <password>290a0e966a42b2bb638095ffc8b94c20d1e867d4</password>
+    </server>
   </servers>
 
   <!-- mirrors
@@ -158,6 +164,19 @@ under the License.
       <url>http://my.repository.com/repo/path</url>
     </mirror>
      -->
+	  <!-- <mirror>
+        <id>alimaven</id>
+         <mirrorOf>central</mirrorOf>
+         <name>aliyun maven</name>
+         <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+     </mirror>
+     <mirror>
+         <id>jboss-public-repository-group</id>
+         <mirrorOf>central</mirrorOf>
+        <name>JBoss Public Repository Group</name>
+         <url>http://repository.jboss.org/nexus/content/groups/public</url>
+     </mirror> -->
+	 
 	  <mirror>
             <id>alimaven</id>
             <name>aliyun maven</name>
@@ -196,6 +215,7 @@ under the License.
             <mirrorOf>central</mirrorOf>
         </mirror>
 
+	
   </mirrors>
 
   <!-- profiles
@@ -260,8 +280,7 @@ under the License.
         <maven.compiler.source>1.8</maven.compiler.source>    
         <maven.compiler.target>1.8</maven.compiler.target>    
         <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>    
-    </properties>   
-	
+    </properties>    
     </profile> 
 
     <!--
