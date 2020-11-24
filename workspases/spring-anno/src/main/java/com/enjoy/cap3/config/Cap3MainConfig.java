@@ -21,7 +21,7 @@ public class Cap3MainConfig {
 	 * request: 主要针对web应用, 递交一次请求创建一个实例
 	 * session:同一个session创建一个实例
 	 */
-	//@Scope("prototype")
+	@Scope("prototype")
 	@Bean
 	public Person person(){
 		return new Person("james",20);

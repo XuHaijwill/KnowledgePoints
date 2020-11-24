@@ -14,10 +14,19 @@ import com.enjoy.cap2.controller.OrderController;
 
 @Configuration
 //@Controller  @Service  @Respostry  @Component
-@ComponentScan(value="com.enjoy.cap2", includeFilters={		
-		@Filter(type=FilterType.ANNOTATION, classes={Controller.class})		
+//包含
+@ComponentScan(value="com.enjoy.cap2", includeFilters={
+		@Filter(type=FilterType.ANNOTATION, classes={Controller.class})
 }, useDefaultFilters=false)
 
+//自定义过滤器
+//@ComponentScan(value="com.enjoy.cap2", includeFilters={
+//		@Filter(type=FilterType.CUSTOM, classes={JamesTypeFilter.class})
+//}, useDefaultFilters=false)
+
+//@ComponentScans(@ComponentScan(value="com.enjoy.cap2", includeFilters={
+//		@Filter(type=FilterType.CUSTOM, classes={JamesTypeFilter.class})
+//}, useDefaultFilters=false))
 
 public class Cap2MainConfig {
 	//给容器中注册一个bean, 类型为返回值的类型, 
