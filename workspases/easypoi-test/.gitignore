@@ -1,0 +1,13 @@
+*.class
+.classpath
+.project
+.settings
+# Package Files #
+*.jar
+*.war
+*.ear
+target
+JOSNTest.java
+XmlTest.java
+#vip的测试需求不提交
+vip/

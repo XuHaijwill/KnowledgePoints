@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bfd41b03-7f2d-446a-be97-348c3bcdb4b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../notes/spring/spring学习指南.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../notes/spring/spring学习指南.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap1/MainTest1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap1/MainTest2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap1/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap1/config/MainConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap10/aop/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap10/aop/LogAspects.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap10/config/Cap10MainConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap11/config/Cap11MainConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap11/dao/OrderDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap11/service/OrderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap12/Cap12MainConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap12/processor/JamesBeanDefinitionRegistryPostProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap12/processor/JamesBeanFactoryPostProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap2/config/Cap2MainConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap2/config/JamesTypeFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap2/controller/OrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap2/dao/OrderDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap2/service/OrderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap3/config/Cap3MainConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap4/config/Cap4MainConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap5/config/Cap5MainConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap5/config/LinCondition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap5/config/WinCondition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap6/bean/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap6/bean/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap6/bean/Fish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap6/bean/Monkey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap6/bean/Pig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap6/bean/Tiger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap6/config/Cap6MainConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap6/config/JamesFactoryBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap6/config/JamesImportBeanDefinitionRegistrar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap6/config/JamesImportSelector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap7/bean/Bike.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap7/bean/JamesBeanPostProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap7/bean/Jeep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap7/bean/Plane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap7/bean/Train.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap7/config/Cap7MainConfigOfLifeCycle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap8/bean/Bird.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap8/config/Cap8MainConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap9/bean/Light.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap9/bean/Moon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap9/bean/Sun.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap9/config/Cap9MainConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap9/controller/TestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap9/dao/TestDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enjoy/cap9/service/TestService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ioc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cap10Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cap11Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cap12Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cap2Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cap3Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cap4Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cap5Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cap6Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cap7Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cap8Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Cap9Test.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../../Program Files/apache-maven-3.6.2" />
+        <option name="userSettingsFile" value="D:\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kpUxawnQNcsJHswqXnInrATmR4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../学习/spring-framework-5.0.x" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfd41b03-7f2d-446a-be97-348c3bcdb4b8" name="Default Changelist" comment="" />
+      <created>1606397273046</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606397273046</updated>
+      <workItem from="1606397276436" duration="5008000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606432286276">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606432286276" />
+    <state x="270" y="57" key="SettingsEditor" timestamp="1606397618601">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606397618601" />
+  </component>
+</project>
