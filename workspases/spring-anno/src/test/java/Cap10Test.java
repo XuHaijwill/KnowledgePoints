@@ -21,7 +21,7 @@ public class Cap10Test {
 		
 		//Calculator c = new Calculator();
 		Calculator c = app.getBean(Calculator.class);
-		int result = c.div(4, 2);
+		int result = c.div(4, 0);
 		System.out.println(result);
 		app.close();
 	

@@ -108,87 +108,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7420148-906b-4647-8bfd-e9d3e1434a53" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq-demo/src/main/java/com/xhjc/generic/TestInf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq-demo/src/main/java/com/xhjc/generic/impl/TestImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro-web-demo1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro-web-demo1/shiro-web-demo1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro-web-demo2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro-web-demo2/shiro-web-demo2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro-web-demo2/src/main/java/com/xhjc/rmi/client/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro-web-demo2/src/main/java/com/xhjc/rmi/services/HelloServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro-web-demo2/src/main/java/com/xhjc/rmi/services/IHello.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro-web-demo2/src/main/java/com/xhjc/rmi/services/impl/HelloImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../shiro/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BaseDemoMaven_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BaseDemoMaven_war.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BaseDemoMaven_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BaseDemoMaven_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../notes/spring/spring学习指南.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../notes/spring/spring学习指南.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_4_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_4_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_http_client_1_1_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_http_client_1_1_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_1_7_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_1_7_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_1_7_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_1_7_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/JavaBaseDemo_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/JavaBaseDemo_main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/JavaBaseDemo_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/JavaBaseDemo_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaseDemoMaven/BaseDemoMaven.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/BaseDemoMaven.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/classes/jvm/Math.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/classes/jvm/p.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/classes/thread/Callable01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/classes/thread/ThreadDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/classes/thread/ThreadSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/classes/thread/ThreadState$Blocked.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/classes/thread/ThreadState$TimeWaiting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/classes/thread/ThreadState$Waiting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/classes/thread/ThreadState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/test-classes/com/xhjc/io/FileHandleDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-demo/rabbitmq-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-demo/rabbitmq-demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-demo/target/classes/com/xhjc/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-demo/target/classes/com/xhjc/simple/Recv$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-demo/target/classes/com/xhjc/simple/Recv.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-demo/target/classes/com/xhjc/simple/Send.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-demo/target/classes/com/xhjc/utils/ConnectionUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-demo/target/test-classes/com/xhjc/AppTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shiro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shiro/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-anno/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-anno/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-anno/src/main/java/com/enjoy/cap10/aop/LogAspects.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-anno/src/main/java/com/enjoy/cap10/aop/LogAspects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-anno/src/test/java/Cap10Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-anno/src/test/java/Cap10Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CompilerWorkspaceConfiguration">
-    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -253,9 +187,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="JRebelWorkspace">
-    <option name="jrebelEnabledAutocompile" value="true" />
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -273,6 +204,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -285,9 +218,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15527344" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -299,20 +235,20 @@
       <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\practise\JavaBaseDemo\src\main\resources\io" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestImpl">
+  <component name="RunManager" selected="Application.NewThread">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xhjc.App" />
-      <module name="rabbitmq-demo" />
+    <configuration name="NewThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiangxue.ch1.NewThread" />
+      <module name="BaseDemoMaven" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xhjc.*" />
+          <option name="PATTERN" value="com.xiangxue.ch1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -320,13 +256,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Callable01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thread.Callable01" />
+    <configuration name="OnlyMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiangxue.ch1.OnlyMain" />
       <module name="BaseDemoMaven" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="thread.*" />
+          <option name="PATTERN" value="com.xiangxue.ch1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -408,19 +344,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Callable01" />
-      <item itemvalue="Application.App" />
       <item itemvalue="Application.Send" />
       <item itemvalue="Application.Recv" />
       <item itemvalue="Application.TestImpl" />
+      <item itemvalue="Application.OnlyMain" />
+      <item itemvalue="Application.NewThread" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NewThread" />
+        <item itemvalue="Application.OnlyMain" />
         <item itemvalue="Application.TestImpl" />
         <item itemvalue="Application.Send" />
         <item itemvalue="Application.Recv" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.Callable01" />
       </list>
     </recent_temporary>
   </component>
@@ -444,6 +380,7 @@
       <workItem from="1587171446295" duration="650000" />
       <workItem from="1588424520947" duration="4919000" />
       <workItem from="1591269172620" duration="1650000" />
+      <workItem from="1606827520753" duration="2196000" />
     </task>
     <servers />
   </component>
@@ -501,24 +438,37 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1591269467674">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="249" y="0" key="#Project_Structure" timestamp="1606828053711">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1591269467674" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1591269625582">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1606828053711" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1606828447559">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591269625582" />
-    <state x="404" y="104" width="582" height="524" key="StructurePopup" timestamp="1591270112586">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606828447559" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1606828447559">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="404" y="104" width="582" height="524" key="StructurePopup/0.0.1366.728@0.0.1366.728" timestamp="1591270112586" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591269850621">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606828447559" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1606828447559">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591269850621" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606828447559" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1606828447559">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606828447559" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1606828003144">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606828003144" />
+    <state x="431" y="144" width="672" height="679" key="search.everywhere.popup" timestamp="1606828201111">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="144" width="672" height="679" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606828201111" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -530,92 +480,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>JavaBaseDemo</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

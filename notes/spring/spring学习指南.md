@@ -12,9 +12,27 @@
 
 ### Bean的作用域和生命周期
 
-
-
 创建-->初始化-->销毁
+
+#### spring中的缓存：DefaultSingletonBeanRegistry中存储bean的不同map/set、
+
+​		org.springframework.beans.factory.support.DefaultSingletonBeanRegistry这个类当中有四个缓存
+
+- singletonObjects(ConcurrentHashMap)
+
+​       保存BeanName和创建的bean实例之间的关系，bean name->bean instance。
+
+- singletonFactories(HashMap)
+
+  保存BeanName和创建bean的工厂之间的关系，bean name -> ObjectsFatory
+
+- earlySingletonObjects(HashMap)
+
+  也是保存BeanName和创建bean实例之间的关系，与singletonObjects之间的区别在于，当一个单例bean被放到earlySingletonObjects里面之后，该bean就可以通过getBean()方法获取到了（虽然只是早期对象，即还在创建过程中。目的是解决循环依赖的问题）
+
+- registeredSingletons(LinkedHashSet)
+
+  保存当前所有已注册的bean，这里为什么要用LinkedHashSet？
 
 ## ComponetScan 源码分析
 
