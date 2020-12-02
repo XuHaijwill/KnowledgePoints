@@ -2,7 +2,7 @@ package thread;
 
 /**
  * @Author xhj
- * @Description //TODO
+ * @Description 线程排序
  * @Date 2020-03-17 20:33
  **/
 public class ThreadSort {

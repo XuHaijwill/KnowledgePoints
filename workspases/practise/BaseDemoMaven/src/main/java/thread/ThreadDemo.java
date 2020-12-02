@@ -2,7 +2,7 @@ package thread;
 
 /**
  * @Author xhj
- * @Description //TODO
+ * @Description 线程启动
  * @Date 2020-03-17 20:07
  **/
 public class ThreadDemo extends Thread{

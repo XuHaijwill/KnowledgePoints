@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @Author xhj
- * @Description //TODO
+ * @Description  线程状态
  * @Date 2020-03-17 20:11
  **/
 public class ThreadState {
