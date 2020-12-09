@@ -24,6 +24,6 @@ public class Cap3MainConfig {
 	@Scope("prototype")
 	@Bean
 	public Person person(){
-		return new Person("james",20);
+		return new Person("tom",20);
 	}
 }

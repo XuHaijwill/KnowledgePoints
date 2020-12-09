@@ -14,6 +14,10 @@
 
 创建-->初始化-->销毁
 
+通过@Scope指定bean的实例类型
+
+![](imgs\bean01.png)
+
 #### spring中的缓存：DefaultSingletonBeanRegistry中存储bean的不同map/set、
 
 ​		org.springframework.beans.factory.support.DefaultSingletonBeanRegistry这个类当中有四个缓存
