@@ -16,7 +16,7 @@ NODE_PATH
 D:\Program Files\nodejs\node_global\node_modules
 ```
 
-![](D:\xhj\git\github\KnowledgePoints\notes\vue\imgs\vue-c01.png)
+![](imgs\vue-c01.png)
 
 ![](imgs\vue1.png)
 
@@ -73,7 +73,7 @@ npm help <topic> : 在默认浏览器中打开指定命令的文档页面，如�
 
 https://blog.csdn.net/weixin_43748812/article/details/84960266
 
-![msg](D:\xhj\git\github\KnowledgePoints\notes\vue\imgs\vcode1.PNG)
+![msg](imgs\vcode1.PNG)
 
 ### 常用插件
 
