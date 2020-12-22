@@ -25,3 +25,15 @@ https://iclient.supermap.io/web/introduction/leafletDevelop.html
 ## leaflet
 
 https://leafletjs.com/reference-1.7.1.html
+
+案例
+
+参考：https://zhuanlan.zhihu.com/p/146541881
+
+https://leafletjs.com/index.html
+
+https://leafletjs.com/examples/quick-start/
+
+### Leaflet：如何在featureGroup上添加多个标记
+
+https://www.thinbug.com/q/39967302
