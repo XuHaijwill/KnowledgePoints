@@ -90,3 +90,9 @@ org.springframework.beans.factory.support.DefaultSingletonBeanRegistry这个类�
 ![扫描分析](imgs/cp-01.png)
 
 ![扫描分析](imgs/cp-08.png)
+
+
+
+## spring面试问题
+
+- spring的循环依赖如何解决（https://zhuanlan.zhihu.com/p/84267654）
