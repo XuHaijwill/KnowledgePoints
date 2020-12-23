@@ -77,11 +77,44 @@ org.springframework.beans.factory.support.DefaultSingletonBeanRegistry这个类�
 
 -  **@Import注册bean**
 
+- **@Value**
+
+- **@Autowired** 自动装配:spring利用依赖注入(DI), 完成对IOC容器中的各个组件的依赖关系赋值
+
+- **@Resource**
+  - @Resource和Autowired一样可以装配bean
+  - @Resource缺点: 不能支持@Primary功能
+    - 不能支持@Autowired(required = false)的功能
+
+- **@Inject**
+  - @Inject和Autowired一样可以装配bean, 并支持@Primary功能, 可用于非spring框架.
+  - @Inject缺点: 但不能支持@Autowired(required = false)的功能,需要引入第三方包javax.inject 
+
+```
+<dependency>
+    <groupId>javax.inject</groupId>
+	<artifactId>javax.inject</artifactId>
+	<version>1</version>
+</dependency>
+```
+
 - 
 
-  
+## AOP源码分析
 
-  
+
+
+
+
+## 
+
+
+
+
+
+
+
+
 
 
 
