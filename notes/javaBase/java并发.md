@@ -36,6 +36,26 @@
 
 ## 认识java里的线程
 
+### 新启线程的方式
+
+Thread、Runable、Callable
+
+- 怎么样才能让Java里的线程安全停止工作呢
+
+  线程自然终止：自然执行完或抛出未处理异常
+
+  stop()，resume(),suspend()已不建议使用，stop()会导致线程不会正确释放资源，suspend()容易导致死锁。
+
+  java线程是协作式，而非抢占式
+
+  调用一个线程的interrupt() 方法中断一个线程，并不是强行关闭这个线程，只是跟这个线程打个招呼，将线程的中断标志位置为true，线程是否中断，由线程本身决定。
+
+  isInterrupted() 判定当前线程是否处于中断状态。
+
+  static方法interrupted() 判定当前线程是否处于中断状态，同时中断标志位改为false。
+
+  方法里如果抛出InterruptedException，线程的中断标志位会被复位成false，如果确实是需要中断线程，要求我们自己在catch语句块里再次调用interrupt()。
+
 
 
 java 进程命令
