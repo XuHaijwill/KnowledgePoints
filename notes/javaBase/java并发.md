@@ -56,7 +56,9 @@ Thread、Runable、Callable
 
   方法里如果抛出InterruptedException，线程的中断标志位会被复位成false，如果确实是需要中断线程，要求我们自己在catch语句块里再次调用interrupt()。
 
+  IDEA快捷键
 
+https://blog.csdn.net/qq_42351033/article/details/108064133
 
 java 进程命令
 

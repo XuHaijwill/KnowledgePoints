@@ -15,7 +15,7 @@
       <module name="JavaBaseDemo" target="1.8" />
       <module name="JavaBaseDemo_main" target="1.8" />
       <module name="JavaBaseDemo_test" target="1.8" />
-      <module name="rabbitmq-demo" target="1.7" />
+      <module name="rabbitmq-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
