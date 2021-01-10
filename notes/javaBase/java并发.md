@@ -58,6 +58,32 @@ Thread、Runable、Callable
 
   IDEA快捷键
 
+
+
+## 线程常用方法和线程的状态
+
+![](D:\project\KnowledgePoints\notes\javaBase\javabase\juc01.png)
+
+### notify和notifyAll应该用谁？
+
+应该尽量使用notifyAll，使用notify因为有可能发生信号丢失的的情况
+
+### join()方法
+
+线程A，执行了线程B的join方法，线程A必须要等待B执行完成了以后，线程A才能继续自己的工作
+
+### 调用yield() 、sleep()、wait()、notify()等方法对锁有何影响？ 
+
+线程在执行yield()以后，持有的锁是不释放的
+
+sleep()方法被调用以后，持有的锁是不释放的
+
+调动方法之前，必须要持有锁。调用了wait()方法以后，锁就会被释放，当wait方法返回的时候，线程会重新持有锁
+
+调动方法之前，必须要持有锁，调用notify()方法本身不会释放锁的
+
+
+
 https://blog.csdn.net/qq_42351033/article/details/108064133
 
 java 进程命令

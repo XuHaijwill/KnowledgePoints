@@ -29,7 +29,7 @@ public class Express {
     /* 变化地点，然后通知处于wait状态并需要处理地点的线程进行业务处理*/
     public synchronized void changeSite(){
     	this.site = "BeiJing";
-    	notify();
+    	notifyAll();
     }
 
     public synchronized void waitKm(){

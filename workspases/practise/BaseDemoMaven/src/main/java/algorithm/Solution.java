@@ -16,6 +16,8 @@ import java.util.Map;
 public class Solution {
 
     public static void main(String[] args) {
+//        String a = "";
+//        System.out.println(a.toLowerCase());
         System.out.println(Arrays.toString(twoSum2(new int[]{2, 7, 11, 15},9)));
     }
 

@@ -113,56 +113,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7420148-906b-4647-8bfd-e9d3e1434a53" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/job/MyTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/job/TaskListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/thread/OnlyMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/thread/safeend/EndRunnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/thread/safeend/EndThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/thread/safeend/HasInterrputException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/thread/syn/SynClzAndInst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/algorithm/LengthOfLastWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/algorithm/SortAnalysis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/algorithm/ToLowerCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/thread/vola/VolatileUnsafe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../notes/javaBase/java并发.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../notes/javaBase/java并发.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../notes/数据结构与算法(java)/数据结构与算法学习指南.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../notes/数据结构与算法(java)/数据结构与算法学习指南.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../auth2-demo/oauth2-shiro-jwt" beforeDir="false" afterPath="$PROJECT_DIR$/../auth2-demo/oauth2-shiro-jwt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BaseDemoMaven_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/BaseDemoMaven_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_4_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_4_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_http_client_1_1_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_http_client_1_1_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_1_7_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_1_7_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_1_7_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_1_7_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_1_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_13_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaseDemoMaven/BaseDemoMaven.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/BaseDemoMaven.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/BaseDemo-Maven.war" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/target/BaseDemo-Maven.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/BaseDemo-Maven/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/target/BaseDemo-Maven/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-demo/rabbitmq-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-demo/rabbitmq-demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/algorithm/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/algorithm/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/com/xiangxue/ch1/wn/Express.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/src/main/java/com/xiangxue/ch1/wn/Express.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/classes/algorithm/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/target/classes/algorithm/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseDemoMaven/target/classes/com/xiangxue/ch1/wn/Express.class" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDemoMaven/target/classes/com/xiangxue/ch1/wn/Express.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-anno/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-anno/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,20 +252,20 @@
       <recent name="D:\workspaces\git_resources\KnowledgePoints\workspases\practise\JavaBaseDemo\src\main\resources\io" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SynClzAndInst">
+  <component name="RunManager" selected="Application.LengthOfLastWord">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="EndRunnable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thread.safeend.EndRunnable" />
+    <configuration name="DBPoolTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiangxue.ch1.pool.DBPoolTest" />
       <module name="BaseDemoMaven" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="thread.safeend.*" />
+          <option name="PATTERN" value="com.xiangxue.ch1.pool.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -309,13 +273,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EndThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thread.safeend.EndThread" />
+    <configuration name="LengthOfLastWord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithm.LengthOfLastWord" />
       <module name="BaseDemoMaven" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="thread.safeend.*" />
+          <option name="PATTERN" value="algorithm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -323,13 +287,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HasInterrputException$UserThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thread.safeend.HasInterrputException$UserThread" />
+    <configuration name="SortAnalysis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithm.SortAnalysis" />
       <module name="BaseDemoMaven" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="thread.safeend.*" />
+          <option name="PATTERN" value="algorithm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -337,13 +301,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OnlyMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thread.OnlyMain" />
+    <configuration name="ToLowerCase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithm.ToLowerCase" />
       <module name="BaseDemoMaven" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="thread.*" />
+          <option name="PATTERN" value="algorithm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -351,13 +315,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SynClzAndInst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="thread.syn.SynClzAndInst" />
+    <configuration name="UseJoin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiangxue.ch1.UseJoin" />
       <module name="BaseDemoMaven" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="thread.syn.*" />
+          <option name="PATTERN" value="com.xiangxue.ch1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -503,20 +467,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.OnlyMain" />
+      <item itemvalue="Application.DBPoolTest" />
+      <item itemvalue="Application.UseJoin" />
+      <item itemvalue="Application.SortAnalysis" />
+      <item itemvalue="Application.ToLowerCase" />
+      <item itemvalue="Application.LengthOfLastWord" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.61" />
-      <item itemvalue="Application.HasInterrputException$UserThread" />
-      <item itemvalue="Application.EndThread" />
-      <item itemvalue="Application.EndRunnable" />
-      <item itemvalue="Application.SynClzAndInst" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SynClzAndInst" />
-        <item itemvalue="Application.EndRunnable" />
-        <item itemvalue="Application.EndThread" />
-        <item itemvalue="Application.HasInterrputException$UserThread" />
-        <item itemvalue="Application.OnlyMain" />
+        <item itemvalue="Application.LengthOfLastWord" />
+        <item itemvalue="Application.ToLowerCase" />
+        <item itemvalue="Application.SortAnalysis" />
+        <item itemvalue="Application.UseJoin" />
+        <item itemvalue="Application.DBPoolTest" />
       </list>
     </recent_temporary>
   </component>
@@ -549,7 +513,10 @@
       <workItem from="1607727826519" duration="944000" />
       <workItem from="1608898406114" duration="1318000" />
       <workItem from="1609046435069" duration="3599000" />
-      <workItem from="1609153360886" duration="598000" />
+      <workItem from="1609153360886" duration="6287000" />
+      <workItem from="1609248467992" duration="3137000" />
+      <workItem from="1609764716489" duration="1358000" />
+      <workItem from="1610150379660" duration="332000" />
     </task>
     <servers />
   </component>
@@ -618,6 +585,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1609048273536" />
+    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1609154454421">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1609154454421" />
     <state x="438" y="66" key="#xdebugger.evaluate" timestamp="1607349243978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -626,46 +597,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="415" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1607349203038" />
-    <state x="521" y="119" key="FileChooserDialogImpl" timestamp="1609048775492">
+    <state x="521" y="119" key="FileChooserDialogImpl" timestamp="1609158756439">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="521" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609048775492" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1609153944248">
+    <state x="521" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609158756439" />
+    <state width="1323" height="194" key="GridCell.Tab.0.bottom" timestamp="1610150714111">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609153944248" />
+    <state width="1323" height="194" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610150714111" />
     <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606904149700" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1609153944248">
+    <state width="1323" height="194" key="GridCell.Tab.0.center" timestamp="1610150714111">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609153944248" />
+    <state width="1323" height="194" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1610150714111" />
     <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606904149700" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1609153944247">
+    <state width="1323" height="194" key="GridCell.Tab.0.left" timestamp="1610150714110">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609153944247" />
+    <state width="1323" height="194" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1610150714110" />
     <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606904149700" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1609153944248">
+    <state width="1323" height="194" key="GridCell.Tab.0.right" timestamp="1610150714111">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609153944248" />
+    <state width="1323" height="194" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610150714111" />
     <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606904149700" />
-    <state width="905" height="113" key="GridCell.Tab.1.bottom" timestamp="1609060691663">
+    <state width="1323" height="240" key="GridCell.Tab.1.bottom" timestamp="1609251838386">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="113" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609060691663" />
-    <state width="905" height="113" key="GridCell.Tab.1.center" timestamp="1609060691663">
+    <state width="1323" height="240" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609251838386" />
+    <state width="1323" height="240" key="GridCell.Tab.1.center" timestamp="1609251838386">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="113" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1609060691663" />
-    <state width="905" height="113" key="GridCell.Tab.1.left" timestamp="1609060691663">
+    <state width="1323" height="240" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1609251838386" />
+    <state width="1323" height="240" key="GridCell.Tab.1.left" timestamp="1609251838386">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="113" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1609060691663" />
-    <state width="905" height="113" key="GridCell.Tab.1.right" timestamp="1609060691663">
+    <state width="1323" height="240" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1609251838386" />
+    <state width="1323" height="240" key="GridCell.Tab.1.right" timestamp="1609251838386">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="113" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1609060691663" />
+    <state width="1323" height="240" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1609251838386" />
     <state width="905" height="113" key="GridCell.Tab.2.bottom" timestamp="1609060691664">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -707,9 +678,10 @@
     </state>
     <state x="221" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1609048778179" />
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606904228956" />
-    <state x="431" y="144" width="672" height="679" key="search.everywhere.popup" timestamp="1606828201111">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="383" y="127" width="672" height="600" key="search.everywhere.popup" timestamp="1609765404534">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="383" y="127" width="672" height="600" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609765404534" />
     <state x="431" y="144" width="672" height="679" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606828201111" />
   </component>
   <component name="XDebuggerManager">
