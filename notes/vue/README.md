@@ -77,7 +77,49 @@ https://blog.csdn.net/weixin_43748812/article/details/84960266
 
 ### 常用插件
 
-vetur
+vetur：打开一个Vue文件，Alt+Shift+F即可对vue文件进行格式化，或者点击鼠标右键，格式化文件即可
+
+
+
+vue-definition：alt+方法 点击跳转
+
+vue-helper
+
+Vue Peek
+
+安装插件 vue-helper
+
+按ctrl和左键跳转定义
+
+还有资料说 vscode-elm-jump 这个插件跳转常规定义
+
+### 如何查看vue版本号
+
+在cmd控制台内，输入npm -v 可查看到npm 的版本号；
+
+vue -V 可看到脚手架的版本号。
+
+去项目中,找到package.json文件夹 找"dependencies"然后就可以看到你装的vue的版本
+
+
+
+### 路由
+
+https://router.vuejs.org/zh/
+
+
+
+VueRouter
+
+
+
+
+
+### vue 配置后台接口方式
+
+https://blog.csdn.net/sinat_41622641/article/details/81636713
+
+
 
 ### vscode调试vue
 
