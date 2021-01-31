@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://www.cnblogs.com/xiaotian-222/category/960683.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="Origin">
+    
+    
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="https://common.cnblogs.com/favicon.svg" type="image/svg+xml">
+    
+    <link rel="stylesheet" href="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/blog-common.min.css">
+    <link id="MainCss" rel="stylesheet" href="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/bundle-en_summergarden.min.css">
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/bundle-en_summergarden-mobile.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/xiaotian-222/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/xiaotian-222/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/xiaotian-222/wlwmanifest.xml">
+    <script async="" src="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/analytics.js.下载"></script><script>
+        var currentBlogId = 257997;
+        var currentBlogApp = 'xiaotian-222';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'En_summerGarden';
+        var visitorUserId = '';
+    </script>
+    <script src="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/jquery-2.2.0.min.js.下载"></script>
+    <script src="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/blog-common.min.js.下载"></script>
+    
+    
+    
+</head>
+<body class="no-navbar">
+    <a name="top"></a>
+        <div id="bannerbar" class="bannerbar-mobile formobile">
+            <a href="https://developer.aliyun.com/learning/21study01?utm_content=g_1000236191" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;aliyun-mobile-bannerbar&#39;)">
+                <img src="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/35695-20210131211350078-971091835.jpg" alt="">
+            </a>
+        </div>
+    <div id="top_nav" class="navbar forpc navbar-custom">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/logo.svg" alt="博客园Logo"></a></li>
+                <li><a href="https://www.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-sitehome&#39;)">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-news&#39;)">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-q&#39;)">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-brands&#39;)">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-ing&#39;)">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-edu&#39;)">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3">
+                        <button type="submit" id="zzk_search_button">
+                            <img src="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/search.svg" alt="搜索">
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客" style="display: none;">
+                        <img id="myblog_icon" class="navbar-icon" src="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/myblog.svg" alt="我的博客">
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息" style="display: none;">
+                        <img id="msg_icon" class="navbar-icon" src="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/message.svg" alt="短消息">
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown" style="display: none;">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/avatar-default.svg" alt="用户头像">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" onclick="logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/" style="display: inline;">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="login()" style="display: inline;">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a href="https://www.cnblogs.com/xiaotian-222/"><img id="blogLogo" src="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/logo.gif" alt="Return Home"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/xiaotian-222/">xiaotian_小天</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+CnBlogs</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/xiaotian-222/">
+Home</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+New Post</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/xiaotian_%E5%B0%8F%E5%A4%A9">
+Contact</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+Admin</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/xiaotian-222/rss/">
+Subscription</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/xiaotian-222/rss/">
+    <img src="./ArcGIS API for javascript - 随笔分类 - xiaotian_小天 - 博客园_files/xml.gif" alt="订阅">
+</a></li>
+</ul>
+
+
+
+		<div class="blogStats">
+			
+			<!--done-->
+Posts - 93&nbsp;
+Articles - 0&nbsp;
+Comments - 7&nbsp;
+Views - 
+<span title="189744">
+19.0 万</span>&nbsp;
+
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+
+
+<h1 class="entrylistTitle">随笔分类 - ArcGIS API for javascript</h1>
+
+
+
+<div class="pager">
+    
+    
+    
+    1
+        <a href="https://www.cnblogs.com/xiaotian-222/category/960683.html?page=2">2</a>
+        <a href="https://www.cnblogs.com/xiaotian-222/category/960683.html?page=3">3</a>
+    
+    
+    <a href="https://www.cnblogs.com/xiaotian-222/category/960683.html?page=2">下一页</a>
+</div>
+
+
+<div class="entrylist">
+    <h1 class="entrylistTitle">
+        
+
+
+    </h1>
+    <div class="entrylistDescription">
+        
+
+    </div>
+
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6651517.html">
+    <span>ArcGIS api for javascript—测量，测距问题</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：首先量测
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6651517.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6651517.html" title="permalink">2017-03-31 15:17</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6651517" class="post-view-count">阅读(2295)</span> 
+        <span data-post-id="6651517" class="post-comment-count">评论(1)</span> 
+        <span data-post-id="6651517" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6651517" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6555098.html">
+    <span>ArcGIS api for javascript——地理处理任务-瓶中信</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 如果在海洋中丢下一个瓶子，本例使用颗粒追踪模型显示指定的天数后瓶子在的地方。首先，输入一个追踪瓶子的天数。然后单击按钮并在海洋里的任意地方画一个点来开始模型。几秒以后将看到一条线出现描述瓶子将去的地方。 关于这个模型的更多信息，见本例中引用的ArcGIS Server地理处理任务的服务目录页:
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6555098.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6555098.html" title="permalink">2017-03-15 16:54</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6555098" class="post-view-count">阅读(295)</span> 
+        <span data-post-id="6555098" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6555098" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6555098" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6555088.html">
+    <span>ArcGIS api for javascript——地理处理任务-计算一个可视域</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了使用一个地理处理计算一个可视域(viewshed) 单击地图上的任意点查看该点5英里内能看见的所有区域。这个模型需要几秒钟来运行并反馈结果。 可视域计算是通过ArcGIS Server 地理处理服务实现。该服务提供访问服务器上的一个包含可视域(viewshed)工具的模型（任务）。 
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6555088.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6555088.html" title="permalink">2017-03-15 16:52</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6555088" class="post-view-count">阅读(551)</span> 
+        <span data-post-id="6555088" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6555088" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6555088" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6555075.html">
+    <span>ArcGIS api for javascript——地理处理任务-服务区域任务</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了如何发送一些输入值到ArcGIS Server上的GIS模型并获得结果反馈给web应用。本例中，模型计算自在地图上单击点起始的驱动时间多边形。 例如，这个分析类型可用于想要知道多少人生活在驾车1，2和3分钟范围内的情况。 这个模型通过ArcGIS Server 地理处理服务提供。查看
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6555075.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6555075.html" title="permalink">2017-03-15 16:51</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6555075" class="post-view-count">阅读(532)</span> 
+        <span data-post-id="6555075" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6555075" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6555075" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6555058.html">
+    <span>ArcGIS api for javascript——地理编码任务-反向地理编码</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 反向地理编码确定地图上给出点的地址。本例展示了如何通过ArcGIS JavaScript API做反向地理编码。 反向地理编码和常规的地理编码请求都使用Locator类和ArcGIS Server geocode service。 调用 locationToAddress方法(和常规的地理编码
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6555058.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6555058.html" title="permalink">2017-03-15 16:49</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6555058" class="post-view-count">阅读(1302)</span> 
+        <span data-post-id="6555058" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6555058" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6555058" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6555037.html">
+    <span>ArcGIS api for javascript——地理编码任务-地理编码地址</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例允许用户输入一个地址，然后显示匹配的地址的位置。这通常地被称为地理编码。在ArcGIS JavaScript API中，使用Locator类执行地理编码。 定位器构造函数需要ArcGIS Server 地理编码服务的URL。一个地理编码服务表示一个在服务器上可用的地址定位器。本例使用ESR
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6555037.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6555037.html" title="permalink">2017-03-15 16:45</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6555037" class="post-view-count">阅读(597)</span> 
+        <span data-post-id="6555037" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6555037" class="post-digg-count">推荐(1)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6555037" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6549379.html">
+    <span>ArcGIS api for javascript——查找任务-在地图上查找要素</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了如何使用查找任务搜索数据。本例在地图上用图表显示结果并用 DojoX的grid格式化结果为表格样式。 FindTask构造函数需要一个ArcGIS Server地图服务的URL。本例使用ESRI sample server上的ESRI_StatesCitiesRivers_USA服务
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6549379.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6549379.html" title="permalink">2017-03-14 16:53</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6549379" class="post-view-count">阅读(3100)</span> 
+        <span data-post-id="6549379" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6549379" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6549379" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6549336.html">
+    <span>ArcGIS api for javascript——查找任务-没有地图查找要素</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了如何使用查找任务搜索数据里的记录，然后在HTML表格中显示结果。 尽管FindTask不需要显示一个地图，但是构造函数需要一个ArcGIS Server地图服务的URL。 本例使用ESRI sample server上的ESRI_StatesCitiesRivers_USA地图服务。
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6549336.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6549336.html" title="permalink">2017-03-14 16:48</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6549336" class="post-view-count">阅读(207)</span> 
+        <span data-post-id="6549336" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6549336" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6549336" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6548299.html">
+    <span>ArcGIS api for javascript——渲染-计算相等间隔分级</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了如何配置分级渲染使用一个相等间隔分类。在这个分类类型中，断点被设置为相等的距离。 可以手工添加相等距离的断点；然而，如果数据被修改了，那些断点就会是不合理的。本例自动地计算断点，因此相同的代码可以用于不同的数据集。 在本例中，断点用相同颜色的逐渐增大的圆符号。如果想要应用某种颜色渐变
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6548299.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6548299.html" title="permalink">2017-03-14 14:26</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6548299" class="post-view-count">阅读(1078)</span> 
+        <span data-post-id="6548299" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6548299" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6548299" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6548281.html">
+    <span>ArcGIS api for javascript——渲染-使用分级渲染</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例使用一个分级渲染通过人口密度用符号表示Kansas。代码明确地增加类并为每一个定义颜色。使用ClassBreaksRenderer.addBreak()方法定义类，参数是在类中包含的最大值和最小值以及类使用的符号。 注意"Infinity"用于表示最后的中断没有上限。
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6548281.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6548281.html" title="permalink">2017-03-14 14:24</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6548281" class="post-view-count">阅读(4338)</span> 
+        <span data-post-id="6548281" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6548281" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6548281" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6548270.html">
+    <span>ArcGIS api for javascript——渲染-使用唯一值渲染</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例使用唯一值渲染器来作为美国的符号。每个州有一个字符串属性"SUB_REGION"表示它的国家的地区。UniqueValueRenderer.addValue()方法被用来重复地为每个区域定义一个颜色。
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6548270.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6548270.html" title="permalink">2017-03-14 14:22</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6548270" class="post-view-count">阅读(1010)</span> 
+        <span data-post-id="6548270" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6548270" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6548270" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6543701.html">
+    <span>ArcGIS api for javascript——图形-使用多个图形图层</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了如何增加多个图形图层到地图。一个图形图层显示国家，另一个显示城市。在一个地图中有多个图形图层的能力是在ArcGIS JavaScript API v1.4增加的。 从蓝色的城市点分隔灰色的区县多边形使图形易于管理。例如，如果仅仅想要删除城市，仅需删除有这个城市点的图形图层。如果城市和
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6543701.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6543701.html" title="permalink">2017-03-13 16:51</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6543701" class="post-view-count">阅读(2391)</span> 
+        <span data-post-id="6543701" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6543701" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6543701" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6543621.html">
+    <span>ArcGIS api for javascript——图形-选择一个范围内的点</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了如何使用图形显示查询结果，如何使用draw toolbar在地图上选择图形和如何修改图形符号为“高亮”。 在地图上画一个矩形区域，加亮矩形范围内的城市。这个应用统计高亮的城市个数并列出城市名称。能够画另外一个矩形来改变高亮的城市集合。 初始的在地图上见到的城市集和是应用加载时生成的查
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6543621.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6543621.html" title="permalink">2017-03-13 16:44</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6543621" class="post-view-count">阅读(6344)</span> 
+        <span data-post-id="6543621" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6543621" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6543621" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6543599.html">
+    <span>ArcGIS api for javascript——图形-增加图形到地图</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了如何使用Draw工具栏在地图上描绘许多种类的几何体。ArcGIS JavaScript API包含工具栏。 工具栏不是一个在页面上自动地可见的用户界面组件。相反，工具栏是一个助手类，可以用来让用户在地图上描绘几何体。它保存为描绘每个几何体类型而写的代码。仅仅激活需要描绘的几何体类型。
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6543599.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6543599.html" title="permalink">2017-03-13 16:42</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6543599" class="post-view-count">阅读(2325)</span> 
+        <span data-post-id="6543599" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6543599" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6543599" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6542076.html">
+    <span>ArcGIS api for javascript——图层-创建定制的切片图层类型的图层</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了如何创建一个定制图层，该图层访问来自WEB服务器的地图切片。这种方式最通用的用途是检索ArcGIS Server 9.2切片缓存或web上的其他地图切片服务。尽管本例使用的是一个ArcGIS Server 9.3服务，这仅仅是为了示范。当从9.3和更高版本时，最好使用ArcGISTi
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6542076.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6542076.html" title="permalink">2017-03-13 11:58</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6542076" class="post-view-count">阅读(1529)</span> 
+        <span data-post-id="6542076" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6542076" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6542076" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6542011.html">
+    <span>ArcGIS api for javascript——图层-创建WMS图层类型的图层</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：本例使用一个WMS端点创建了一个简单的动态图层。首先，代码声明一个新的类my.CityStatesRiversUSAWMSLayer，该类继承esri.layers.DynamicMapServiceLayer。 接下来定义了类的构造函数。图层的初始化和完整的范围和空间参考都被定义在构造函数中。代码
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6542011.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6542011.html" title="permalink">2017-03-13 11:46</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6542011" class="post-view-count">阅读(1698)</span> 
+        <span data-post-id="6542011" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6542011" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6542011" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6541996.html">
+    <span>ArcGIS api for javascript——地图配置-定制缩放动画，定制缩放框</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了当用户放大或缩小地图时如何定义地图的动画。zoomDuration和zoomRate是Dojo动画属性，他们确定了动画的duration和帧刷新的rate 。这些属性单位是毫秒，zoomDuration默认值是250，zoomRate默认值是25。 在本例中，可以通过调整这些属性为数
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6541996.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6541996.html" title="permalink">2017-03-13 11:43</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6541996" class="post-view-count">阅读(2080)</span> 
+        <span data-post-id="6541996" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6541996" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6541996" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6541973.html">
+    <span>ArcGIS api for javascript——地图配置-定制缩放动画</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了当用户放大或缩小地图时如何定义地图的动画。zoomDuration和zoomRate是Dojo动画属性，他们确定了动画的duration和帧刷新的rate 。这些属性单位是毫秒，zoomDuration默认值是250，zoomRate默认值是25。 在本例中，可以通过调整这些属性为数
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6541973.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6541973.html" title="permalink">2017-03-13 11:40</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6541973" class="post-view-count">阅读(2306)</span> 
+        <span data-post-id="6541973" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6541973" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6541973" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6541949.html">
+    <span>ArcGIS api for javascript——地图配置-滑动器的刻度线、方向、大小的改变</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了如果删除缩放等级滑动器的刻度线。通过设置esriConfig里的sliderLabel为null来实现： 默认情况下，缩放等级滑动器是垂直方向的。可以通过设置滑动器的高度属性为null来使滑动器改为水平方向。 如本例所示，能够通过设置esriConfig上的属性来改变缩放等级滑动器的
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6541949.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6541949.html" title="permalink">2017-03-13 11:37</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6541949" class="post-view-count">阅读(1238)</span> 
+        <span data-post-id="6541949" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6541949" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6541949" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+            <div class="postSeparator"></div>
+        <div class="entrylistItem">
+            <div class="entrylistPosttitle">
+                
+<a class="entrylistItemTitle" href="https://www.cnblogs.com/xiaotian-222/p/6541943.html">
+    <span>ArcGIS api for javascript——地图配置-</span>
+    
+
+
+</a>
+
+            </div>
+            <div class="entrylistPostSummary">
+                
+<div class="c_b_p_desc">
+摘要：描述 本例展示了如果删除缩放等级滑动器的刻度线。通过设置esriConfig里的sliderLabel为null来实现： 默认情况下，缩放等级滑动器是垂直方向的。可以通过设置滑动器的高度属性为null来使滑动器改为水平方向。 如本例所示，能够通过设置esriConfig上的属性来改变缩放等级滑动器的
+        <a href="https://www.cnblogs.com/xiaotian-222/p/6541943.html" class="c_b_p_desc_readmore">阅读全文</a>
+</div>
+
+
+            </div>
+            <div class="entrylistItemPostDesc">
+                
+<!--Post Desc-->
+posted @ <a href="https://www.cnblogs.com/xiaotian-222/p/6541943.html" title="permalink">2017-03-13 11:36</a><text> </text>
+xiaotian_小天
+        <span data-post-id="6541943" class="post-view-count">阅读(319)</span> 
+        <span data-post-id="6541943" class="post-comment-count">评论(0)</span> 
+        <span data-post-id="6541943" class="post-digg-count">推荐(0)</span>     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6541943" rel="nofollow">编辑</a>
+
+            </div>
+        </div>
+
+    <p>
+        
+
+
+
+    </p>
+</div>
+
+
+<div class="pager">
+    
+    
+    
+    1
+        <a href="https://www.cnblogs.com/xiaotian-222/category/960683.html?page=2">2</a>
+        <a href="https://www.cnblogs.com/xiaotian-222/category/960683.html?page=3">3</a>
+    
+    
+    <a href="https://www.cnblogs.com/xiaotian-222/category/960683.html?page=2">下一页</a>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem"><!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	
+<div id="blog-news">
+    
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/xiaotian-222/">
+            xiaotian_小天
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/xiaotian-222/" title="入园时间：2015-12-05">
+            5年1个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/xiaotian-222/followers/">
+            17
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/xiaotian-222/followees/">
+            0
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow(&#39;36147040-179b-e511-9fc1-ac853d9f53cc&#39;)">+加关注</a></div>
+        <script>getFollowStatus('36147040-179b-e511-9fc1-ac853d9f53cc');</script>
+    </div>
+</div>
+</div>
+
+</div>
+<div id="sidebar_c3"></div>
+			<div id="calendar"><div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2020/12/31&#39;); return false;">&lt;</a>
+                            </td>
+                            <td align="center">2021年1月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2021/02/28&#39;); return false;">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    <tr>
+        <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+        <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+        <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+        <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+        <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+        <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+        <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+    </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">27</td>
+                            <td class="CalOtherMonthDay" align="center">28</td>
+                            <td class="CalOtherMonthDay" align="center">29</td>
+                            <td class="CalOtherMonthDay" align="center">30</td>
+                            <td class="CalOtherMonthDay" align="center">31</td>
+                        <td class="" align="center">
+                            1
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        2
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            3
+                        </td>
+                            <td class="" align="center">
+                                4
+                            </td>
+                            <td class="" align="center">
+                                5
+                            </td>
+                            <td class="" align="center">
+                                6
+                            </td>
+                            <td class="" align="center">
+                                7
+                            </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            9
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            10
+                        </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                            <td class="" align="center">
+                                12
+                            </td>
+                            <td class="" align="center">
+                                13
+                            </td>
+                            <td class="" align="center">
+                                14
+                            </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            16
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            17
+                        </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                            <td class="" align="center">
+                                19
+                            </td>
+                            <td class="" align="center">
+                                20
+                            </td>
+                            <td class="" align="center">
+                                21
+                            </td>
+                            <td class="" align="center">
+                                22
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            23
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            24
+                        </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                            <td class="" align="center">
+                                26
+                            </td>
+                            <td class="" align="center">
+                                27
+                            </td>
+                            <td class="" align="center">
+                                28
+                            </td>
+                            <td class="" align="center">
+                                29
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            30
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalTodayDay" align="center">
+                            31
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                1
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                2
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                3
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            6
+                        </td>
+                </tr>
+    </tbody>
+</table></div><script>loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">Search</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            <div id="widget_my_google" class="div_my_zzk">
+                <input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block">
+</div>
+
+<!-- 最新随笔 -->
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block"><div class="catListTag">
+<h3 class="catListTitle">My Tags</h3>
+<ul>
+        <li>
+            <a href="https://www.cnblogs.com/xiaotian-222/tag/ArcSDE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">ArcSDE学习笔记<span class="tag-count">(3)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/xiaotian-222/tag/Mybaties%E4%B8%8B%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/">Mybaties下分页功能实现<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/xiaotian-222/tag/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">读取配置文件<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/xiaotian-222/tag/ArcGIS%20%20api/">ArcGIS  api<span class="tag-count">(1)</span></a>
+        </li>
+    
+
+</ul>
+</div>
+
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+
+    <div class="catListPostCategory">
+        <h3 class="catListTitle">
+            
+PostCategories
+
+
+
+        </h3>
+
+        <ul>
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/category/960683.html" rel="" target="">
+    ArcGIS API for javascript(51)
+</a>
+ 
+
+                </li>                            <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/category/765342.html" rel="" target="">
+    DP(10)
+</a>
+ 
+
+                </li>                        
+        </ul>
+    </div>    <div class="catListPostArchive">
+        <h3 class="catListTitle">
+            
+PostArchives
+
+
+
+        </h3>
+
+        <ul>
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/archive/2019/12.html" rel="" target="">
+    2019/12(3)
+</a>
+ 
+
+                </li>                            <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/archive/2018/08.html" rel="" target="">
+    2018/8(2)
+</a>
+ 
+
+                </li>                            <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/archive/2018/05.html" rel="" target="">
+    2018/5(1)
+</a>
+ 
+
+                </li>                            <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/archive/2017/09.html" rel="" target="">
+    2017/9(1)
+</a>
+ 
+
+                </li>                            <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/archive/2017/07.html" rel="" target="">
+    2017/7(2)
+</a>
+ 
+
+                </li>                            <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/archive/2017/06.html" rel="" target="">
+    2017/6(9)
+</a>
+ 
+
+                </li>                            <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/archive/2017/04.html" rel="" target="">
+    2017/4(8)
+</a>
+ 
+
+                </li>                            <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/archive/2017/03.html" rel="" target="">
+    2017/3(54)
+</a>
+ 
+
+                </li>                            <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/archive/2016/05.html" rel="" target="">
+    2016/5(3)
+</a>
+ 
+
+                </li>                            <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/archive/2016/04.html" rel="" target="">
+    2016/4(1)
+</a>
+ 
+
+                </li>                            <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/archive/2016/03.html" rel="" target="">
+    2016/3(1)
+</a>
+ 
+
+                </li>                            <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/xiaotian-222/archive/2015/12.html" rel="" target="">
+    2015/12(8)
+</a>
+ 
+
+                </li>                        
+        </ul>
+    </div></div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block"><div class="catListComment">
+<h3 class="catListTitle">Recent Comments</h3>
+
+	<div class="RecentCommentBlock">
+        <ul>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/xiaotian-222/p/6515434.html">1. Re:ArcGIS api for javascript——鼠标悬停时显示信息窗口</a></li>
+                    <li class="recent_comment_body">你好，connect无法绑定，view用on方法可以绑定click事件但无法绑定onMouseMove是什么情况</li>
+                    <li class="recent_comment_author">--苏莱曼</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/xiaotian-222/p/7099384.html">2. Re:echarts 柱状图和饼状图动态获取后台数据</a></li>
+                    <li class="recent_comment_body">楼主 请教一下，这个饼图的数据可以获取到，那个饼图中各个模块的颜色的设置是在哪体现的呢？</li>
+                    <li class="recent_comment_author">--LiuPengpeng0924</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/xiaotian-222/p/7099384.html">3. Re:echarts 柱状图和饼状图动态获取后台数据</a></li>
+                    <li class="recent_comment_body">你的后台是写在哪里的</li>
+                    <li class="recent_comment_author">--萌新菜鸟</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/xiaotian-222/p/6515465.html">4. Re:ArcGIS api for javascript——加载查询结果，悬停显示信息窗口</a></li>
+                    <li class="recent_comment_body">谢谢</li>
+                    <li class="recent_comment_author">--马里小奥</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/xiaotian-222/p/6515465.html">5. Re:ArcGIS api for javascript——加载查询结果，悬停显示信息窗口</a></li>
+                    <li class="recent_comment_body">这一个 clear() ，费了我好大的事，试过remove、removeAll、delete、refresh、都不对。</li>
+                    <li class="recent_comment_author">--马里小奥</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block"><div class="catListView">
+<h3 class="catListTitle">Top Posts</h3>
+	<div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/xiaotian-222/p/7099384.html">
+                            1. echarts 柱状图和饼状图动态获取后台数据(27188)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/xiaotian-222/p/6962351.html">
+                            2. java实现上传图片(11516)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/xiaotian-222/p/6515113.html">
+                            3. ArcGIS api for javascript——用图表显示查询结果(8189)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/xiaotian-222/p/6515434.html">
+                            4. ArcGIS api for javascript——鼠标悬停时显示信息窗口(7294)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/xiaotian-222/p/6514434.html">
+                            5. ArcGIS api for javascript——加入地图并显示当前地图范围(7231)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block"><!--
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/xiaotian-222/p/7099384.html">
+                            1. echarts 柱状图和饼状图动态获取后台数据(3)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/xiaotian-222/p/6515465.html">
+                            2. ArcGIS api for javascript——加载查询结果，悬停显示信息窗口(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/xiaotian-222/p/6651517.html">
+                            3. ArcGIS api for javascript—测量，测距问题(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/xiaotian-222/p/6515434.html">
+                            4. ArcGIS api for javascript——鼠标悬停时显示信息窗口(1)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+-->
+
+</div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+<div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">推荐排行榜</h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break: break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/xiaotian-222/p/7099384.html">
+                                1. echarts 柱状图和饼状图动态获取后台数据(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/xiaotian-222/p/6555037.html">
+                                2. ArcGIS api for javascript——地理编码任务-地理编码地址(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/xiaotian-222/p/6515465.html">
+                                3. ArcGIS api for javascript——加载查询结果，悬停显示信息窗口(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/xiaotian-222/p/6514902.html">
+                                4. ArcGIS api for javascript——用第二个服务的范围设置地图范围(1)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div></div></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2021 xiaotian_小天
+<br><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body></html>

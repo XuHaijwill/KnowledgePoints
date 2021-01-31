@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://zhihu.geoscene.cn/?/article/556 -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>
+	 	 	 ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区	 
+ </title>
+
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+<meta name="renderer" content="webkit">
+<meta property="qc:admins" content="440534360105653213016163756367">
+<meta property="wb:webmaster" content="4e9e767c9468995b">
+<meta name="keywords" content="arcgis,api,javascript,入门教程,第一章,介绍,ArcGIS二次开发,ArcGIS教程,三维地图,ArcGIS下载,GIS系统,GIS软件
+">
+<meta name="description" content="ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS API for JavaScript的总体介绍
+
+作为ArcGIS平台的一部分，ArcGIS API for JavaScript使得开发者能够丰富的地理web应用程序。本次课程，将在ArcGIS 平台的背景下学习ArcGIS API for...">
+<!--<base href="http://zhihu.geoscene.cn/">--><base href="."><!--[if IE]></base><![endif]-->
+<link href="http://zhihu.geoscene.cn/static/css/default/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+<link rel="stylesheet" type="text/css" href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/icon.css">
+
+<link href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/common.css" rel="stylesheet" type="text/css">
+<link href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/link.css" rel="stylesheet" type="text/css">
+<link href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/style.css" rel="stylesheet" type="text/css">
+<link href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/xcode.css" rel="stylesheet" type="text/css">
+
+
+<script src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/hm.js.下载"></script><script src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/push.js.下载"></script><script src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/hm.js(1).下载"></script><script type="text/javascript">
+	var _6CB0CD772117A12930B2211F51CAD05B="";
+	var G_POST_HASH=_6CB0CD772117A12930B2211F51CAD05B;
+	var G_INDEX_SCRIPT = "";
+	var G_SITE_NAME = "ArcGIS知乎-新一代ArcGIS问答社区";
+	var G_BASE_URL = "http://zhihu.geoscene.cn/";
+	var G_STATIC_URL = "http://zhihu.geoscene.cn/static";
+	var G_UPLOAD_URL = "http://images.esrichina.com.cn";
+	var G_USER_ID = "";
+	var G_USER_NAME = "";
+	var G_UPLOAD_ENABLE = "N";
+	var G_UNREAD_NOTIFICATION = 0;
+	var G_NOTIFICATION_INTERVAL = 100000;
+	var G_CAN_CREATE_TOPIC = "";
+	var G_ADVANCED_EDITOR_ENABLE = "Y";
+
+	</script>
+<script src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/jquery.2.js.下载" type="text/javascript"></script>
+<script src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/jquery.form.js.下载" type="text/javascript"></script>
+<script src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/plug-in_module.js.下载" type="text/javascript"></script>
+<script src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/aws.js.下载" type="text/javascript"></script>
+<script src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/aw_template.js.下载" type="text/javascript"></script>
+<script src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/app.js.下载" type="text/javascript"></script>
+<script src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/highlight.pack.js.下载" type="text/javascript"></script>
+<script type="text/javascript" src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/compatibility.js.下载"></script>
+<!--[if lte IE 8]>
+	<script type="text/javascript" src="http://zhihu.geoscene.cn/static/js/respond.js"></script>
+<![endif]-->
+<script src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/share.js.下载"></script><style type="text/css">.fancybox-margin{margin-right:17px;}</style><link rel="stylesheet" href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/share_style1_32.css"></head>
+<body><noscript unselectable="on" id="noscript">
+    <div class="aw-404 aw-404-wrap container">
+        <img src="http://zhihu.geoscene.cn/static/common/no-js.jpg">
+        <p>你的浏览器禁用了JavaScript, 请开启后刷新浏览器获得更好的体验!</p>
+    </div>
+</noscript>
+
+	<div class="aw-top-menu-wrap">
+		<div class="container">
+			<!-- logo -->
+			<div class="aw-logo hidden-xs">
+				<a href="http://zhihu.geoscene.cn/" alt="ArcGIS知乎-ArcGIS二次开发,ArcGIS教程,三维地图,ArcGIS下载,GIS系统,GIS软件"></a>
+			</div>
+			<!-- end logo -->
+			<!-- 搜索框 -->
+			<div class="aw-search-box  hidden-xs hidden-sm">
+				<form class="navbar-search" action="http://zhihu.geoscene.cn/search/" id="global_search_form" method="post">
+					<input class="form-control search-query" type="text" placeholder="搜索问题、话题或人" autocomplete="off" name="q" id="aw-search-query" value="">
+					<span title="搜索" id="global_search_btns" onclick="$(&#39;#global_search_form&#39;).submit();"><i class="icon icon-search"></i></span>
+					<div class="aw-dropdown">
+						<div class="mod-body">
+							<p class="title">输入关键字进行搜索</p>
+							<ul class="aw-dropdown-list hide"></ul>
+						</div>
+						<!--
+						<div class="mod-footer">
+							<a href="http://zhihu.geoscene.cn/publish" onClick="$('#header_publish').click();" class="pull-right btn btn-mini btn-success publish">发起问题</a>
+						</div>
+						-->
+					</div>
+				</form>
+			</div>
+			<!-- end 搜索框 -->
+			<!-- 导航 -->
+			<div class="aw-top-nav navbar">
+				<div class="navbar-header">
+				  <button class="navbar-toggle pull-left">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				</div>
+				<nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
+				  <ul class="nav navbar-nav">
+				  <!---->
+					<!--<li><a href="http://zhihu.geoscene.cn" class=""><i class="icon icon-list"></i> 发现</a></li>-->
+					<li><a href="http://zhihu.geoscene.cn/question/"><i class="icon icon-bulb"></i> 问题</a></li>
+					<li><a href="http://zhihu.geoscene.cn/topic/"><i class="icon icon-topic"></i> 话题</a></li>
+					<li><a href="http://zhihu.geoscene.cn/article/" class="active"><i class="icon icon-file"></i> 文章</a></li>
+					<!-- <li><a href="http://zhihu.geoscene.cn/page/download"><i class="icon icon-download"></i>下载</a></li> -->
+					<li><a href="http://zhihu.geoscene.cn/download"><i class="icon icon-download"></i>下载</a></li>
+										 
+					<li><a href="http://zhihu.geoscene.cn/help/"><i class="icon icon-bulb"></i> 帮助</a></li>					<!--<li>
+						<a style="font-weight:bold;">· · ·</a>
+						<div class="dropdown-list pull-right">
+							<ul id="extensions-nav-list">
+																							</ul>
+						</div>
+					</li>-->
+				  </ul>
+				</nav>
+			</div>
+			<!-- end 导航 -->
+			<!-- 用户栏 -->
+			<div class="aw-user-nav">
+				<!-- 登陆&注册栏 -->
+									<a class="login btn btn-normal btn-primary" href="http://zhihu.geoscene.cn/account/login/">登录</a>
+													<!-- end 登陆&注册栏 -->
+			</div>
+			<!-- end 用户栏 -->
+			<!-- 发起 -->
+						<!-- end 发起 -->
+		</div>
+	</div>
+	
+
+<div class="aw-container-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="aw-content-wrap clearfix">
+                <div class="col-sm-12 col-md-9 aw-main-content aw-article-content">
+                    <div class="aw-mod aw-topic-bar" id="question_topic_editor" data-type="article" data-id="556">
+                        <div class="tag-bar clearfix">
+                                                                                    <span class="topic-tag" data-id="182">
+                                <a class="text" href="http://zhihu.geoscene.cn/topic/ArcGIS+API+for+JavaScript%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B">ArcGIS API for JavaScript入门教程</a>
+                            </span>
+                                                        <span class="topic-tag" data-id="64">
+                                <a class="text" href="http://zhihu.geoscene.cn/topic/ArcGIS+API+for+JavaScript">ArcGIS API for JavaScript</a>
+                            </span>
+                                                        
+                                                    </div>
+                    </div>
+                    <div class="aw-mod aw-question-detail">
+                        <div class="mod-head">
+                            <h1>
+                                ArcGIS API for JavaScript入门教程_第一章_介绍                            </h1>
+
+                                                    </div>
+                        <div class="mod-body">
+                            <div class="meta clearfix">
+                                <div class="aw-article-vote pull-left disabled">
+                                    <a href="javascript:;" class="agree" onclick=""><i class="icon icon-agree"></i> <b>4</b></a>
+                                                                    </div>
+
+                                <span class="pull-right  more-operate">
+                                    
+                                    
+                                    <a class="text-color-999 dropdown-toggle" data-toggle="dropdown">
+                                        <i class="icon icon-share"></i> 分享                                    </a>
+                                    <div aria-labelledby="dropdownMenu" role="menu" class="aw-dropdown shareout pull-right">
+                                        <ul class="aw-dropdown-list">
+                                            <!-- <li><a onclick="AWS.User.share_out({webid: 'tsina', content: $(this).parents('.aw-question-detail').find('.markitup-box')});"><i class="icon icon-weibo"></i> 微博</a></li> -->
+											<!-- <li><a onclick="AWS.User.share_out({webid: 'qzone', content: $(this).parents('.aw-question-detail')});"><i class="icon icon-qzone"></i> QZONE</a></li> -->
+											<!-- <li><a onclick="AWS.User.share_out({webid: 'weixin', content: $(this).parents('.aw-question-detail')});"><i class="icon icon-wechat"></i> 微信</a></li> -->
+											<div class="bdsharebuttonbox bdshare-button-style1-32" style="margin-left: 10px;" data-bd-bind="1612102240902"><div class="bdsharebuttonbox bdshare-button-style1-32" data-bd-bind="1612102240902"><a href="http://zhihu.geoscene.cn/#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="http://zhihu.geoscene.cn/#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="http://zhihu.geoscene.cn/#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="http://zhihu.geoscene.cn/#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="http://zhihu.geoscene.cn/#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="http://zhihu.geoscene.cn/#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a></div><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+                                        </div></ul>
+                                    </div>
+
+                                    <em class="text-color-999">2016-03-17</em>
+                                </span>
+                            </div>
+
+                            <div class="content markitup-box">
+                                <span style="font-size:36px">ArcGIS API for JavaScript的总体介绍</span><br>
+<br>
+作为ArcGIS平台的一部分，ArcGIS API for JavaScript使得开发者能够丰富的地理web应用程序。本次课程，将在ArcGIS 平台的背景下学习ArcGIS API for JavaScript内容。将了解平台提供的资源和解决方案，以及利用他们开发自己的地理web应用程序。<br>
+<br>
+<strong><span style="font-size:23px">学习内容</span></strong><br>
+· ArcGIS 平台<br>
+· 开发者资源<br>
+· API结构<br>
+· 开发流程<br>
+<br>
+<strong><span style="font-size:23px">学习目标</span></strong><br>
+· 掌握ArcGIS开发者能够获取到的资源<br>
+· 列举出ArcGIS API for JavaScript的特性和组件<br>
+· 使用API在html页面中添加Map<br>
+<br>
+<strong><span style="font-size:23px">ArcGIS平台</span></strong><br>
+ArcGIS平台，提供了丰富的SDK和API使开发者能够开发许多地理应用程序。平台以Web GIS为核心，由portal，应用程序，内容和设施组成用来支持以地理核心的工作流。开发者通过这些工具能够在不同的web端和移动开发自己的应用程序用来创造，展示和分析地理信息。ArcGIS API for JavaScritp就是这样的API工具用来构建自己的web地理应用程序。<br>
+<br>
+<div class="aw-upload-img-list active" style="text-align: center"><a href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154152_69ed59e8-85c8-4906-a7c5-a90af38c7e5f_image1.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154152_69ed59e8-85c8-4906-a7c5-a90af38c7e5f_image1.png" class="img-polaroid"></a></div><br>
+<br>
+<strong><span style="font-size:23px">开发准备</span></strong><br>
+为了使用ArcGIS Javascript 开发一个web应用程序，你需要配置环境来获取GIS 服务和来自portal和ArcGIS Online中的内容。你也需要开发工具用来开发和测试应用程序。 一般推荐配置如下工具：<br>
+<blockquote><p>a. WebStorm或者Sublim Text或者NotePad++<br>
+b. Chrome或fireBug<br>
+c. Fiddler</p></blockquote><br>
+<br>
+一般的解决方案是使用WebStorm，Sublime Text或者NotePad++ 来进行代码的编写，然后使用带开发者工具的Chrome 浏览器进行测试。而使用Fiddler来监控前端和服务器端的交互。<br>
+<br>
+<strong><span style="font-size:23px">开发资源</span></strong><br>
+ESRI 给出了许多的帮助文档，实例等资源来帮助开发者学习ArcGIS APIs和SDKs。<br>
+<br>
+<strong><span style="font-size:20px">ArcGIS API for JavaScript 主页</span></strong><br>
+JavaScripte 的主页是ArcGIS for Developers 网站（developers.argis.com）的一部分。开发者网站旨在帮助开发者发现如何构建富客服端的地理应用程序。该网站对不熟悉Esri 和API的新开发者来说是一个巨大的资源库。Developers网站还提供免费Online 服务，授权和其他ArcGIS 平台中账号。<br>
+<br>
+在该网站中开发者既能使用免费的开发和测试订阅也可企业级订阅，使用企业级订阅可以：<br>
+· 使用ArcGIS 平台注册应用程序<br>
+· 创建托管的要素服务<br>
+· 使用和下载开发sdks<br>
+· 测试Online 服务<br>
+<br>
+ArcGIS API（js.arcgis.com）的主页使得开发者能开始获取和使用API。该页面为新的JavaScript开发者提供了良好的入门资源也为熟练的开发者提供更为详细的API参考<br>
+<div class="aw-upload-img-list active" style="text-align: center"><a href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154152_e1969bf5-4261-45f6-b201-4cd3f413cc86_image2.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154152_e1969bf5-4261-45f6-b201-4cd3f413cc86_image2.png" class="img-polaroid"></a></div><br>
+<br>
+<strong><span style="font-size:20px">GitHub</span></strong><br>
+ESRI采用GitHub（esri.github.io）作为其开源平台，开发者能够克隆和提交其中的代码库。ESRI的开发库严格按照GitHub的标准规范要求，包含README文件，问题处理和wiki说明文档。使用GitHub开发者能够实时获取ESRI 发现的问题，有那些问题被处理，新提交了那些代码等。<br>
+<br>
+<div class="aw-upload-img-list active" style="text-align: center"><a href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154152_ff9b4784-17dc-4baf-80dd-6f3e298b092f_image3.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154152_ff9b4784-17dc-4baf-80dd-6f3e298b092f_image3.png" class="img-polaroid"></a></div><br>
+<br>
+<strong><span style="font-size:20px">GeoNet</span></strong><br>
+GeoNet 为ArcGIS用户提供的一个社区来分享和讨论GIS和地理空间相关的话题。论坛中的用户来自世界各地。它不简简单单的为一个用来提问和获取答案的论坛，其提供了一个社交平台，通过平台能够分享许多的资源，包括博客，视频，文档，上传文件和其他内容。<br>
+<div class="aw-upload-img-list active" style="text-align: center"><a href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154152_d5b8f699-ba8d-4887-b744-00c72beba13d_image4.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154152_d5b8f699-ba8d-4887-b744-00c72beba13d_image4.png" class="img-polaroid"></a></div><br>
+<br>
+<strong><span style="font-size:20px">ArcGIS 知乎</span></strong><br>
+ArcGIS 知乎（<a href="http://zhihu.esrichina.com.cn/" rel="nofollow" target="_blank">zhihu.esrichina.com.cn</a>）是esri china 推出的自助问答社区。为中国的用户提供关于ArcGIS 产品的相关帮助。<br>
+<br>
+<div class="aw-upload-img-list active" style="text-align: center"><a href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154152_a7bc9afe-8f42-461d-b54f-a9d96055f511_image5.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154152_a7bc9afe-8f42-461d-b54f-a9d96055f511_image5.png" class="img-polaroid"></a></div><br>
+<br>
+<strong><span style="font-size:23px">ArcGIS for JavaScript API的使用</span></strong><br>
+ArcGIS API for JavaScript的使用一般遵循四个部分，这四个部分如下图所示：<br>
+<br>
+<div class="aw-upload-img-list active" style="text-align: center"><a href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154151_d5273462-8998-4395-aca1-9ad01f02c1e8_image6.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154151_d5273462-8998-4395-aca1-9ad01f02c1e8_image6.png" class="img-polaroid"></a></div><br>
+<br>
+<br>
+<br>
+在使用API构建web应用程序之前，首先需要告知应用程序如何获取API，然后添加需要的功能模块。<br>
+目前API的sample中给出的实例均是使用在线的URL。当有新版本的API出现，可以直接可以更换为新版本URL。<br>
+API支持异步模块定义（AMD）语法。使用dojo的加载其和AMD语法可以异步的加载模块，提高应用程序的使用性能。代码如下所示：<script>$(document).ready(function() {$('pre code').each(function(i, block) {   hljs.highlightBlock( block); }); });</script><pre><code class="hljs javascript"><span class="hljs-comment">//load the map module form the ESRI namespace</span><br>
+ <span class="hljs-keyword">var</span> map, dialog;<br>
+        <span class="hljs-built_in">require</span>(<span>[</span> <span class="hljs-string">"esri/map"</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">Map</span>)</span>{            <br>
+            <span class="hljs-comment">//构建地图对象</span><br>
+            <span class="hljs-keyword">var</span> myMap=<span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>(<span class="hljs-string">"divMap"</span>,{});         <br>
+        };</code></pre><strong><span style="font-size:20px">添加底图</span></strong><br>
+在编写代码，需要给应用程序添加地图，而ArcGIS Online中托管了一系列的底图。ArcGIS API for JavaScript中将这些地理底图加载到应用程序非常的便捷。在Map类的构造中包含一个名为baseMap的可选参数。该参数接受字符串值用来指定对应的地图。如下图所示：<br>
+<br>
+<div class="aw-upload-img-list active" style="text-align: center"><a href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154151_4f298572-c1a5-46ac-ae3a-12d3b8aa15fb_image7.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154151_4f298572-c1a5-46ac-ae3a-12d3b8aa15fb_image7.png" class="img-polaroid"></a></div><br>
+<br>
+除了底图，ArcGIS 平台还提供了许多其他的即拿即用的内容，可以参考Sample code中的一些示例：<br>
+<div class="aw-upload-img-list active" style="text-align: center"><a href="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154152_5739a1ef-ef82-4a37-9880-db76cb1ab512_image8.png" target="_blank" data-fancybox-group="thumb" rel="lightbox"><img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/20160412154152_5739a1ef-ef82-4a37-9880-db76cb1ab512_image8.png" class="img-polaroid"></a></div><br>
+<br>
+<strong><span style="font-size:23px">练习1：创建一个简单的题图应用</span></strong><br>
+完成本课程后，你已经掌握了使用ArcGIS for JavaScript的基本知识和技巧。这个时候你想写一个简单的应用程序。在本次练习中，将学习如下内容：<br>
+<br>
+· 添加ArcGIS API for JavaScript应用<br>
+· 添加Map到应用程序中<br>
+· 调整地图的参数和样式<br>
+<br>
+<strong><span style="font-size:20px">STEP1. 创建html页面</span></strong><br>
+· 打开WebStorm<br>
+· 创建或者打开一个project<br>
+· 创建一个新的index.html页面<br>
+<br>
+<strong><span style="font-size:20px">STEP2： 引用ESRI的JS库</span></strong><br>
+· 打开index.html页面<br>
+· 打开浏览器访问js.arcgis.com，从主页中获取必须使用的&lt;link&gt;和&lt;script&gt;标签。<br>
+<br>
+这些标签用来引用ESRI 的css文件和ArcGIS JavaScript 文件。拷贝这些链接到index.html页面中。除了在js.arcgis.com中获取这些链接，也可以从sample中获取这些链接。<br>
+<blockquote><p>注：如果是在本地开发环境下，将这些链接替换成本地部署对应的文件链接。</p></blockquote><br>
+<br>
+<strong><span style="font-size:20px">STEP3： 添加地图</span></strong><br>
+显示Map需要API的esri/map 模块。ArcGIS JavaScript的API使用的AMD模式来异步加载模块。<br>
+<br>
+· 使用require() 语句添加模块<br>
+该模块添加两个参数，第一个参数为模块名，此处为esri/map 和 dojo/domReady 。第二个参数添加一个空的匿名函数function().并使用Map作为匿名函数的别名参数。<br>
+· 在匿名函数中实例化一个Map类，并将实例赋值给myMap对象<br>
+· 在html的&lt;body&gt;对象中，添加一个div用来展示map。此处将该div的id命名为divMap<br>
+· 将divMap作为实例化Map类的第一个参数。后面的参数为可选参数，根据实际的情况选择添加。<br>
+· 启动浏览器进行浏览，此时可以看到图<br>
+<br>
+<strong><span style="font-size:20px">STEP4：调整地图参数和样式</span></strong><br>
+目前地图默认的是全图显示，且地图没有充满整个浏览器，这个时候，需要指定和调整地图选项。让地图打开就显示到某个特定位置，此处以san Francisco 为例。<br>
+· 修改Map的构造参数<pre><code class="hljs http">  <span class="hljs-attribute">center</span>: <span>[</span>-122.45, 37.75], // longitude, latitude<br>
+          <span class="hljs-attribute">zoom</span>: 13<br>
+<br>
+<span class="undefined"></span></code></pre>· 修改css，使得hmtl，body和mydiv的高度都为100%<br>
+<br>
+<strong><span style="font-size:23px">小结</span></strong><br>
+通过本节课程了解ArcGIS API for JavaScript在整个ArcGIS 平台中的作用；掌握从事JavaScript API 开发能够获取到的资源以及构建一个web应用程序的基础流程。<br>
+<br>
+<strong><span style="font-size:23px">思考题</span></strong><br>
+1. 在API的主页能够获取那些资源？<br>
+2. 使用ArcGIS API for JavaScript的场景有那些？<br>
+&nbsp;<br>
+<strong>本教程所有章节链接：</strong><br>
+ArcGIS API for JavaScript入门教程_第一章_介绍：<a href="http://zhihu.esrichina.com.cn/?/article/556" rel="nofollow" target="_blank">http://zhihu.esrichina.com.cn/?/article/556</a><br>
+ArcGIS API for JavaScript入门教程_第二章_Map操作：<a href="http://zhihu.esrichina.com.cn/?/article/557" rel="nofollow" target="_blank">http://zhihu.esrichina.com.cn/?/article/557</a><br>
+&nbsp;
+                                
+                                                            </div>
+                            <div class="meta clearfix">
+                                <div class="aw-article-vote pull-left disabled">
+                                    <a href="javascript:;" class="agree" onclick=""><i class="icon icon-agree"></i> <b>4</b></a>
+                                                                    </div>
+
+                                <span class="pull-right  more-operate">
+                                    
+                                    
+                                    <a class="text-color-999 dropdown-toggle" data-toggle="dropdown">
+                                        <i class="icon icon-share"></i> 分享                                    </a>
+                                    <div aria-labelledby="dropdownMenu" role="menu" class="aw-dropdown shareout pull-right">
+                                        <ul class="aw-dropdown-list">
+                                            <li><a onclick="AWS.User.share_out({webid: &#39;tsina&#39;, content: $(this).parents(&#39;.aw-question-detail&#39;).find(&#39;.markitup-box&#39;)});"><i class="icon icon-weibo"></i> 微博</a></li>
+											<li><a onclick="AWS.User.share_out({webid: &#39;qzone&#39;, content: $(this).parents(&#39;.aw-question-detail&#39;)});"><i class="icon icon-qzone"></i> QZONE</a></li>
+											<li><a onclick="AWS.User.share_out({webid: &#39;weixin&#39;, content: $(this).parents(&#39;.aw-question-detail&#39;)});"><i class="icon icon-wechat"></i> 微信</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <em class="text-color-999">2016-03-17</em>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mod-footer">
+                                                        <div class="aw-article-voter">
+                                                                <a href="http://zhihu.geoscene.cn/people/%E6%9D%BE%E6%9E%9C" class="voter" data-toggle="tooltip" data-placement="right" data-original-title="松果"><img alt="松果" src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/avatar-mid-img.png"></a>
+                                                                <a href="http://zhihu.geoscene.cn/people/lijiaqi" class="voter" data-toggle="tooltip" data-placement="right" data-original-title="lijiaqi"><img alt="lijiaqi" src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/avatar-mid-img.png"></a>
+                                                                <a href="http://zhihu.geoscene.cn/people/%E4%BD%99%E6%88%88%E6%B8%94%E6%AD%8C" class="voter" data-toggle="tooltip" data-placement="right" data-original-title="余戈渔歌"><img alt="余戈渔歌" src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/89_avatar_mid.jpg"></a>
+                                                                <a href="http://zhihu.geoscene.cn/people/%E9%BC%BB%E6%B6%95%E8%99%AB%E4%B8%8D%E5%93%AD" class="voter" data-toggle="tooltip" data-placement="right" data-original-title="鼻涕虫不哭"><img alt="鼻涕虫不哭" src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/40_avatar_mid.jpg"></a>
+                                                                <!--<a class="more-voters">...</a>-->
+                            </div>
+                                                    </div>
+                    </div>
+
+                    <!-- 文章评论 -->
+                    <div class="aw-mod">
+                        <div class="mod-head common-head">
+                            <h2>3 个评论</h2>
+                        </div>
+
+                        <div class="mod-body aw-feed-list">
+                            
+                                                                <div class="aw-item" id="answer_list_642">
+                                    <div class="mod-head">
+                                        <a class="aw-user-img aw-border-radius-5" href="http://zhihu.geoscene.cn/people/ListeningLTG">
+                                            <img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/89_avatar_mid(1).jpg" alt="ListeningLTG">
+                                        </a>
+                                        <p>
+                                            <a href="http://zhihu.geoscene.cn/people/ListeningLTG">ListeningLTG</a>                                        </p>
+                                    </div>
+                                    <div class="mod-body">
+                                        <div class="markitup-box">
+                                            怎么图都看不到了。。。                                        </div>
+                                    </div>
+                                    <div class="mod-footer">
+                                        <div class="meta">
+                                            <span class="pull-right text-color-999">2018-05-22 17:16</span>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                                                <div class="aw-item" id="answer_list_1268">
+                                    <div class="mod-head">
+                                        <a class="aw-user-img aw-border-radius-5" href="http://zhihu.geoscene.cn/people/haiwulei">
+                                            <img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/avatar-mid-img.png" alt="haiwulei">
+                                        </a>
+                                        <p>
+                                            <a href="http://zhihu.geoscene.cn/people/haiwulei">haiwulei</a>                                        </p>
+                                    </div>
+                                    <div class="mod-body">
+                                        <div class="markitup-box">
+                                            底图的语言改成中文怎么改呢                                        </div>
+                                    </div>
+                                    <div class="mod-footer">
+                                        <div class="meta">
+                                            <span class="pull-right text-color-999">2019-05-13 14:58</span>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                                                <div class="aw-item" id="answer_list_1302">
+                                    <div class="mod-head">
+                                        <a class="aw-user-img aw-border-radius-5" href="http://zhihu.geoscene.cn/people/%E9%A1%BE%E5%BF%B5">
+                                            <img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/avatar-mid-img.png" alt="顾念">
+                                        </a>
+                                        <p>
+                                            <a href="http://zhihu.geoscene.cn/people/%E9%A1%BE%E5%BF%B5">顾念</a>                                        </p>
+                                    </div>
+                                    <div class="mod-body">
+                                        <div class="markitup-box">
+                                            请问一下，为什么会出现报错Uncaught ReferenceError: require is not defined呢，require不是根本不需要定义么                                        </div>
+                                    </div>
+                                    <div class="mod-footer">
+                                        <div class="meta">
+                                            <span class="pull-right text-color-999">2019-07-14 21:02</span>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                                                                    </div>
+
+                        
+                                            </div>
+                    <!-- end 文章评论 -->
+
+                    <!-- 回复编辑器 -->
+                    <div class="aw-mod aw-article-replay-box">
+                        <a name="answer_form"></a>
+                                                <p align="center">要回复文章请先<a href="http://zhihu.geoscene.cn/account/login/">登录</a>或<a href="http://zhihu.geoscene.cn/account/register/">注册</a></p>
+                                            </div>
+                    <!-- end 回复编辑器 -->
+                </div>
+                <!-- 侧边栏 -->
+                <div class="col-sm-12 col-md-3 aw-side-bar hidden-sm hidden-xs">
+                    <!-- 发起人 -->
+                                        <div class="aw-mod user-detail">
+                        <div class="mod-head">
+                            <h3>发起人</h3>
+                        </div>
+                        <div class="mod-body">
+                            <dl>
+                                <dt class="pull-left aw-border-radius-5">
+                                    <a href="http://zhihu.geoscene.cn/people/myyouthlife"><img alt="江民彬" src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/15_avatar_mid.jpg"></a>
+                                </dt>
+                                <dd class="pull-left">
+                                    <a class="aw-user-name" href="http://zhihu.geoscene.cn/people/myyouthlife" data-id="15">江民彬</a>
+                                                                            <i class="icon-v i-vn" title="热心用户认证"></i>
+                                    
+                                                                        <p></p>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="mod-footer clearfix">
+                                                        <div class="aw-topic-bar">
+                                <div class="topic-bar clearfix">
+                                    <span class="pull-left text-color-999">
+                                        擅长话题 : &nbsp;
+                                    </span>
+                                                                        <span class="topic-tag">
+                                        <a href="http://zhihu.geoscene.cn/topic/ArcGIS+Server" class="text" data-id="38">ArcGIS Server</a>
+                                    </span>
+                                                                        <span class="topic-tag">
+                                        <a href="http://zhihu.geoscene.cn/topic/ArcGIS+API+for+JavaScript" class="text" data-id="64">ArcGIS API for JavaScript</a>
+                                    </span>
+                                                                        <span class="topic-tag">
+                                        <a href="http://zhihu.geoscene.cn/topic/ArcGIS+Python" class="text" data-id="78">ArcGIS Python</a>
+                                    </span>
+                                                                        <span class="topic-tag">
+                                        <a href="http://zhihu.geoscene.cn/topic/ArcGIS+Desktop" class="text" data-id="37">ArcGIS Desktop</a>
+                                    </span>
+                                                                    </div>
+                            </div>
+                                                    </div>
+                    </div>
+                                        <!-- end 发起人 -->
+
+                                        <!-- 推荐内容 -->
+                    <div class="aw-mod">
+                        <div class="mod-head">
+                            <h3>推荐内容</h3>
+                        </div>
+                        <div class="mod-body">
+                            <ul>
+                                                                <li>
+                                                                        <a href="http://zhihu.geoscene.cn/article/4030">ArcGIS API for JavaScript 4.16 局部场景添加自定义坐标系的场景图层（已修改）</a>
+                                                                    </li>
+                                                                <li>
+                                                                        <a href="http://zhihu.geoscene.cn/article/3770">浅析 Promise</a>
+                                                                    </li>
+                                                            </ul>
+                        </div>
+                    </div>
+                    <!-- end 推荐内容 -->
+                    
+                                        <!-- 相关问题 -->
+                    <div class="aw-mod aw-text-align-justify question-related-list">
+                        <div class="mod-head">
+                            <h3>相关问题</h3>
+                        </div>
+                        <div class="mod-body font-size-12">
+                            <ul>
+                                                                <li><a href="http://zhihu.geoscene.cn/question/12709">ArcGIS知乎上有哪些干货可以推荐？（持续更新中）</a></li>
+                                                                <li><a href="http://zhihu.geoscene.cn/question/12535">如何优雅的使用ArcGIS知乎？</a></li>
+                                                                <li><a href="http://zhihu.geoscene.cn/question/6614">建设ArcGIS知乎平台的目和意义？</a></li>
+                                                                <li><a href="http://zhihu.geoscene.cn/question/12037"> ArcGIS知乎社区改进意见征集</a></li>
+                                                                <li><a href="http://zhihu.geoscene.cn/question/15153">【抽奖结果已出】ArcGIS知乎社区活动 之 你不知道的地理空间革命【转发分享有奖】【附奖品寄送照片】</a></li>
+                                                                <li><a href="http://zhihu.geoscene.cn/question/12024">苹果系统下可以使用arcgis 吗?</a></li>
+                                                                <li><a href="http://zhihu.geoscene.cn/question/13447">请问ArcGIS适合在局域网内用javaweb做二次开发吗？</a></li>
+                                                                <li><a href="http://zhihu.geoscene.cn/question/13861">arcgis版本兼容性</a></li>
+                                                                <li><a href="http://zhihu.geoscene.cn/question/18607">ArcGIS 知乎社区活动 之 字幕组加鸡腿暨KBP字幕组招新【获奖名单公布与优秀作品展示】</a></li>
+                                                                <li><a href="http://zhihu.geoscene.cn/question/19341">ArcGIS 知乎社区活动 之 2018拒绝boring，来，在线答题赢kindle【结果已出，速来领奖】</a></li>
+                                                                <li><a href="http://zhihu.geoscene.cn/question/13773">请问大神们，怎么用ArcGIS做城镇间经济联系强度的图？</a></li>
+                                                            </ul>
+                        </div>
+                    </div>
+                    <!-- end 相关问题 -->
+                                        <!--微信二维码-->
+					<div class="aw-mod">
+	<div class="mod-body">
+		<img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/qrcode__1280.jpg" width="200px" height="200px">
+	</div>
+	<div class="mod-head">
+		<h3>——  扫技术支持中心微信服务号！</h3>
+		<h3>——  让ArcGIS知乎问答随时随地！</h3>
+	</div>
+	<!--Esri技术支持中文页面-->
+	<!-- <div class="mod-body"> -->
+		<!-- <a href="https://support.esri.com/zh-cn" target="_blank"> -->
+			<!-- <img src="uploads/downimg/esrisupport.jpg" width="200px" height="78px"> -->
+		<!-- </a> -->
+	<!-- </div> -->
+	<div class="mod-head">
+	</div>
+	<!--ArcGIS培训中心-->
+	<div class="mod-body">
+		<a href="http://www.higis.cn/" target="_blank">
+			<img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/arcgistraininglogo.png" width="200px" height="78px">
+		</a>
+	</div>
+	<div class="mod-head">
+	</div>
+	<!--开发竞赛banner-->
+	<div class="mod-body">
+		<a href="http://contest.esrichina.com.cn/" target="_blank">
+			<img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/contest new logo .png" width="200px" height="78px">
+		</a>
+	</div>
+	<div class="mod-head">
+	</div>
+	<!--ENVI技术殿堂-->
+	<div class="mod-body">
+		<a href="http://blog.sina.com.cn/enviidl" target="_blank">
+			<img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/envi_blog_2016_logo_2.png" width="200px" height="78px">
+		</a>
+	</div>
+	<div class="mod-head">
+	</div>
+	<!--ArcGIS在线体验中心
+	<div class="mod-body">
+		<a href="http://solutions.arcgisonline.cn/" target="_blank">
+			<img src="http://images.esrichina.com.cn/arcigssolutionslogo-1.jpg" width="200px" height="78px">
+		</a>
+	</div>-->
+</div>                </div>
+                <!-- end 侧边栏 -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var ANSWER_EDIT_TIME = 0;
+
+    $(document).ready(function () {
+        if ($('.aw-article-vote.disabled').length)
+        {
+            $('.aw-article-vote.disabled a').attr('onclick', '');
+        }
+
+        AWS.at_user_lists('#wmd-input');
+
+        AWS.Init.init_article_comment_box($('.aw-article-comment'));
+    });
+</script>
+
+<div class="aw-footer-wrap">
+	<div class="aw-footer">
+	<!--	<a href="http://www.esrichina.com.cn/" target="_blank">Esri中国</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="http://resources.arcgis.com/en/home/" target="_blank">Esri资源中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://developers.arcgis.com/" target="_blank">Esri开发者中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="http://esri.github.io/" target="_blank">Esri开源中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="http://solutions.arcgis.com/" target="_blank">Esri解决方案中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://support.esri.com/zh-cn/" target="_blank">Esri在线支持中心</a>  -->
+		<br>
+		Copyright © 2021<span class="hidden-xs"> - 京ICP备05021261号-1, All Rights Reserved</span>
+
+		<!--<span class="hidden-xs">Powered By <a href="http://www.wecenter.com/?copyright" target="blank">WeCenter 3.1.7</a></span>-->
+
+			</div>
+</div>
+
+<a class="aw-back-top hidden-xs" title="返回顶部" href="javascript:;" onclick="$.scrollTo(1, 600, {queue:true});"><i class="icon icon-up"></i></a>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c35f3502cc64d088ee8e2f3d4e697682";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3fb2fd45cd94e207a27c56589e8607fa";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- DO NOT REMOVE -->
+<div id="aw-ajax-box" class="aw-ajax-box"></div>
+
+<div style="display:none;" id="__crond"><img src="./ArcGIS API for JavaScript入门教程_第一章_介绍 - ArcGIS知乎-新一代ArcGIS问答社区_files/1612102235" width="1" height="1"></div>
+
+<!-- Escape time: 0.109375 --><!-- / DO NOT REMOVE -->
+
+
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body></html>

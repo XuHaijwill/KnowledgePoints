@@ -124,6 +124,8 @@ https://developers.arcgis.com/python/guide/
 
 [arcgis开发指南](https://developers.arcgis.com/javascript/latest/)
 
+[ArcGIS API for JavaScript 入门教程目录](https://www.cnblogs.com/onsummer/p/9080204.html)
+
 [ArcGIS API For JS官方文档解析教程](https://blog.csdn.net/gisdoer/article/details/88079171)
 
 [X北辰北](https://xuqwblog.blog.csdn.net/)
@@ -162,9 +164,21 @@ https://resources.arcgis.com/zh-cn/help/
 ```
 https://zhuanlan.zhihu.com/c_165676639
 
+https://desktop.arcgis.com/zh-cn/arcmap/10.3/map/working-with-layers/adding-layers-to-a-map.htm
+
 ```
 
+### 学习博客（重要）
 
+https://www.cnblogs.com/onsummer/p/9091052.html
+
+### ArcGIS API for JavaScript之基础篇
+
+https://blog.csdn.net/weixin_41665391/article/details/79342758
+
+### ArcGIS api for javascript全套教程
+
+https://www.cnblogs.com/xiaotian-222/category/960683.html
 
 ## 学习视频
 
@@ -193,6 +207,16 @@ https://www.bilibili.com/video/BV1qK411N7sr/?spm_id_from=333.788.videocard.15
 ### 第九章 ArcGIS API for JavaScript应用开发
 
 https://www.bilibili.com/video/BV1pi4y187oL/?spm_id_from=333.788.videocard.1
+
+![](D:\workspaces\git\github\KnowledgePoints\notes\acgis-webjs\images\ArcGIS API for JavaScript应用开发\003.png)
+
+https://community.esri.com/community/developers/web-developers/arcgis-api-for-javascript/
+
+http://zhihu.geoscene.cn/
+
+http://zhihu.geoscene.cn/
+
+https://developers.arcgis.com/downloads/api-and-sdks?product=javascript
 
 ### 不一样的前端，JavaScript之arcgis api教程
 
@@ -232,8 +256,20 @@ https://www.youtube.com/watch?v=zQTkkFUhzLI
 
 
 
+## arcgis api（三）arcgis api for js 4.x 加载高德地图、谷歌地图、天地图
+
+https://blog.csdn.net/zhengjie0722/article/details/81780860?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-8.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-8.control
+
 ## 学习基础视频
 
 https://www.bilibili.com/video/BV11D4y197wM/?spm_id_from=333.788.videocard.5
 
 https://www.bilibili.com/video/BV1qK411N7sr?from=search&seid=17644116689783027491
+
+
+
+## 使用操作
+
+### 创建不同类型地图（超图）
+
+![](D:\workspaces\git\github\KnowledgePoints\notes\acgis-webjs\images\acg-05.png)

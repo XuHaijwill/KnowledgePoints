@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/ -->
+<html class="js" lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.giserdqy.com/xmlrpc.php">	
+	<meta name="baidu-site-verification" content="58B1SsHF1m">
+	<meta name="msvalidate.01" content="EC27F4C8475D6FE44DD5998FFE8B3702">
+	<meta name="KeyWords" content="gis,webgis,arcgis,arcengine,arcpy,openlayers,leaflet,geoserver,cesium,threejs,java,javascript,python,c#,html5,postgis,postgresql,oracle,mysql,mongodb,linux,centos,windows,nodejs,macos,geoai">
+	
+	<script type="text/javascript" async="" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/auto_dup"></script><script charset="utf-8" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/s.js.下载"></script><script src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/hm.js.下载"></script><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+
+	<!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者</title>
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<link rel="canonical" href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者">
+	<meta property="og:description" content="ArcGIS API For JS官方文档解析目录     ArcGIS ...">
+	<meta property="og:url" content="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/">
+	<meta property="og:site_name" content="GIS开发者">
+	<meta property="article:published_time" content="2018-12-17T02:37:53+00:00">
+	<meta property="article:modified_time" content="2019-05-16T03:33:12+00:00">
+	<meta property="og:image" content="https://mtr-1.oss-cn-beijing.aliyuncs.com/qyblog/2019/04/download.png?x-oss-process=image%2Fformat,webp">
+	<meta property="og:image:width" content="90">
+	<meta property="og:image:height" content="90">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="作者">
+	<meta name="twitter:data1" content="giser">
+	<meta name="twitter:label2" content="预计阅读时间">
+	<meta name="twitter:data2" content="2分">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.giserdqy.com/#website","url":"https://www.giserdqy.com/","name":"GIS\u5f00\u53d1\u8005","description":"gis,openlayers,leaflet,gis\u5e94\u7528,geoai,geoserver,cesium,python,arcpy,arcmap,webgis","publisher":{"@id":"https://www.giserdqy.com/#/schema/person/c1b8ed12dcd0e5dfc1d5f6464e517f22"},"potentialAction":[{"@type":"SearchAction","target":"https://www.giserdqy.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"zh-CN"},{"@type":"ImageObject","@id":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#primaryimage","inLanguage":"zh-CN","url":"https://mtr-1.oss-cn-beijing.aliyuncs.com/qyblog/2019/04/download.png?x-oss-process=image%2Fformat,webp","width":90,"height":90},{"@type":"WebPage","@id":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#webpage","url":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/","name":"ArcGIS API For JavaScript\u5b98\u65b9\u6587\u6863\uff08\u4e00\uff09\u4e4b\u9ed8\u8ba4API\u914d\u7f6e - GIS\u5f00\u53d1\u8005","isPartOf":{"@id":"https://www.giserdqy.com/#website"},"primaryImageOfPage":{"@id":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#primaryimage"},"datePublished":"2018-12-17T02:37:53+00:00","dateModified":"2019-05-16T03:33:12+00:00","breadcrumb":{"@id":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#breadcrumb"},"inLanguage":"zh-CN","potentialAction":[{"@type":"ReadAction","target":["https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/"]}]},{"@type":"BreadcrumbList","@id":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.giserdqy.com/","url":"https://www.giserdqy.com/","name":"\u9996\u9875"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://www.giserdqy.com/%e5%8d%9a%e5%ae%a2/","url":"https://www.giserdqy.com/%e5%8d%9a%e5%ae%a2/","name":"\u535a\u5ba2"}},{"@type":"ListItem","position":3,"item":{"@type":"WebPage","@id":"https://www.giserdqy.com/secdev/","url":"https://www.giserdqy.com/secdev/","name":"\u4e8c\u6b21\u5f00\u53d1"}},{"@type":"ListItem","position":4,"item":{"@type":"WebPage","@id":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/","url":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/","name":"ArcGIS API For JavaScript\u5b98\u65b9\u6587\u6863"}},{"@type":"ListItem","position":5,"item":{"@type":"WebPage","@id":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/","url":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/","name":"ArcGIS API For JavaScript\u5b98\u65b9\u6587\u6863\uff08\u4e00\uff09\u4e4b\u9ed8\u8ba4API\u914d\u7f6e"}}]},{"@type":"Article","@id":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#article","isPartOf":{"@id":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#webpage"},"author":{"@id":"https://www.giserdqy.com/#/schema/person/c1b8ed12dcd0e5dfc1d5f6464e517f22"},"headline":"ArcGIS API For JavaScript\u5b98\u65b9\u6587\u6863\uff08\u4e00\uff09\u4e4b\u9ed8\u8ba4API\u914d\u7f6e","datePublished":"2018-12-17T02:37:53+00:00","dateModified":"2019-05-16T03:33:12+00:00","mainEntityOfPage":{"@id":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#webpage"},"publisher":{"@id":"https://www.giserdqy.com/#/schema/person/c1b8ed12dcd0e5dfc1d5f6464e517f22"},"image":{"@id":"https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#primaryimage"},"keywords":"ArcGIS API For JavaScript\u5b98\u65b9\u6587\u6863\uff08\u4e00\uff09\u4e4b\u9ed8\u8ba4API\u914d\u7f6e,arcgis api for js","articleSection":"ArcGIS API For JavaScript\u5b98\u65b9\u6587\u6863,\u7cbe\u9009\u6587\u7ae0","inLanguage":"zh-CN"},{"@type":["Person","Organization"],"@id":"https://www.giserdqy.com/#/schema/person/c1b8ed12dcd0e5dfc1d5f6464e517f22","name":"giser","image":{"@type":"ImageObject","@id":"https://www.giserdqy.com/#personlogo","inLanguage":"zh-CN","url":"https://secure.gravatar.com/avatar/d5164311385380c5e297faff19021560?s=96&d=monsterid&r=r","caption":"giser"},"logo":{"@id":"https://www.giserdqy.com/#personlogo"},"sameAs":["http://www.giserdqy.com"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://www.giserdqy.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="GIS开发者 » Feed" href="https://www.giserdqy.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="GIS开发者 » 评论Feed" href="https://www.giserdqy.com/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.giserdqy.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/wp-emoji-release.min.js.下载" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/style.css" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--huge: 42px;--wp--preset--font-style--normal: normal;--wp--preset--font-style--italic: italic;--wp--preset--font-weight--100: 100;--wp--preset--font-weight--200: 200;--wp--preset--font-weight--300: 300;--wp--preset--font-weight--400: 400;--wp--preset--font-weight--500: 500;--wp--preset--font-weight--600: 600;--wp--preset--font-weight--700: 700;--wp--preset--font-weight--800: 800;--wp--preset--font-weight--900: 900;--wp--preset--text-decoration--underline: underline;--wp--preset--text-decoration--strikethrough: line-through;--wp--preset--text-transform--uppercase: uppercase;--wp--preset--text-transform--lowercase: lowercase;--wp--preset--text-transform--capitalize: capitalize;}.has-black-color{color: #000000;}.has-black-background-color{background-color: #000000;}.has-cyan-bluish-gray-color{color: #abb8c3;}.has-cyan-bluish-gray-background-color{background-color: #abb8c3;}.has-white-color{color: #ffffff;}.has-white-background-color{background-color: #ffffff;}.has-pale-pink-color{color: #f78da7;}.has-pale-pink-background-color{background-color: #f78da7;}.has-vivid-red-color{color: #cf2e2e;}.has-vivid-red-background-color{background-color: #cf2e2e;}.has-luminous-vivid-orange-color{color: #ff6900;}.has-luminous-vivid-orange-background-color{background-color: #ff6900;}.has-luminous-vivid-amber-color{color: #fcb900;}.has-luminous-vivid-amber-background-color{background-color: #fcb900;}.has-light-green-cyan-color{color: #7bdcb5;}.has-light-green-cyan-background-color{background-color: #7bdcb5;}.has-vivid-green-cyan-color{color: #00d084;}.has-vivid-green-cyan-background-color{background-color: #00d084;}.has-pale-cyan-blue-color{color: #8ed1fc;}.has-pale-cyan-blue-background-color{background-color: #8ed1fc;}.has-vivid-cyan-blue-color{color: #0693e3;}.has-vivid-cyan-blue-background-color{background-color: #0693e3;}.has-vivid-purple-color{color: #9b51e0;}.has-vivid-purple-background-color{background-color: #9b51e0;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);}.has-cool-to-warm-spectrum-gradient-background{background: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);}.has-blush-light-purple-gradient-background{background: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);}.has-blush-bordeaux-gradient-background{background: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);}.has-luminous-dusk-gradient-background{background: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);}.has-pale-ocean-gradient-background{background: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);}.has-electric-grass-gradient-background{background: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);}.has-midnight-gradient-background{background: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);}.has-small-font-size{font-size: 13px;}.has-normal-font-size{font-size: 16px;}.has-medium-font-size{font-size: 20px;}.has-large-font-size{font-size: 36px;}.has-huge-font-size{font-size: 42px;}.has-normal-font-style{font-style: normal;}.has-italic-font-style{font-style: italic;}.has-100-font-weight{font-weight: 100;}.has-200-font-weight{font-weight: 200;}.has-300-font-weight{font-weight: 300;}.has-400-font-weight{font-weight: 400;}.has-500-font-weight{font-weight: 500;}.has-600-font-weight{font-weight: 600;}.has-700-font-weight{font-weight: 700;}.has-800-font-weight{font-weight: 800;}.has-900-font-weight{font-weight: 900;}.has-underline-text-decoration{text-decoration: underline;}.has-strikethrough-text-decoration{text-decoration: line-through;}.has-uppercase-text-transform{text-transform: uppercase;}.has-lowercase-text-transform{text-transform: lowercase;}.has-capitalize-text-transform{text-transform: capitalize;}
+</style>
+<link rel="stylesheet" id="scroll-top-css-css" href="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/scroll-top.css" type="text/css" media="all">
+<link rel="stylesheet" id="ez-icomoon-css" href="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ez-toc-css" href="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/screen.min.css" type="text/css" media="all">
+<style id="ez-toc-inline-css" type="text/css">
+div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 700;}div#ez-toc-container ul li {font-size: 95%;}div#ez-toc-container {background: #bcbcbc;border: 1px solid #ddd;}div#ez-toc-container p.ez-toc-title {color: #0b8ec6;}div#ez-toc-container ul.ez-toc-list a {color: #428bca;}div#ez-toc-container ul.ez-toc-list a:hover {color: #2a6496;}div#ez-toc-container ul.ez-toc-list a:visited {color: #428bca;}
+</style>
+<link rel="stylesheet" id="kontrast-style-css" href="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/style(1).css" type="text/css" media="all">
+<style id="kontrast-style-inline-css" type="text/css">
+body { font-family: Arial, sans-serif; }
+.boxed #wrapper, .container-inner { max-width: 1366px; }
+
+::selection { background-color: #7781ff; }
+::-moz-selection { background-color: #7781ff; }
+
+a,
+.themeform label .required,
+.toggle-search:hover, 
+.toggle-search.active,
+.post-hover:hover .post-title a,
+.post-title a:hover,
+.post-nav li a:hover span,
+.post-nav li a:hover i,
+.sidebar.dark .post-nav li a:hover i,
+.sidebar.dark .post-nav li a:hover span,
+.content .post-nav li a:hover i,
+.post-related a:hover,
+.widget a:hover,
+.widget_rss ul li a,
+.widget_calendar a,
+.alx-tabs-nav li.active a,
+.alx-tab .tab-item-category a,
+.alx-posts .post-item-category a,
+.alx-tab li:hover .tab-item-title a,
+.alx-tab li:hover .tab-item-comment a,
+.alx-posts li:hover .post-item-title a,
+.dark .widget a:hover,
+.dark .widget_rss ul li a,
+.dark .widget_calendar a,
+.dark .alx-tab .tab-item-category a,
+.dark .alx-posts .post-item-category a,
+.dark .alx-tab li:hover .tab-item-title a,
+.dark .alx-tab li:hover .tab-item-comment a,
+.dark .alx-posts li:hover .post-item-title a,
+.comment-tabs li.active a,
+.comment-awaiting-moderation,
+.child-menu a:hover,
+.child-menu .current_page_item > a,
+.light-sidebar .child-menu a:hover,
+.light-sidebar .child-menu .current_page_item > a,
+.wp-pagenavi a { color: #7781ff; }
+
+.themeform input[type="button"],
+.themeform input[type="reset"],
+.themeform input[type="submit"],
+.themeform button[type="button"],
+.themeform button[type="reset"],
+.themeform button[type="submit"],
+.sidebar-toggle,
+#flexslider-featured .flex-control-nav li a.flex-active,
+.post-tags a:hover,
+
+.widget_calendar caption,
+.dark .widget_calendar caption,
+.author-bio .bio-avatar:after,
+.commentlist li.bypostauthor > .comment-body:after,
+.commentlist li.comment-author-admin > .comment-body:after,
+.jp-play-bar,
+.jp-volume-bar-value { background-color: #7781ff; }
+
+#header .container-inner > .pad,
+.post-format .format-container { border-color: #7781ff; }
+
+#nav-mobile .nav > li > a:hover, 
+#nav-mobile .nav > li:hover > a,
+#nav-mobile .nav li.current_page_item:hover > a, 
+#nav-mobile .nav li.current-menu-item:hover > a,
+#nav-mobile .nav li.current-menu-ancestor:hover > a,
+#nav-mobile .nav li.current-post-parent:hover > a,
+#nav-topbar .nav > li > a:hover, 
+#nav-topbar .nav > li:hover > a,
+#nav-topbar .nav li.current_page_item:hover > a, 
+#nav-topbar .nav li.current-menu-item:hover > a,
+#nav-topbar .nav li.current-menu-ancestor:hover > a,
+#nav-topbar .nav li.current-post-parent:hover > a,
+.alx-tabs-nav li.active a,
+.dark .alx-tabs-nav li.active a,
+.comment-tabs li.active a,
+.wp-pagenavi a:hover,
+.wp-pagenavi a:active,
+.wp-pagenavi span.current { border-bottom-color: #7781ff!important; }				
+				
+
+.post-comments { background-color: #1084eb; }
+.post-comments span:before { border-right-color: #1084eb; border-top-color: #1084eb; }				
+				
+
+#nav-header.nav-container { background-color: #343745; }
+@media only screen and (min-width: 720px) {
+	#nav-header .nav ul { background-color: #343745; }
+}			
+				
+
+#nav-footer.nav-container,
+#footer-bottom #back-to-top { background-color: #7ca4ff; }
+@media only screen and (min-width: 720px) {
+	#nav-footer .nav ul { background-color: #7ca4ff; }
+}			
+				
+#footer-bottom { background-color: #333742; }
+img { -webkit-border-radius: 4px; border-radius: 4px; }
+.site-title a, .site-description { color: #757fff; }
+
+</style>
+<link rel="stylesheet" id="kontrast-responsive-css" href="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" id="kontrast-font-awesome-css" href="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/all.min.css" type="text/css" media="all">
+<script type="text/javascript" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/jquery.min.js.下载" id="jquery-core-js"></script>
+<script type="text/javascript" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/jquery-migrate.min.js.下载" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/jquery.flexslider.min.js.下载" id="kontrast-flexslider-js"></script>
+<link rel="https://api.w.org/" href="https://www.giserdqy.com/wp-json/"><link rel="alternate" type="application/json" href="https://www.giserdqy.com/wp-json/wp/v2/posts/11826"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.giserdqy.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.giserdqy.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.6">
+<link rel="shortlink" href="https://www.giserdqy.com/?p=11826">
+<link rel="alternate" type="application/json+oembed" href="https://www.giserdqy.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.giserdqy.com%2Fsecdev%2Farcgis-api-for-js-docs%2F11826%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.giserdqy.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.giserdqy.com%2Fsecdev%2Farcgis-api-for-js-docs%2F11826%2F&amp;format=xml">
+<script type="text/javascript">
+	window._wp_rp_static_base_url = 'https://wprp.sovrn.com/static/';
+	window._wp_rp_wp_ajax_url = "https://www.giserdqy.com/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.6.4';
+	window._wp_rp_post_id = '11826';
+	window._wp_rp_num_rel_posts = '6';
+	window._wp_rp_thumbnails = false;
+	window._wp_rp_post_title = 'ArcGIS+API+For+JavaScript%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%EF%BC%88%E4%B8%80%EF%BC%89%E4%B9%8B%E9%BB%98%E8%AE%A4API%E9%85%8D%E7%BD%AE';
+	window._wp_rp_post_tags = ['arcgis+api+for+js', 'arcgis+api+for+javascript%3F', 'arcgis+api+for+javascript%3F', '%3F%3F%3F%3F', 'share', 'function', 'overrid', 'origin', 'a', 'updat', 'host', 'resourc', 'properti', '2', 'color', 'javascript', 'api'];
+	window._wp_rp_promoted_content = true;
+</script>
+<!-- Scroll Top -->
+<style id="scrolltop-custom-style">
+		#scrollUp {border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;font-size:25px;opacity:0.7;filter:alpha(opacity=70);bottom:20px;right:20px;color:#ffffff;background:#000000;}
+		#scrollUp:hover{opacity:1;filter:alpha(opacity=100);}
+		
+		</style>
+<!-- End Scroll Top - https://wordpress.org/plugins/scroll-top/ -->
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+	<link rel="icon" href="https://mtr-1.oss-cn-beijing.aliyuncs.com/qyblog/2020/04/gis%E5%BC%80%E5%8F%91%E8%80%85%E5%B0%8F%E7%A8%8B%E5%BA%8F.png?x-oss-process=image%2Fformat,webp" sizes="32x32">
+<link rel="icon" href="https://mtr-1.oss-cn-beijing.aliyuncs.com/qyblog/2020/04/gis%E5%BC%80%E5%8F%91%E8%80%85%E5%B0%8F%E7%A8%8B%E5%BA%8F.png?x-oss-process=image%2Fformat,webp" sizes="192x192">
+<link rel="apple-touch-icon" href="https://mtr-1.oss-cn-beijing.aliyuncs.com/qyblog/2020/04/gis%E5%BC%80%E5%8F%91%E8%80%85%E5%B0%8F%E7%A8%8B%E5%BA%8F.png?x-oss-process=image%2Fformat,webp">
+<meta name="msapplication-TileImage" content="https://mtr-1.oss-cn-beijing.aliyuncs.com/qyblog/2020/04/gis开发者小程序.png?x-oss-process=image%2Fformat,webp">
+		<style type="text/css" id="wp-custom-css">
+			.h1,h2,h3,h4,h5,h6{color:black;}		</style>
+		<style id="kirki-inline-styles"></style><link rel="stylesheet" type="text/css" href="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/prettify.css"><script src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/share.js.下载"></script><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><link rel="stylesheet" href="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/share_style0_24.css"><style>html #hm_t_24900 .hm-t-main,html #hm_t_24900 .hm-t-side-arrow,html #hm_t_24900 .hm-t-unfold-button{bottom:2px;_top:expression(eval(document.documentElement.scrollTop+(document.documentElement.clientHeight||document.body.clientHeight)-this.offsetHeight-2-0));}html #hm_t_24900.hm-t-container,html #hm_t_24900.hm-t-container * {box-sizing:content-box;margin:0;padding:0;float:none;clear:none;overflow:hidden;white-space:nowrap;word-wrap:normal;border:0;background:none;width:auto;height:auto;max-width:none;min-width:none;max-height:none;min-height:none;border-radius:0;box-shadow:none;transition:none;}html #hm_t_24900 .hm-t-list {position:relative;*zoom:1;}html #hm_t_24900 .hm-t-list-txt {padding:12px 12px 0 0;}html #hm_t_24900 .hm-t-item {display:list-item;text-align:left;float:left;list-style:none!important;}html #hm_t_24900 .hm-t-item-img {margin-top:12px;}html #hm_t_24900 .hm-t-img,html #hm_t_24900 .hm-t-img-title {display:block;margin:auto;}html #hm_t_24900 .hm-t-img {border:1px solid #cedbeb;}html #hm_t_24900 .hm-t-img img {border:none;}html #hm_t_24900 .hm-t-img-title {white-space:normal;margin-top:6px;}html #hm_t_24900 .hm-t-txt-wrapper {padding-left:20px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAyCAMAAABMDIr8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCNEMwQzIxMzExRjAxMUUzODhDMkE2MzkxMTc1ODQyMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCNEMwQzIxNDExRjAxMUUzODhDMkE2MzkxMTc1ODQyMiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkI0QzBDMjExMTFGMDExRTM4OEMyQTYzOTExNzU4NDIyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkI0QzBDMjEyMTFGMDExRTM4OEMyQTYzOTExNzU4NDIyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+qPUs2wAAABtQTFRFDEqCAEF8DUqCwM7dwM3dDkuDDUuDAEB7////w7r9TAAAAAl0Uk5T//////////8AU094EgAAACtJREFUeNpiYAcCBgjBCCQYgSQDBxAML4KZlZWFAehNNhDBwMDCxMQMEGAA7HcF3baHdjUAAAAASUVORK5CYII=) no-repeat;*background-image:url(http://ecma.bdimg.com/holmes/t-list-styles.png);}html #hm_t_24900 .hm-t-txt {white-space:normal;}html #hm_t_24900 .hm-t-footer {position:relative;height:22px;}html #hm_t_24900 .hm-t-footer a {position:absolute;top:0;right:12px;font-family:arial,sans-serif;font-size:12px;color:#aeaeae;text-decoration:none;line-height:22px;}html #hm_t_24900 .hm-t-side-arrow {width:7px;height:40px;position:fixed;right: 45px;z-index:99998;_position:absolute;_left:expression(eval(document.documentElement.scrollLeft+(document.documentElement.clientWidth||document.body.clientWidth)-this.offsetWidth-46));background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAALCAYAAACzkJeoAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowQzAxMTU3REQ3NTAxMUUzQkU2RUFEMjdEMkI0QkM4NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowQzAxMTU3RUQ3NTAxMUUzQkU2RUFEMjdEMkI0QkM4NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjBDMDExNTdCRDc1MDExRTNCRTZFQUQyN0QyQjRCQzg1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjBDMDExNTdDRDc1MDExRTNCRTZFQUQyN0QyQjRCQzg1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7bPU3wAAAHRJREFUeNpi+Pz58/9Xr151ATHj////GZAxw79///5DFcwDYmYUyf9QAFWwEYg5MSSRFBwAYgGQJMgeoBIE+Pr1K8O3b98uAJmeGJIgAJQEKdrDgi4B1XkJyIzFZudBmJ34XYvkz/lAzILiT6hEN7YQAggwAIuw1+QHMhc7AAAAAElFTkSuQmCC) no-repeat 0 center;*background-image:url(http://ecma.bdimg.com/holmes/app-side-arrow-right-png8.png);}html #hm_t_24900 .hm-t-unfold-button {position:fixed;right:2px;z-index:99998;display:block;width:40px;text-align:center;white-space:normal;text-decoration:none;_position:absolute;}html #hm_t_24900 .hm-t-unfold-button-txt {color:#fff;background:#666;}html {_background-image:url(about:blank);_background-attachment:fixed;}html #hm_t_24900.hm-t-container {overflow:visible;}html #hm_t_24900 .hm-t-main {position:fixed;right:52px;z-index:99998;_position:absolute;_left:expression(eval(document.documentElement.scrollLeft+(document.documentElement.clientWidth||document.body.clientWidth)-this.offsetWidth-2-50));}html #hm_t_24900 .hm-t-main img {border:1px solid #eaeaea;}html #hm_t_24900 .hm-t-unfold-button {position:fixed;right:2px;z-index:99998;display:block;width:40px;text-align:center;white-space:normal;text-decoration:none;_position:absolute;}html #hm_t_24900 .hm-t-unfold-button-txt {color:#fff;background:#666;}html #hm_t_24900 .hm-t-unfold-button-barcode {height:40px!important;background:url(http://ecma.bdimg.com/holmes/app-barcode.png);}</style><link rel="stylesheet" href="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/imgshare.css"></head>
+
+<body class="post-template-default single single-post postid-11826 single-format-standard custom-background col-2cl boxed light-sidebar topbar-enabled mobile-menu s1-collapse s2-collapse"><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
+		
+
+<script>
+       var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?bff2a83625abe8b965af9427f27ee370";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4651446704375771",
+        enable_page_level_ads: true
+    });
+</script>
+
+<a class="skip-link screen-reader-text" href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#page">Skip to content</a>
+
+<div id="wrapper">
+
+	<header id="header">
+		
+					<nav class="nav-container group" id="nav-mobile">
+				<div class="nav-toggle"><i class="fas fa-bars"></i></div>
+				<div class="nav-text"><!-- put your mobile menu text here --></div>
+				<div class="nav-wrap container"><ul id="menu-%e6%a0%b8%e5%bf%83%e7%9b%ae%e5%bd%95" class="nav container-inner group"><li id="menu-item-36390" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-36390"><a href="https://www.giserdqy.com/">首页</a></li>
+<li id="menu-item-35152" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35152"><a href="https://www.giserdqy.com/gis/gisknowledge/">GIS理论</a></li>
+<li id="menu-item-35149" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-35149"><a href="https://www.giserdqy.com/secdev/">二次开发</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-35160" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35160"><a href="https://www.giserdqy.com/secdev/leaflet/">leaflet</a></li>
+	<li id="menu-item-35161" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35161"><a href="https://www.giserdqy.com/secdev/openlayers/">openlayers</a></li>
+	<li id="menu-item-35711" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35711"><a href="https://www.giserdqy.com/secdev/mapboxgl/">mapboxgl</a></li>
+	<li id="menu-item-35164" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35164"><a href="https://www.giserdqy.com/gis/baidumap/">百度地图开发</a></li>
+	<li id="menu-item-35151" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35151"><a href="https://www.giserdqy.com/arcgis/arcpy/">ArcPy</a></li>
+	<li id="menu-item-35159" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35159"><a href="https://www.giserdqy.com/secdev/arcengine/">ArcEngine</a></li>
+	<li id="menu-item-35162" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35162"><a href="https://www.giserdqy.com/secdev/geotools/">geotools</a></li>
+	<li id="menu-item-36931" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36931"><a href="https://www.giserdqy.com/secdev/geoserver-secdev/">geoserver</a></li>
+	<li id="menu-item-36930" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36930"><a href="https://www.giserdqy.com/secdev/qgis/">QGIS</a></li>
+	<li id="menu-item-35167" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35167"><a href="https://www.giserdqy.com/gis/opengis/3d/cesium/">cesium</a></li>
+	<li id="menu-item-35150" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35150"><a href="https://www.giserdqy.com/arcgis/">ArcGIS</a>
+	<ul class="sub-menu" style="display: none;">
+		<li id="menu-item-35153" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35153"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-javascript/">arcgis api for javascript</a>
+		<ul class="sub-menu" style="display: none;">
+			<li id="menu-item-35185" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-35185"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/">ArcGIS API For JavaScript官方文档</a></li>
+			<li id="menu-item-35157" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35157"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-javascript/3-x/">3.x</a></li>
+			<li id="menu-item-35158" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35158"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-javascript/4-x/">4.x</a></li>
+		</ul>
+</li>
+		<li id="menu-item-35156" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35156"><a href="https://www.giserdqy.com/arcgis/arcgisserver/">ArcGISServer</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-35163" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35163"><a href="https://www.giserdqy.com/algorithm/">算法</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-35165" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35165"><a href="https://www.giserdqy.com/gdal/">GDAL</a></li>
+	<li id="menu-item-35172" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35172"><a href="https://www.giserdqy.com/proj/">PROJ</a></li>
+	<li id="menu-item-35175" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35175"><a href="https://www.giserdqy.com/ogr/">OGR</a></li>
+	<li id="menu-item-35166" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35166"><a href="https://www.giserdqy.com/geotrellis/">Geotrellis</a></li>
+</ul>
+</li>
+<li id="menu-item-35181" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35181"><a href="https://www.giserdqy.com/gisnews/">GIS前沿</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-35182" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35182"><a href="https://www.giserdqy.com/gisbim/">GIS+BIM</a></li>
+	<li id="menu-item-35183" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35183"><a href="https://www.giserdqy.com/gisai/">GIS人工智能</a></li>
+	<li id="menu-item-35184" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35184"><a href="https://www.giserdqy.com/geospatial/">GIS大数据</a></li>
+	<li id="menu-item-35186" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35186"><a href="https://www.giserdqy.com/gis/opengisnews/">GIS新闻</a></li>
+</ul>
+</li>
+<li id="menu-item-35188" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35188"><a href="https://www.giserdqy.com/geoanalysis/">数据分析</a></li>
+<li id="menu-item-35548" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35548"><a href="https://www.giserdqy.com/frontend/">前端</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-35212" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35212"><a href="https://www.giserdqy.com/frontend/js/">JavaScript</a></li>
+	<li id="menu-item-35716" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35716"><a href="https://www.giserdqy.com/frontend/vue/">vue</a></li>
+	<li id="menu-item-35214" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35214"><a href="https://www.giserdqy.com/frontend/es6/">es6</a></li>
+	<li id="menu-item-35209" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35209"><a href="https://www.giserdqy.com/frontend/css/">CSS</a></li>
+	<li id="menu-item-35210" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35210"><a href="https://www.giserdqy.com/frontend/h5/">html5</a></li>
+</ul>
+</li>
+<li id="menu-item-35549" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35549"><a href="https://www.giserdqy.com/backend/">后端</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-35208" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35208"><a href="https://www.giserdqy.com/backend/net/">C#</a></li>
+	<li id="menu-item-35211" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35211"><a href="https://www.giserdqy.com/backend/java/">Java</a></li>
+	<li id="menu-item-35717" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35717"><a href="https://www.giserdqy.com/backend/redis/">redis</a></li>
+	<li id="menu-item-35215" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35215"><a href="https://www.giserdqy.com/backend/nodejs-mysql/">nodejs</a></li>
+	<li id="menu-item-35216" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35216"><a href="https://www.giserdqy.com/backend/py/">Python</a>
+	<ul class="sub-menu" style="display: none;">
+		<li id="menu-item-35218" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35218"><a href="https://www.giserdqy.com/backend/py/pybasic/">Python教程</a></li>
+		<li id="menu-item-35220" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35220"><a href="https://www.giserdqy.com/backend/py/scrapy/">Scrapy教程</a></li>
+		<li id="menu-item-35219" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35219"><a href="https://www.giserdqy.com/backend/py/python_data_science/">Python数据分析</a></li>
+		<li id="menu-item-35217" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35217"><a href="https://www.giserdqy.com/backend/py/pyspider/">pyspider</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-35514" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35514"><a href="https://www.giserdqy.com/os/">操作系统</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-35515" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35515"><a href="https://www.giserdqy.com/os/windows/">windows</a></li>
+	<li id="menu-item-35516" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35516"><a href="https://www.giserdqy.com/os/centos/">centos</a></li>
+	<li id="menu-item-35517" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35517"><a href="https://www.giserdqy.com/os/ubuntu/">ubuntu</a></li>
+	<li id="menu-item-35541" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35541"><a href="https://www.giserdqy.com/os/macos/">macos</a></li>
+</ul>
+</li>
+<li id="menu-item-35543" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35543"><a href="https://www.giserdqy.com/database/">数据库</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-35176" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35176"><a href="https://www.giserdqy.com/database/postgresql/">PostGreSQL</a></li>
+	<li id="menu-item-35177" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35177"><a href="https://www.giserdqy.com/database/mongodb/">MongoDB</a></li>
+	<li id="menu-item-35178" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35178"><a href="https://www.giserdqy.com/database/mysql/">MySQL</a></li>
+	<li id="menu-item-35179" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35179"><a href="https://www.giserdqy.com/database/oracle/">Oracle</a>
+	<ul class="sub-menu" style="display: none;">
+		<li id="menu-item-35294" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35294"><a href="https://www.giserdqy.com/oraclespatial/">oraclespatial</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-35545" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35545"><a href="https://www.giserdqy.com/gisdata/">GIS数据</a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-35542" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35542"><a href="https://www.giserdqy.com/gisdata/datasource/">数据源</a></li>
+	<li id="menu-item-35546" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35546"><a href="https://www.giserdqy.com/gisdata/arcmap/">ArcMap</a></li>
+	<li id="menu-item-35547" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35547"><a href="https://www.giserdqy.com/gisdata/cad/">CAD</a></li>
+	<li id="menu-item-36211" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36211"><a href="https://www.giserdqy.com/gis/opengis/geoserver/">GeoServer</a></li>
+</ul>
+</li>
+<li id="menu-item-36644" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-36644"><a href="https://www.giserdqy.com/featured/">精选专区</a></li>
+<li id="menu-item-36155" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36155"><a href="https://www.giserdqy.com/tools/">开发工具</a></li>
+<li id="menu-item-35633" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35633"><a target="_blank" rel="noopener" href="http://tools.giserdqy.com/">功能示例</a></li>
+</ul></div>
+				
+									<div class="container">
+						<div class="container-inner">		
+							<div class="toggle-search"><i class="fas fa-search"></i></div>
+							<div class="search-expand">
+								<div class="search-expand-inner">
+									<form method="get" class="searchform themeform" action="https://www.giserdqy.com/">
+	<div>
+		<input type="text" class="search" name="s" onblur="if(this.value==&#39;&#39;)this.value=&#39;To search type and hit enter&#39;;" onfocus="if(this.value==&#39;To search type and hit enter&#39;)this.value=&#39;&#39;;" value="To search type and hit enter">
+	</div>
+</form>								</div>
+							</div>
+						</div><!--/.container-inner-->
+					</div><!--/.container-->
+								
+			</nav><!--/#nav-mobile-->
+				
+					<nav class="nav-container group" id="nav-topbar">
+				<div class="nav-toggle"><i class="fas fa-bars"></i></div>
+				<div class="nav-text"><!-- put your mobile menu text here --></div>
+				<div class="nav-wrap container"><ul id="menu-%e8%81%94%e7%b3%bb%e6%88%91%e4%bb%ac" class="nav container-inner group"><li id="menu-item-36374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36374"><a href="https://www.giserdqy.com/contact/">商务合作</a></li>
+<li id="menu-item-36376" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36376"><a href="http://www.forum.giserdqy.com/">GIS问答</a></li>
+<li id="menu-item-36378" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-36378"><a href="https://www.giserdqy.com/privacy-policy/">版权说明</a></li>
+<li id="menu-item-36396" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36396"><a href="https://www.giserdqy.com/login">登录</a></li>
+<li id="menu-item-36397" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36397"><a href="https://www.giserdqy.com/wp-login.php?action=register">注册</a></li>
+</ul></div>
+				
+									<div class="container">
+						<div class="container-inner">		
+							<div class="toggle-search"><i class="fas fa-search"></i></div>
+							<div class="search-expand">
+								<div class="search-expand-inner">
+									<form method="get" class="searchform themeform" action="https://www.giserdqy.com/">
+	<div>
+		<input type="text" class="search" name="s" onblur="if(this.value==&#39;&#39;)this.value=&#39;To search type and hit enter&#39;;" onfocus="if(this.value==&#39;To search type and hit enter&#39;)this.value=&#39;&#39;;" value="To search type and hit enter">
+	</div>
+</form>								</div>
+							</div>
+						</div><!--/.container-inner-->
+					</div><!--/.container-->
+								
+			</nav><!--/#nav-topbar-->
+				
+					<div class="container" id="header-ads">
+				<div class="container-inner">
+									</div><!--/.container-inner-->
+			</div><!--/.container-->
+				
+		<div class="container-inner group">
+			
+						
+							<div class="site-header">
+					<a href="https://www.giserdqy.com/" rel="home">
+						<img class="site-image" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/agencyImg.png" alt="GIS开发者" data-bd-imgshare-binded="1">
+					</a>
+				</div>
+			
+							<nav class="nav-container group" id="nav-header">
+					<div class="nav-toggle"><i class="fas fa-bars"></i></div>
+					<div class="nav-text"><!-- put your mobile menu text here --></div>
+					<div class="nav-wrap container"><ul id="menu-%e6%a0%b8%e5%bf%83%e7%9b%ae%e5%bd%95-1" class="nav group"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-36390"><a href="https://www.giserdqy.com/">首页</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35152"><a href="https://www.giserdqy.com/gis/gisknowledge/">GIS理论</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-35149"><a href="https://www.giserdqy.com/secdev/">二次开发</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35160"><a href="https://www.giserdqy.com/secdev/leaflet/">leaflet</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35161"><a href="https://www.giserdqy.com/secdev/openlayers/">openlayers</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35711"><a href="https://www.giserdqy.com/secdev/mapboxgl/">mapboxgl</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35164"><a href="https://www.giserdqy.com/gis/baidumap/">百度地图开发</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35151"><a href="https://www.giserdqy.com/arcgis/arcpy/">ArcPy</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35159"><a href="https://www.giserdqy.com/secdev/arcengine/">ArcEngine</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35162"><a href="https://www.giserdqy.com/secdev/geotools/">geotools</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36931"><a href="https://www.giserdqy.com/secdev/geoserver-secdev/">geoserver</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36930"><a href="https://www.giserdqy.com/secdev/qgis/">QGIS</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35167"><a href="https://www.giserdqy.com/gis/opengis/3d/cesium/">cesium</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35150"><a href="https://www.giserdqy.com/arcgis/">ArcGIS</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35153"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-javascript/">arcgis api for javascript</a>
+		<ul class="sub-menu" style="display: none;">
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-35185"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/">ArcGIS API For JavaScript官方文档</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35157"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-javascript/3-x/">3.x</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35158"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-javascript/4-x/">4.x</a></li>
+		</ul>
+</li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35156"><a href="https://www.giserdqy.com/arcgis/arcgisserver/">ArcGISServer</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35163"><a href="https://www.giserdqy.com/algorithm/">算法</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35165"><a href="https://www.giserdqy.com/gdal/">GDAL</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35172"><a href="https://www.giserdqy.com/proj/">PROJ</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35175"><a href="https://www.giserdqy.com/ogr/">OGR</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35166"><a href="https://www.giserdqy.com/geotrellis/">Geotrellis</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35181"><a href="https://www.giserdqy.com/gisnews/">GIS前沿</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35182"><a href="https://www.giserdqy.com/gisbim/">GIS+BIM</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35183"><a href="https://www.giserdqy.com/gisai/">GIS人工智能</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35184"><a href="https://www.giserdqy.com/geospatial/">GIS大数据</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35186"><a href="https://www.giserdqy.com/gis/opengisnews/">GIS新闻</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35188"><a href="https://www.giserdqy.com/geoanalysis/">数据分析</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35548"><a href="https://www.giserdqy.com/frontend/">前端</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35212"><a href="https://www.giserdqy.com/frontend/js/">JavaScript</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35716"><a href="https://www.giserdqy.com/frontend/vue/">vue</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35214"><a href="https://www.giserdqy.com/frontend/es6/">es6</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35209"><a href="https://www.giserdqy.com/frontend/css/">CSS</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35210"><a href="https://www.giserdqy.com/frontend/h5/">html5</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35549"><a href="https://www.giserdqy.com/backend/">后端</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35208"><a href="https://www.giserdqy.com/backend/net/">C#</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35211"><a href="https://www.giserdqy.com/backend/java/">Java</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35717"><a href="https://www.giserdqy.com/backend/redis/">redis</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35215"><a href="https://www.giserdqy.com/backend/nodejs-mysql/">nodejs</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35216"><a href="https://www.giserdqy.com/backend/py/">Python</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35218"><a href="https://www.giserdqy.com/backend/py/pybasic/">Python教程</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35220"><a href="https://www.giserdqy.com/backend/py/scrapy/">Scrapy教程</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35219"><a href="https://www.giserdqy.com/backend/py/python_data_science/">Python数据分析</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35217"><a href="https://www.giserdqy.com/backend/py/pyspider/">pyspider</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35514"><a href="https://www.giserdqy.com/os/">操作系统</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35515"><a href="https://www.giserdqy.com/os/windows/">windows</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35516"><a href="https://www.giserdqy.com/os/centos/">centos</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35517"><a href="https://www.giserdqy.com/os/ubuntu/">ubuntu</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35541"><a href="https://www.giserdqy.com/os/macos/">macos</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35543"><a href="https://www.giserdqy.com/database/">数据库</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35176"><a href="https://www.giserdqy.com/database/postgresql/">PostGreSQL</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35177"><a href="https://www.giserdqy.com/database/mongodb/">MongoDB</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35178"><a href="https://www.giserdqy.com/database/mysql/">MySQL</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35179"><a href="https://www.giserdqy.com/database/oracle/">Oracle</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35294"><a href="https://www.giserdqy.com/oraclespatial/">oraclespatial</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-35545"><a href="https://www.giserdqy.com/gisdata/">GIS数据</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35542"><a href="https://www.giserdqy.com/gisdata/datasource/">数据源</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35546"><a href="https://www.giserdqy.com/gisdata/arcmap/">ArcMap</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35547"><a href="https://www.giserdqy.com/gisdata/cad/">CAD</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36211"><a href="https://www.giserdqy.com/gis/opengis/geoserver/">GeoServer</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-36644"><a href="https://www.giserdqy.com/featured/">精选专区</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36155"><a href="https://www.giserdqy.com/tools/">开发工具</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35633"><a target="_blank" rel="noopener" href="http://tools.giserdqy.com/">功能示例</a></li>
+</ul></div>
+				</nav><!--/#nav-header-->
+						
+						
+		</div><!--/.container-->
+		
+	</header><!--/#header-->
+	
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+				<div class="main-inner group">
+<div class="content">
+
+	<div class="page-title pad group">
+
+			<ul class="meta-single group">
+			<li class="category"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/" rel="category tag">ArcGIS API For JavaScript官方文档</a> <span>/</span> <a href="https://www.giserdqy.com/featured/" rel="category tag">精选文章</a></li>
+					</ul>
+		
+	
+</div><!--/.page-title-->
+	<div class="pad group">
+
+					<article class="post-11826 post type-post status-publish format-standard has-post-thumbnail hentry category-arcgis-api-for-js-docs category-featured tag-arcgis-api-for-javascriptapi tag-arcgis-api-for-js">
+				<div class="post-inner group">
+
+					<h1 class="post-title">ArcGIS API For JavaScript官方文档（一）之默认API配置</h1>
+					<div class="bdsharebuttonbox bdshare-button-style0-24" data-bd-bind="1612104802320"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" class="bds_more" data-cmd="more"></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享"></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" class="bds_print" data-cmd="print" title="分享到打印"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["mshare","weixin","sqq","youdao","twi","fbook","linkedin","copy","print"],"viewText":"分享到：","viewSize":"24"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+					<p class="post-byline">by <a href="https://www.giserdqy.com/author/dqy/" title="由giser发布" rel="author">giser</a> · 2018-12-17</p>
+
+					
+					<div class="clear"></div>
+
+					<div class="entry ">
+						<div class="entry-inner">
+							<p style="text-align:center" class="has-text-color has-background has-luminous-vivid-orange-color has-vivid-green-cyan-background-color"><a rel="noreferrer noopener" aria-label="https://www.giserdqy.com/gis/arcgis/arcgis-api-for-javascript/11754（在新窗口打开）" href="https://www.giserdqy.com/gis/arcgis/arcgis-api-for-javascript/11754" target="_blank">ArcGIS API For JS官方文档解析目录</a></p>
+<p>&nbsp; &nbsp; ArcGIS Javascript API有可以被覆盖的默认选项，所有配置选项的默认值都存储在esri/config模块中。要修改默认值，需要加载该模块，将其命名为esriConfig并将该对象上的属性更新为所需的值。</p>
+<pre class="prettyprint linenums"><code class="language-javascript">require(["esri/config"], function(esriConfig) {
+  // update esriConfig properties here to override defaults
+});</code></pre>
+<p>&nbsp; &nbsp; 一个常见的更改是修改用于地图缩放框的符号。在下面的代码中，创建了一个新符号，并将其转换成JSON对象，然后设置为地图的默认缩放符号。</p>
+<pre class="prettyprint linenums"><code class="language-javascript">// AMD
+require([
+  "esri/config",
+  "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleLineSymbol", "dojo/_base/Color"
+], function(
+  esriConfig,
+  SimpleFillSymbol, SimpleLineSymbol, Color
+) {
+  var lineColor = new Color([0,0,255]);
+  var fillColor = new Color([255,255,0,0.5]);
+  var zoomSymbol = new SimpleFillSymbol(
+    SimpleFillSymbol.STYLE_SOLID,
+    new SimpleLineSymbol(SimpleLineSymbol.STYLE_DASHDOT, lineColor, 2), 
+    fillColor
+  );
+  esriConfig.defaults.map.zoomSymbol = zoomSymbol.toJson();
+});
+
+// legacy
+var zoomSymbol = new esri.symbol.SimpleFillSymbol(
+  esri.symbol.SimpleFillSymbol.STYLE_SOLID,
+  new esri.symbol.SimpleLineSymbol(
+    esri.symbol.SimpleLineSymbol.STYLE_DASHDOT, 
+    new dojo.Color([0,0,255]), 
+    2
+  ),
+  new dojo.Color([255,255,0,0.5]));
+esri.config.defaults.map.zoomSymbol = zoomSymbol.toJson();</code></pre>
+<p>&nbsp; &nbsp; 下面是JavaScript API的配置属性名称和默认值：</p>
+<p><strong>①esriConfig.defaults.geometryService</strong></p>
+<p>&nbsp; &nbsp; 指定小部件和操作使用的默认几何服务</p>
+<pre class="prettyprint linenums"><code class="language-javascript">esriConfig.defaults.geometryService = new GeometryService("http://yourdomain.com/geometryService");</code></pre>
+<p><strong>②esriConfig.defaults.io.alwaysUseProxy</strong></p>
+<p>&nbsp; &nbsp; 是否始终使用代理与REST端点通信</p>
+<pre class="prettyprint linenums"><code class="language-javascript">esriConfig.defaults.io.alwaysUseProxy = true;</code></pre>
+<p>&nbsp; &nbsp; 默认值：false</p>
+<p>&nbsp; &nbsp; 参照其他：<a href="https://developers.arcgis.com/javascript/3/jshelp/ags_proxy.html" rel="nofollow">使用代理页面</a></p>
+<p><strong>③esriConfig.defaults.io.corsDetection</strong></p>
+<p>&nbsp; &nbsp; 是否检测服务器对跨域资源共享(cross-origin resource sharing &nbsp; &nbsp;CORS)的支持，将其设置为false将阻止API发送请求，导致浏览器开发工具中报错信息：”XMLHttpRequest无法加载http://some.url.com/ArcGIS/rest/info?f=json. Origin http://yourapp.com is not allowed by Access-Control-Allow-Origin.”。但是，如果没有将资源显示添加<strong>esriConfig.defaults.io.corsEnabledServers</strong>，则API也将无法发现资源支持CORS。</p>
+<p>&nbsp; &nbsp; 默认值：true</p>
+<p><strong>④esriConfig.defaults.io.corsDetectionTimeout</strong></p>
+<p>&nbsp; &nbsp; 在CORS检测期间等待来自ArcGIS Server响应的秒数。如果检测到在此时间到期之前尚未收到响应，则假设服务器不支持CORS。</p>
+<p>&nbsp; &nbsp; 默认值：15</p>
+<p><strong>⑤esriConfig.defaults.io.corsEnabledServers</strong></p>
+<p>&nbsp; &nbsp; 为需要进行跨域资源共享的服务器添加URL。跨域资源共享(CORS)允许web应用程序绕过浏览器相同的原始策略文件，并访问不同服务器/域上的资源或服务，<span style="color:#ff0000;">当web服务器和浏览器支持CORS时，特别是esri.request将不使用代理来执行跨域请求。</span>API默认包括一些Esri服务器，因此重要的是将项推到这个数组上而不是覆盖它。</p>
+<pre class="prettyprint linenums"><code class="language-javascript">require(["esri/config"], function(esriConfig) {
+  esriConfig.defaults.io.corsEnabledServers.push("servicesbeta.esri.com");
+  esriConfig.defaults.io.corsEnabledServers.push("server.organization.com");
+});</code></pre>
+<p>&nbsp; &nbsp; 在3.14版本中，添加了对发送带有凭证的AJAX请求的支持。corsEnabledServers现在可以包含具有<strong>host</strong>和<strong>withCredentials</strong>属性的对象。</p>
+<pre class="prettyprint linenums"><code class="language-javascript">require(["esri/config"], function(esriConfig) {
+esriConfig.defaults.io.corsEnabledServers.push({
+  host: "server.organization.com",
+  withCredentials: true
+})
+});</code></pre>
+<p>&nbsp; &nbsp; 在2.8版中，默认情况下，列表包含以下服务器：</p>
+<pre class="prettyprint linenums"><code class="language-javascript">"www.arcgis.com",
+"tiles.arcgis.com",
+"services.arcgis.com"</code></pre>
+<p>&nbsp; &nbsp; 在3.1版中，将下列域添加到列表中：</p>
+<pre class="prettyprint linenums"><code class="language-javascript">"static.arcgis.com",
+"utility.arcgisonline.com",
+"geocode.arcgis.com"</code></pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在3.3版中，将下列域添加到列表中：</p>
+<pre class="prettyprint linenums"><code class="language-javascript">"services1.arcgis.com",
+"services2.arcgis.com",
+"services3.arcgis.com"</code></pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在3.6版中，将下列域添加到列表中：</p>
+<pre class="prettyprint linenums"><code class="language-javascript">"geoenrich.arcgis.com</code></pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在3.15版中，将下列域添加到列表中：</p>
+<pre class="prettyprint linenums"><code class="language-javascript">"basemaps.arcgis.com"</code></pre>
+<p>&nbsp; &nbsp; 在3.21版中，将下列域添加到列表中：</p>
+<pre class="prettyprint linenums"><code class="language-javascript">"utility.arcgis.com"</code></pre>
+<p>&nbsp; &nbsp; 指定的Web服务器必须预先配置以支持CORS。浏览<a href="https://enable-cors.org/" rel="nofollow">enable-cors.org</a>，了解如何为流行的Web服务器启用CORS。</p>
+<p><strong>⑥esriConfig.defaults.io.httpsDomains</strong></p>
+<p>&nbsp; &nbsp; 支持https的已知域后缀列表。当应用程序不在http上运行时，这将自动升级对此类域的请求，以使用https而不是http。注意，端口号不应包含在匹配的域后缀中。</p>
+<p>&nbsp; &nbsp; 从3.19版开始，默认情况下包含以下域后缀:</p>
+<pre class="prettyprint linenums"><code class="language-javascript">https://enable-cors.org/</code></pre>
+<p><strong>⑦esriConfig.defaults.io.proxyRules</strong></p>
+<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div class="84f19c93f0a84bcd905e11f4e09c5427" data-index="1" style="float: none; margin:10px 0 10px 0; text-align:center;">
+<script type="text/javascript">
+        (function() {
+            var s = "_" + Math.random().toString(36).slice(2);
+            document.write('<div style="" id="' + s + '"></div>');
+            (window.slotbydup = window.slotbydup || []).push({
+                id: "u5238116",
+                container: s
+            });
+        })();
+</script><div style="" id="_npwin9hogk"><iframe id="iframeu5238116_0" name="iframeu5238116_0" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/nctm.html" width="960" height="90" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0;margin:0;width:960px;height:90px" allowtransparency="true"></iframe></div>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/c.js.下载" async="async" defer="defer">
+</script>
+</div>
+
+<p>&nbsp; &nbsp; proxy rule（代理规则）定义了具有相同url前缀的资源集的代理。当使用esri/request时，如果目标URL与规则匹配，则请求将发送到指定的代理。与其填充该数组，不如使用API的<a href="https://developers.arcgis.com/javascript/3/jsapi/esri.urlutils-amd.html#addproxyrule" rel="nofollow">addProxyRule</a>方法，规则对象具有以下属性：</p>
+<p>
+</p><ul>
+<li>&nbsp; &nbsp; proxyUrl：关于代理的URL</li>
+<li>&nbsp; &nbsp; urlPrefix：用于需要通过特定代理访问的资源的URL前缀。</li>
+</ul>
+<p></p>
+<p><strong>⑧esriConfig.defaults.io.proxyUrl</strong></p>
+<p>&nbsp; &nbsp; 将大型有效载荷发送到终端时应该使用的代理URL的位置。这必须驻留在于HTML应用程序相同的域上。</p>
+<pre class="prettyprint linenums"><code class="language-javascript">esriConfig.defaults.io.proxyUrl = "/arcgisserver/apis/javascript/proxy/proxy.ashx";</code></pre>
+<p>&nbsp; &nbsp; 默认值：null</p>
+<p>&nbsp; &nbsp; 查看其他：<a href="https://developers.arcgis.com/javascript/3/jshelp/ags_proxy.html" rel="nofollow">使用代理页面</a></p>
+<p><strong>⑨esriConfig.defaults.io.timeout</strong></p>
+<p>&nbsp; &nbsp; 每个通过esri.Request的请求都允许响应长达60000毫秒（即60秒)。如果没有返回响应或返回服务器端错误，则按照这个顺序调用esri.Error和error back处理程序。</p>
+<p>&nbsp; &nbsp; 默认值：60000毫秒</p>
+<p><strong>⑩esriConfig.defaults.io.useCors</strong></p>
+<p>&nbsp; &nbsp; 通过esri/request发出的请求是否应该尝试使用CORS。如果是true的话，直接向支持CORS的服务器发出AJAX请求。如果使用”with-credentials”，在适当的地方设置withCredentials标志。最后，如果是false，不会直接请求，如果代理可用的话，将使用代理。</p>
+<p>&nbsp; &nbsp; 默认值：”with-credentials”</p>
+<p><strong>11esriConfig.defaults.kmlService</strong></p>
+<p>&nbsp; &nbsp; 这是由<a href="https://developers.arcgis.com/javascript/3/jsapi/kmllayer-amd.html" rel="nofollow">KMLLayer</a>使用的，这是kml utility service的URL，而不是由ArcGIS.com托管的服务。（需要Portal for ArcGIS)</p>
+<pre class="prettyprint linenums"><code class="language-javascript">esriConfig.defaults.kmlService = "http://servername.domain.suffix/arcgis/sharing/kml";</code></pre>
+<p>&nbsp; &nbsp; 默认值：null</p>
+<p><strong>12、esriConfig.defaults.geoRSSService</strong></p>
+<p>&nbsp; &nbsp; 这是<a href="https://developers.arcgis.com/javascript/3/jsapi/georsslayer-amd.html" rel="nofollow">GeoRSSLayer</a>使用的，是geoRSS utility service的URL，而不是由ArcGIS.com托管的。（需要Portal for ArcGIS）</p>
+<pre class="prettyprint linenums"><code class="language-html">esriConfig.defaults.geoRSSService = "http://servername.domain.suffix/arcgis/sharing/rss";</code></pre>
+<p>&nbsp; &nbsp; 默认值：null</p>
+<p><strong>13、esriConfig.defaults.map.basemaps</strong></p>
+<p>&nbsp; &nbsp; 这个对象在API的3.12版中被移除，使用<a href="https://developers.arcgis.com/javascript/3/jsapi/esri.basemaps-amd.html" rel="nofollow">esri/basemaps</a>代替。</p>
+<p><strong>14、esriConfig.defaults.map.panDuration</strong></p>
+<p>&nbsp; &nbsp; 地图从一个extent（范围）到另一个extent经历的时间长度，以毫秒为单位。</p>
+<p>&nbsp; &nbsp; 默认值：350</p>
+<p>&nbsp; &nbsp; 示例：<a href="https://developers.arcgis.com/javascript/3/jssamples/mapconfig_smoothpan.html" rel="nofollow">Customize pan animation</a></p>
+<p><strong>15、esriConfig.defaults.map.panRate</strong></p>
+<p>&nbsp; &nbsp; 地图平移到下一个extent的刷新时间，以毫秒为单位</p>
+<p>&nbsp; &nbsp; 默认值：25</p>
+<p>&nbsp; &nbsp; 示例：<a href="https://developers.arcgis.com/javascript/3/jssamples/mapconfig_smoothpan.html" rel="nofollow">Customize pan animation</a></p>
+<p><strong>16、esriConfig.defaults.map.slider</strong></p>
+<p>&nbsp; &nbsp; 定义slider（滑块）位置、大小和方向的参数</p>
+<p>&nbsp; &nbsp; 在版本3.3中，推荐的方法是使用CSS和map构造函数选项的组合来定制地图的slider或zoom按钮。</p>
+<p>&nbsp; &nbsp; 默认值：{left: “30px”, top: “30px”, width: null, height: “200px”}</p>
+<p>&nbsp; &nbsp; 示例：<a href="https://developers.arcgis.com/javascript/3/jssamples/mapconfig_orientation.html" rel="nofollow">Change slider orientation</a></p>
+<p><strong>17、esriConfig.defaults.map.sliderLabel</strong></p>
+<p>&nbsp; &nbsp; 定义slider刻度和伴随刻度的标签，如果这是null，那么slider将不会显示刻度线。</p>
+<p>&nbsp; &nbsp; 再版本3.3中，推荐的方法是使用CSS和构造函数选项的组合来定制地图的slider或zoom按钮</p>
+<p>&nbsp; &nbsp; 默认值：{tick:5，labels:null，style:”width:2em; font-family:Verdana; font-size:75%;”}</p>
+<p>&nbsp; &nbsp; 示例：<a href="https://developers.arcgis.com/javascript/3/jssamples/mapconfig_customlabels.html" rel="nofollow">Add labels to slider</a></p>
+<p><strong>18、esriConfig.defaults.map.zoomDuration</strong></p>
+<p>&nbsp; &nbsp; 地图从一个extent缩放到另一extent经过的时间，单位为毫秒</p>
+<p>&nbsp; &nbsp; 默认值：500</p>
+<p>&nbsp; &nbsp; 示例：<a href="https://developers.arcgis.com/javascript/3/jssamples/mapconfig_smoothpan.html" rel="nofollow">Customize zoom animation</a></p>
+<p><strong>19、esriConfig.defaults.map.zoomRate</strong></p>
+<p>&nbsp; &nbsp; 地图缩放到下一个extent刷新的时间，单位为毫秒</p>
+<p>&nbsp; &nbsp; 默认值：25</p>
+<p>&nbsp; &nbsp; 示例：<a href="https://developers.arcgis.com/javascript/3/jssamples/mapconfig_smoothpan.html" rel="nofollow">Customize zoom animation</a></p>
+<p><strong>20、esriConfig.defaults.map.zoomSymbol</strong></p>
+<p>&nbsp; &nbsp; 使用SimpleFillSymbol表现RubberBand zoom的color、fill、outline特征，这是SimpleFillSymbol的JSON表现形式。</p>
+<p>&nbsp; &nbsp; 默认值：<span style="color:rgb(77,77,77);font-family:&#39;Lucida Grande&#39;, &#39;Segoe UI&#39;, Arial, sans-serif;font-size:14px;background-color:rgb(255,255,255);">{color:[0,0,0,64],outline:{color:[255,0,0,255],width:1.5,style:”esriSLSSolid”},style:”esriSFSSolid”}</span></p>
+<p>&nbsp; &nbsp; 示例：<a href="https://developers.arcgis.com/javascript/3/jssamples/mapconfig_zoombox.html" rel="nofollow">Customize zoom box</a></p>
+<p><strong>21、esriConfig.defaults.workers.loaderConfig</strong></p>
+<p>&nbsp; &nbsp; 修改配置，以指定工作人员加载包的位置，或者定义特征检测（截至3.20版）</p>
+<pre class="prettyprint linenums"><code class="language-html">esriConfig.defaults.workers.loaderConfig = {
+  paths: {
+    dojo: "https://ajax.googleapis.com/ajax/libs/dojo/1.11.2/dojo/"
+  },
+  packages: [{
+    name: "primes",
+    location: window.location.href.replace(/\/[^/]+$/, "/lib"),
+    main: "primes"
+  }],
+  has: {
+    "dojo-debug-messages": true
+  }
+};</code></pre>
+<p><strong>转载自：</strong>https://blog.csdn.net/qq_35732147/article/details/79864698</p>
+
+<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div class="84f19c93f0a84bcd905e11f4e09c5427" data-index="2" style="float: none; margin:10px 0 10px 0; text-align:center;">
+<script type="text/javascript">
+        (function() {
+            var s = "_" + Math.random().toString(36).slice(2);
+            document.write('<div style="" id="' + s + '"></div>');
+            (window.slotbydup = window.slotbydup || []).push({
+                id: "u5844329",
+                container: s
+            });
+        })();
+</script><div style="" id="_h17q0zzu68"><iframe id="iframeu5844329_0" name="iframeu5844329_0" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/nctm(1).html" width="700" height="200" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0;margin:0;width:700px;height:200px" allowtransparency="true"></iframe></div>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/c.js.下载" async="async" defer="defer">
+</script>
+</div>
+
+<div style="font-size: 0px; height: 0px; line-height: 0px; margin: 0; padding: 0; clear: both;"></div>
+<div class="wp_rp_wrap  wp_rp_plain" id="wp_rp_first"><div class="wp_rp_content"><h3 class="related_post_title">相关推荐</h3><ul class="related_post wp_rp"><li data-position="0" data-poid="in-11831" data-post-type="none"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11831/" class="wp_rp_title">ArcGIS API For JavaScript官方文档（十三）之Web地图</a></li><li data-position="1" data-poid="in-11828" data-post-type="none"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11828/" class="wp_rp_title">ArcGIS API For Javascript官方文档（十）之添加任务</a></li><li data-position="2" data-poid="in-11820" data-post-type="none"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11820/" class="wp_rp_title">ArcGIS API For JavaScript官方文档（四）之事件处理</a></li><li data-position="3" data-poid="in-11822" data-post-type="none"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11822/" class="wp_rp_title">ArcGIS API For JavaScript官方文档（七）之编辑</a></li><li data-position="4" data-poid="in-11824" data-post-type="none"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11824/" class="wp_rp_title">ArcGIS API For JavaScript官方文档（二）之默认的API字符串</a></li><li data-position="5" data-poid="in-11816" data-post-type="none"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11816/" class="wp_rp_title">ArcGIS API For JavaScript官方文档（二十一）之Popups and Info Windows①</a></li></ul></div></div>
+													</div>
+												<div class="clear"></div>
+					</div><!--/.entry-->
+
+				</div><!--/.post-inner-->
+			</article><!--/.post-->
+		
+		<div class="clear"></div>
+
+		<p class="post-tags"><span>Tags:</span> <a href="https://www.giserdqy.com/tag/arcgis-api-for-javascript%e5%ae%98%e6%96%b9%e6%96%87%e6%a1%a3%ef%bc%88%e4%b8%80%ef%bc%89%e4%b9%8b%e9%bb%98%e8%ae%a4api%e9%85%8d%e7%bd%ae/" rel="tag">ArcGIS API For JavaScript官方文档（一）之默认API配置</a><a href="https://www.giserdqy.com/tag/arcgis-api-for-js/" rel="tag">arcgis api for js</a></p>
+		
+			<ul class="post-nav group">
+		<li class="next"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11831/" rel="next"><i class="fas fa-chevron-right"></i><strong>Next story</strong> <span>ArcGIS API For JavaScript官方文档（十三）之Web地图</span></a></li>
+		<li class="previous"><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11824/" rel="prev"><i class="fas fa-chevron-left"></i><strong>Previous story</strong> <span>ArcGIS API For JavaScript官方文档（二）之默认的API字符串</span></a></li>
+	</ul>
+
+		
+
+<h4 class="heading">
+	<i class="fas fa-hand-point-right"></i>You may also like...</h4>
+
+<ul class="related-posts group">
+	
+		<li class="related post-hover">
+		<article class="post-11813 post type-post status-publish format-standard has-post-thumbnail hentry category-arcgis-api-for-js-docs category-featured tag-arcgis-api-for-js tag-arcgis-api-for-javascript">
+
+			<div class="post-thumbnail">
+				<a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11813/">
+											<img width="315" height="245" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/20180608214317182-1.jpg" class="attachment-kontrast-medium size-kontrast-medium wp-post-image" alt="" loading="lazy" data-bd-imgshare-binded="1">																								</a>
+							</div><!--/.post-thumbnail-->
+			
+			<div class="related-inner">
+				
+				<h4 class="post-title">
+					<a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11813/" rel="bookmark">一、ArcGIS API for JavaScript本地开发环境配置</a>
+				</h4><!--/.post-title-->
+				
+				<div class="post-meta group">
+					<p class="post-date">2018-12-17</p>
+				</div><!--/.post-meta-->
+			
+			</div><!--/.related-inner-->
+
+		</article>
+	</li><!--/.related-->
+		<li class="related post-hover">
+		<article class="post-11810 post type-post status-publish format-standard hentry category-arcgis-api-for-js-docs tag-arcgis-api-for-javascriptrenderer tag-arcgis-api-for-js">
+
+			<div class="post-thumbnail">
+				<a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11810/">
+																								</a>
+							</div><!--/.post-thumbnail-->
+			
+			<div class="related-inner">
+				
+				<h4 class="post-title">
+					<a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11810/" rel="bookmark">ArcGIS API For JavaScript官方文档之Renderer类</a>
+				</h4><!--/.post-title-->
+				
+				<div class="post-meta group">
+					<p class="post-date">2018-12-17</p>
+				</div><!--/.post-meta-->
+			
+			</div><!--/.related-inner-->
+
+		</article>
+	</li><!--/.related-->
+		<li class="related post-hover">
+		<article class="post-11771 post type-post status-publish format-standard hentry category-arcgis-api-for-js-docs tag-arcgis-api-for-javascript-grap tag-arcgis-api-for-js">
+
+			<div class="post-thumbnail">
+				<a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11771/">
+																								</a>
+							</div><!--/.post-thumbnail-->
+			
+			<div class="related-inner">
+				
+				<h4 class="post-title">
+					<a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11771/" rel="bookmark">ArcGIS API For JavaScript官方文档（二十）之图形和要素图层——①Graphics概述</a>
+				</h4><!--/.post-title-->
+				
+				<div class="post-meta group">
+					<p class="post-date">2018-12-17</p>
+				</div><!--/.post-meta-->
+			
+			</div><!--/.related-inner-->
+
+		</article>
+	</li><!--/.related-->
+		
+</ul><!--/.post-related-->
+
+
+		
+	</div><!--/.pad-->
+
+</div><!--/.content-->
+
+
+	<div class="sidebar s1 ">
+		
+		<a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+		
+		<div class="sidebar-content">
+			
+						
+						
+			<div id="text-10" class="widget widget_text"><h3 class="group"><span>公告</span></h3>			<div class="textwidget"><p>GIS问答已上线，欢迎注册加入。<a href="http://www.forum.giserdqy.com/" target="_blank" rel="noopener">GIS问答</a></p>
+</div>
+		</div><div id="text-12" class="widget widget_text"><h3 class="group"><span>微信群</span></h3>			<div class="textwidget"><p>人数过多只能拉人进群;</p>
+<p>加我好友<strong>yu389741</strong></p>
+</div>
+		</div><div id="media_image-7" class="widget widget_media_image"><h3 class="group"><span>QQ群</span></h3><img width="238" height="250" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/gis技术交流群聊二维码.png" class="image wp-image-35744  attachment-full size-full" alt="" loading="lazy" style="max-width: 100%; height: auto;" title="QQ群" data-bd-imgshare-binded="1"></div><div id="ecp_widget-14" class="widget widget_ecp_widget"><p align="center"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275226820'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s96.cnzz.com/z_stat.php%3Fid%3D1275226820%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1275226820"><a href="https://www.cnzz.com/stat/website.php?web_id=1275226820" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/pic.gif" data-bd-imgshare-binded="1"></a></span><script src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/z_stat.php" type="text/javascript"></script><script src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/core.php" charset="utf-8" type="text/javascript"></script></p></div><div id="ecp_widget-16" class="widget widget_ecp_widget"><p align="center"><script src="https://miip.dmqapp.com/765871.html?"></script></p></div>			
+		</div><!--/.sidebar-content-->
+		
+	</div><!--/.sidebar-->
+
+		
+
+				</div><!--/.main-inner-->
+			</div><!--/.main-->
+		</div><!--/.container-inner-->
+	</div><!--/.container-->
+
+	<footer id="footer">
+
+		
+		
+		
+					<nav class="nav-container group" id="nav-footer">
+				<div class="nav-toggle"><i class="fas fa-bars"></i></div>
+				<div class="nav-text"><!-- put your mobile menu text here --></div>
+				<div class="nav-wrap"><ul id="menu-%e5%ba%95%e9%83%a8%e9%93%be%e6%8e%a5" class="nav container group"><li id="menu-item-12036" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12036"><a href="http://www.pydeveloper.com/">GeoAI</a></li>
+<li id="menu-item-11647" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11647"><a href="http://www.yulekong.cn/">中国程序员</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19"><a href="https://blog.csdn.net/gisdoer">CSDN</a></li>
+<li id="menu-item-985" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-985"><a href="http://www.cnblogs.com/dqygiser/">博客园</a></li>
+<li id="menu-item-3659" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3659"><a href="https://www.giserdqy.com/sitemap_index.xml">站点地图</a></li>
+</ul></div>
+			</nav><!--/#nav-footer-->
+		
+		<div class="container" id="footer-bottom">
+			<div class="container-inner">
+
+				<a id="back-to-top" href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#"><i class="fas fa-angle-up"></i></a>
+
+				<div class="pad group">
+
+					<div class="grid one-half">
+
+						<div id="copyright">
+															<p>GIS开发者 © 2021. All Rights Reserved.</p>
+													</div><!--/#copyright-->
+
+						
+					</div>
+
+					<div class="grid one-half last">
+											</div>
+
+				</div><!--/.pad-->
+
+			</div><!--/.container-inner-->
+		</div><!--/.container-->
+		<div style="text-align:center;width:100%;height:30px;line-height:30px;"><a href="http://beian.miit.gov.cn/" target="_blank">京ICP备 18040113</a></div>
+	</footer><!--/#footer-->
+
+</div><!--/#wrapper-->
+
+<script type="text/javascript" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/jquery.scrollUp.min.js.下载" id="scroll-top-js-js"></script>
+<script type="text/javascript" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/jquery.fitvids.js.下载" id="kontrast-fitvids-js"></script>
+<script type="text/javascript" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/scripts.js.下载" id="kontrast-scripts-js"></script>
+<script type="text/javascript" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/comment-reply.min.js.下载" id="comment-reply-js"></script>
+<script type="text/javascript" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/lazyload.js.下载" id="jquery.lazyload-js"></script>
+<script type="text/javascript" src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/wp-embed.min.js.下载" id="wp-embed-js"></script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	
+		<script id="scrolltop-custom-js">
+		jQuery(document).ready(function($){
+			$.scrollUp({
+				scrollSpeed: 300,
+				animation: 'fade',
+				scrollText: '<span class="scroll-top"><i class="icon-up-open"></i></span>',
+				scrollDistance: 300,
+				scrollTarget: ''
+			});
+		});
+		</script>
+
+
+<a id="scrollUp" href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#top" style="position: fixed; z-index: 2147483647;"><span class="scroll-top"><i class="icon-up-open"></i></span></a><div id="bdimgshare_1612104802324" class="sr-bdimgshare sr-bdimgshare-list sr-bdimgshare-24 sr-bdimgshare-black" style="height: 42px; line-height: 32px; font-size: 14px; position: absolute; top: 64px; left: 0px; width: 1263px; display: none;" data-bd-bind="1612104802324"><div class="bdimgshare-bg"></div><div class="bdimgshare-content bdsharebuttonbox bdshare-button-style0-24"><label class="bdimgshare-lbl">分享到：</label><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" onclick="return false;" class="bds_mshare" data-cmd="mshare" hidefocus=""></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" onclick="return false;" class="bds_weixin" data-cmd="weixin" hidefocus=""></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" onclick="return false;" class="bds_sqq" data-cmd="sqq" hidefocus=""></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" onclick="return false;" class="bds_youdao" data-cmd="youdao" hidefocus=""></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" onclick="return false;" class="bds_twi" data-cmd="twi" hidefocus=""></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" onclick="return false;" class="bds_fbook" data-cmd="fbook" hidefocus=""></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" onclick="return false;" class="bds_linkedin" data-cmd="linkedin" hidefocus=""></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" onclick="return false;" class="bds_copy" data-cmd="copy" hidefocus=""></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" onclick="return false;" class="bds_print" data-cmd="print" hidefocus=""></a><a href="https://www.giserdqy.com/secdev/arcgis-api-for-js-docs/11826/#" onclick="return false;" class="bds_more" data-cmd="more" hidefocus=""></a></div></div><div id="hm_t_24900" class="hm-t-container"><div class="hm-t-main" style="width:302px;height:302px;display:none">
+<img src="./ArcGIS API For JavaScript官方文档（一）之默认API配置 - GIS开发者_files/9aade278e93564343a0180059747e730.png" width="300" height="300" alt="热点专题" title="热点专题">
+</div><div class="hm-t-side-arrow" style="display: none;"></div><div title="热点专题" class="hm-t-unfold-button hm-t-unfold-button-txt" style="cursor: default; font-size: 14px; line-height: 17px; padding-top: 3px; height: 37px;">热点专题</div></div><div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body></html>
