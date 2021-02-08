@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://www.cnblogs.com/jdWu-d/p/12643822.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <meta name="description" content="目前手头的vue项目关于权限一块有一个需求，其实架构师很早就要求我做了，但是由于这个紧急程度不是很高，最近临近项目上线，我才想起，于是赶紧补上这个功能。这个项目是基于OAuth2.0认证，需要在每个请">
+    <meta property="og:description" content="目前手头的vue项目关于权限一块有一个需求，其实架构师很早就要求我做了，但是由于这个紧急程度不是很高，最近临近项目上线，我才想起，于是赶紧补上这个功能。这个项目是基于OAuth2.0认证，需要在每个请">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>(*′Д`)つ))′?`)别忘了我</title>
+    <link id="favicon" rel="shortcut icon" href="https://common.cnblogs.com/favicon.svg" type="image/svg+xml">
+    
+    <link rel="stylesheet" href="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/blog-common.min.css">
+    <link id="MainCss" rel="stylesheet" href="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/bundle-simplememory.min.css">
+    <link type="text/css" rel="stylesheet" href="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/custom.css">
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/bundle-SimpleMemory-mobile.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/jdWu-d/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/jdWu-d/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/jdWu-d/wlwmanifest.xml">
+    <script src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/osd.js.下载"></script><script async="" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/analytics.js.下载"></script><script type="text/javascript" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/encoder.js.下载"></script><script>
+        var currentBlogId = 545238;
+        var currentBlogApp = 'jdWu-d';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'SimpleMemory';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2020-04-12 06:57';
+        </script>
+    <script src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/jquery-2.2.0.min.js.下载"></script>
+    <script src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/blog-common.min.js.下载"></script>
+    
+    
+    
+<meta http-equiv="origin-trial" content="A2shzsdPO+RKe83bUqT9oVkYwGZN6j9O7nrcOASNFPuQz8HefgVYb9qAqn6coNCSDIRtXoi6ybCrjEsYh3caFgIAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MTM0OTU4NjgsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxL6K+7uLMunmYb1wpp/pnDPBsoQgMGPaTDkE6HIAKvHNoXilVyfzrIZM9q7OUqMUDJCYgIlFmJcvooS3kGjowMAAACOeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGVhZHNlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjE0MTI0Nzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><script src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/pubads_impl_2021012801.js.下载" async=""></script><link rel="preload" href="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/f.txt" as="script"><script type="text/javascript" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/f.txt"></script><link rel="prefetch" href="https://c138766db22e61400f385cbf1e328026.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html"><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html"></head>
+<body class="no-navbar">
+    <a name="top"></a>
+        <div id="bannerbar" class="bannerbar-mobile formobile">
+            <a href="https://developer.aliyun.com/learning/21study01?utm_content=g_1000236191" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;aliyun-mobile-bannerbar&#39;)">
+                <img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/35695-20210201124157344-514743462.jpg" alt="">
+            </a>
+        </div>
+    <div id="top_nav" class="navbar forpc navbar-custom">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/logo.svg" alt="博客园Logo"></a></li>
+                <li><a href="https://www.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-sitehome&#39;)">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-news&#39;)">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-q&#39;)">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-brands&#39;)">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-ing&#39;)">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-edu&#39;)">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3">
+                        <button type="submit" id="zzk_search_button">
+                            <img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/search.svg" alt="搜索">
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客" style="display: none;">
+                        <img id="myblog_icon" class="navbar-icon" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/myblog.svg" alt="我的博客">
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息" style="display: none;">
+                        <img id="msg_icon" class="navbar-icon" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/message.svg" alt="短消息">
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown" style="display: none;">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/avatar-default.svg" alt="用户头像">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" onclick="logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/" style="display: inline;">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="login()" style="display: inline;">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page_begin_html"><!--<div style="display: none" id="__document_write_ajax_div-1"></div><script>window['__document_write_ajax_callbacks__']['1']();</script>
+</script>
+<div id='loading'></div>-->
+<script type="text/javascript">window['__document_write_ajax_callbacks__']['3']();</script><script>window['__document_write_ajax_callbacks__']['2']();</script>
+</div>
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/jdWu-d/"><img id="blogLogo" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/logo.gif" alt="返回主页"></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/jdWu-d/">他好像一条狗啊</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/jdWu-d/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E4%BB%96%E5%A5%BD%E5%83%8F%E4%B8%80%E6%9D%A1%E7%8B%97%E5%95%8A">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/jdWu-d/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<span id="stats_post_count">随笔 - 26&nbsp; </span>
+<span id="stats_article_count">文章 - 0&nbsp; </span>
+<span id="stats-comment_count">评论 - 23&nbsp; </span>
+<span id="stats-total-view-count">阅读 - 
+<span title="总阅读数: 45848">
+45848</span></span>
+
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/jdWu-d/p/12643822.html">
+    <span>基于OAuth2.0的token无感知刷新</span>
+    
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body">
+    <p>　　目前手头的vue项目关于权限一块有一个需求，其实架构师很早就要求我做了，但是由于这个紧急程度不是很高，最近临近项目上线，我才想起，于是赶紧补上这个功能。这个项目是基于OAuth2.0认证，需要在每个请求的头部携带access_token，如果这个access_token过期，需要利用已有的refresh _token去重新获取一个access_token，如果连这个refresh_token也过期了，那就是真正的过期了，需要退出登录页面。refresh_token在获取新的access_token的时候需要让用户无感知，也叫无痛刷新。</p>
+<p>　　这里的代码实现肯定是要在axios拦截器里写的，但是是在请求拦截器里写还是在响应拦截器里写还是有区别的：</p>
+<p>　　1.写在请求拦截器里：每次请求之前都会先请求一个checkToken的接口，来确认这个access_token是否过期，如果没有过期，直接就发起原本的请求，如果过期，利用已有的refresh _token去重新获取一个access_token之后，再发起原本的请求。但是这样写有个缺点，就是每次请求之前都要额外请求一次checkToken的接口，如果网速不好，会给用户造成不好的体验，而且对服务器造成了性能上的浪费。</p>
+<p>　　2.写在响应拦截器里：直到access_token过期，返回401未授权，才利用已有的refresh _token去重新获取一个access_token。</p>
+<p>　　最后我和后端讨论了下，最后采用了第二种方法，把checkToken放在后端，前端无感知刷新写在响应拦截器里。</p>
+<p>这里写的一个响应拦截器：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>import axios from 'axios'
+
+<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">创建一个axios实例</span>
+const service =<span style="color: rgba(0, 0, 0, 1)"> axios.create({
+  timeout: </span>5000, <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 请求超时时间</span>
+  withCredentials:<span style="color: rgba(0, 0, 255, 1)">true</span> <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">表示跨域请求时是否需要使用凭证. 默认为false</span>
+<span style="color: rgba(0, 0, 0, 1)">})
+</span><span style="color: rgba(0, 0, 255, 1)">var</span> loading;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">遮罩层</span>
+
+<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> 响应拦截器<br></span><span style="color: rgba(0, 0, 0, 1)">service.interceptors.response.use(
+  response </span>=&gt;<span style="color: rgba(0, 0, 0, 1)"> {
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">do what you like</span>
+<span style="color: rgba(0, 0, 0, 1)">  },
+  error </span>=&gt;<span style="color: rgba(0, 0, 0, 1)"> {
+    loading.close();
+    </span><span style="color: rgba(0, 0, 255, 1)">if</span> (error &amp;&amp;<span style="color: rgba(0, 0, 0, 1)"> error.response) {
+      </span><span style="color: rgba(0, 0, 255, 1)">switch</span><span style="color: rgba(0, 0, 0, 1)"> (error.response.status) {
+        </span><span style="color: rgba(0, 0, 255, 1)">case</span> 400<span style="color: rgba(0, 0, 0, 1)">:
+          error.message </span>= '请求错误'
+          <span style="color: rgba(0, 0, 255, 1)">break</span>
+        <span style="color: rgba(0, 0, 255, 1)">case</span> 401<span style="color: rgba(0, 0, 0, 1)">:
+          </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> doRequest(error);
+        </span><span style="color: rgba(0, 0, 255, 1)">case</span> 403<span style="color: rgba(0, 0, 0, 1)">:
+          error.message </span>= '拒绝访问'
+          <span style="color: rgba(0, 0, 255, 1)">break</span>
+        <span style="color: rgba(0, 0, 255, 1)">case</span> 404<span style="color: rgba(0, 0, 0, 1)">:
+          error.message </span>=<span style="color: rgba(0, 0, 0, 1)"> `请求地址出错: ${error.response.config.url}`
+          </span><span style="color: rgba(0, 0, 255, 1)">break</span>
+        <span style="color: rgba(0, 0, 255, 1)">case</span> 408<span style="color: rgba(0, 0, 0, 1)">:
+          error.message </span>= '请求超时'
+          <span style="color: rgba(0, 0, 255, 1)">break</span>
+        <span style="color: rgba(0, 0, 255, 1)">case</span> 500<span style="color: rgba(0, 0, 0, 1)">:
+          error.message </span>= '服务器内部错误'
+          <span style="color: rgba(0, 0, 255, 1)">break</span>
+        <span style="color: rgba(0, 0, 255, 1)">case</span> 501<span style="color: rgba(0, 0, 0, 1)">:
+          error.message </span>= '服务未实现'
+          <span style="color: rgba(0, 0, 255, 1)">break</span>
+        <span style="color: rgba(0, 0, 255, 1)">case</span> 502<span style="color: rgba(0, 0, 0, 1)">:
+          error.message </span>= '网关错误'
+          <span style="color: rgba(0, 0, 255, 1)">break</span>
+        <span style="color: rgba(0, 0, 255, 1)">case</span> 503<span style="color: rgba(0, 0, 0, 1)">:
+          error.message </span>= '服务不可用'
+          <span style="color: rgba(0, 0, 255, 1)">break</span>
+        <span style="color: rgba(0, 0, 255, 1)">case</span> 504<span style="color: rgba(0, 0, 0, 1)">:
+          error.message </span>= '网关超时'
+          <span style="color: rgba(0, 0, 255, 1)">break</span>
+        <span style="color: rgba(0, 0, 255, 1)">case</span> 505<span style="color: rgba(0, 0, 0, 1)">:
+          error.message </span>= 'HTTP版本不受支持'
+          <span style="color: rgba(0, 0, 255, 1)">break</span>
+        <span style="color: rgba(0, 0, 255, 1)">default</span><span style="color: rgba(0, 0, 0, 1)">:
+          </span><span style="color: rgba(0, 0, 255, 1)">break</span><span style="color: rgba(0, 0, 0, 1)">
+      }
+    }
+    errorLog(error)
+    </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> Promise.reject(error)
+  }
+)<br><br></span></pre>
+<div>&nbsp; export&nbsp;default&nbsp;service</div>
+<pre><span style="color: rgba(0, 0, 0, 1)">&nbsp;</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>　　可以看到在响应拦截器的错误回调函数里401值的时候调用了一个方法doRequest()；</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>async <span style="color: rgba(0, 0, 255, 1)">function</span><span style="color: rgba(0, 0, 0, 1)"> doRequest (error) {
+  </span><span style="color: rgba(0, 0, 255, 1)">try</span><span style="color: rgba(0, 0, 0, 1)"> {
+    const data </span>=<span style="color: rgba(0, 0, 0, 1)"> await getNewToken();
+    </span><span style="color: rgba(0, 0, 255, 1)">var</span> token=data.data.token_type+' '+<span style="color: rgba(0, 0, 0, 1)">data.data.access_token;
+    sessionStorage.setItem(</span>'RequestToken'<span style="color: rgba(0, 0, 0, 1)">,token);
+    const res </span>=<span style="color: rgba(0, 0, 0, 1)"> await service.request(error.config)
+    </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> res;
+  } </span><span style="color: rgba(0, 0, 255, 1)">catch</span><span style="color: rgba(0, 0, 0, 1)">(err) {
+    Message({
+      message: </span>'登录会话已过期，请重新登录'<span style="color: rgba(0, 0, 0, 1)">,
+      type: </span>'error'<span style="color: rgba(0, 0, 0, 1)">,
+      duration: </span>5 * 1000<span style="color: rgba(0, 0, 0, 1)">
+    })
+    sessionStorage.clear();
+    router.replace({
+      path:</span>"/login"<span style="color: rgba(0, 0, 0, 1)">
+    });
+    </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> err;
+  }
+}</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>　　这里的重点这些请求必须是<strong>同步</strong>的，<strong>同步</strong>的，<strong>同步</strong>的，重要的事情说三遍，而axios默认是异步的，所以你要么使用ES6的async/await语句，要么使用then回调函数，必须保持是同步的。而getNewToken()则是利用refresh_token重新获取access_token方法。算了，一并贴出，仅作参考。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>import qs from 'qs'<span style="color: rgba(0, 0, 0, 1)">
+
+async </span><span style="color: rgba(0, 0, 255, 1)">function</span><span style="color: rgba(0, 0, 0, 1)"> getNewToken() {
+  </span><span style="color: rgba(0, 0, 255, 1)">var</span> refreshToken=sessionStorage.getItem('refreshToken'<span style="color: rgba(0, 0, 0, 1)">);
+  </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> await axios({
+    url: </span>'/OAuth/oauth/token'<span style="color: rgba(0, 0, 0, 1)">,
+      method: </span>'post'<span style="color: rgba(0, 0, 0, 1)">,
+      headers: {
+        </span>'Authorization': 'Basic XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'<span style="color: rgba(0, 0, 0, 1)">,
+        </span>'Content-Type':'application/x-www-form-urlencoded'<span style="color: rgba(0, 0, 0, 1)">
+      },
+    data:qs.stringify({
+      grant_type:</span>'refresh_token'<span style="color: rgba(0, 0, 0, 1)">,
+      refresh_token : refreshToken
+    })
+  })
+}</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>　　下面看效果。为了效果，这里设置了access_token有效时间为5s，refresh _token有效时间为10s。动图是这样的：</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/1782126-20200412170617072-1960945944.gif" alt="" width="699" height="701"></p>
+<p>　　一步一步分解下，登录的时候，获取到access_token和refresh _token。然后带着access_token：f0a3******cb64去访问menuQuery接口是可以正常请求的。</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/1782126-20200412182639029-180750017.png" alt="" width="635" height="825"></p>
+<p>&nbsp;　　但是之后，我等了超过5s后（不超过10s，这个时候access_token已过期，refresh _token未过期）发了一个对0304接口的请求，这个时候返回401未授权，说明access_token：f0a3******cb64已过期。</p>
+<p><img style="float: left" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/1782126-20200412182043485-1872357673.png" alt="" width="472" height="613"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/1782126-20200412182204930-1051662863.png" alt="" width="471" height="612"></p>
+<p>&nbsp;　　这时利用refresh_token重新获取access_token。</p>
+<p><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/1782126-20200412183153708-1333762081.png" alt="" width="472" height="614"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/1782126-20200412183313730-1340482106.png" alt="" width="473" height="614"></p>
+<p>　　可以看到返回了一个新的access_token：8332******1c8a，于是带着这个新的access_token重新发起对0304接口的请求，这个时候就可以返回所需要的数据。</p>
+<p>&nbsp;<img style="display: block; margin-left: auto; margin-right: auto" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/1782126-20200412183525332-785952510.png" alt="" width="483" height="626"></p>
+<p>&nbsp;</p>
+<p>　　之后再等超过5s，这个时候access_token过期了，refresh _token也过期了。动图是这样的：</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/1782126-20200412171317300-21984399.gif" alt="" width="496" height="498"></p>
+<p>&nbsp;</p>
+<p>　　&nbsp;这时的请求返回的是400，而不是401了，这说明refresh _token：826b******17d1过期了。这个时候就该退出登录界面，重新登录了。</p>
+<p><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/1782126-20200412184350231-491043193.png" alt="" width="427" height="424"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/1782126-20200412184435755-703719969.png" alt="" width="426" height="424"></p>
+<p>&nbsp;　　最后，放一个总的效果图：</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/1782126-20200412184849713-1621121899.gif" alt="" width="1295" height="377"></p>
+<p class="EOF">__EOF__</p></div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block"><div id="BlogPostCategory">
+    分类: 
+            <a href="https://www.cnblogs.com/jdWu-d/category/1613912.html" target="_blank">Axios</a></div>
+<div id="EntryTag">
+    标签: 
+            <a href="https://www.cnblogs.com/jdWu-d/tag/Axios/">Axios</a></div>
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(12643822,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow(&#39;2cd2fa56-994d-4046-7d43-08d72b81ce75&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/jdWu-d/" target="_blank"><img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/20190918151619.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/jdWu-d/">他好像一条狗啊</a><br>
+            <a href="https://home.cnblogs.com/u/jdWu-d/followees/">关注 - 0</a><br>
+            <a href="https://home.cnblogs.com/u/jdWu-d/followers/">粉丝 - 12</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;2cd2fa56-994d-4046-7d43-08d72b81ce75&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(12643822,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">8</span>
+    </div>
+    <div class="buryit" onclick="votePost(12643822,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/jdWu-d/p/12482001.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/jdWu-d/p/12482001.html" title="发布于 2020-03-12 19:00">《JavaScript高级程序设计》查缺补漏</a>
+    <br>
+    <a href="https://www.cnblogs.com/jdWu-d/p/12687396.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/jdWu-d/p/12687396.html" title="发布于 2020-05-12 13:56">Vue-cli3.0读取外部化配置文件来修改公共路径</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-04-12 18:57</span>&nbsp;
+<a href="https://www.cnblogs.com/jdWu-d/">他好像一条狗啊</a>&nbsp;
+阅读(<span id="post_view_count">3210</span>)&nbsp;
+评论(<span id="post_comment_count">6</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12643822" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12643822);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/highlight.min.js.下载"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 545238, cb_blogApp = 'jdWu-d', cb_blogUserGuid = '2cd2fa56-994d-4046-7d43-08d72b81ce75';
+    var cb_entryId = 12643822, cb_entryCreatedDate = '2020-04-12 18:57', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder">
+
+<div id="comment_pager_top">
+    
+</div>
+
+<br>
+<div class="feedback_area_title">评论列表</div>
+<div class="feedbackNoItems">
+    <div class="feedbackNoItems"></div>
+</div>
+    <div class="feedbackItem">
+        <div class="feedbackListSubtitle">
+            <div class="feedbackManage">
+                &nbsp;&nbsp;
+
+<span class="comment_actions">
+    
+    
+    
+    
+</span>
+
+
+            </div>
+            
+<a href="https://www.cnblogs.com/jdWu-d/p/12643822.html#4548724" class="layer">#1楼</a>
+<a name="4548724" id="comment_anchor_4548724"></a>
+ 
+<span class="comment_date">2020-04-12 19:47</span>
+
+ 
+        <a id="a_comment_author_4548724" href="https://www.cnblogs.com/philipsslg/" target="_blank">福星人</a>
+
+        </div>
+        <div class="feedbackCon">
+            
+<div id="comment_body_4548724" data-format-type="Markdown" class="blog_comment_body cnblogs-markdown">
+    <p>最近刷新token有莫名其妙的问题，有空看一下。</p>
+
+</div>
+        <div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4548724, &#39;Digg&#39;, this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4548724, &#39;Bury&#39;, this.parentElement, false);">
+                反对(0)
+            </a>
+        </div>
+        
+
+        </div>
+    </div>
+    <div class="feedbackItem">
+        <div class="feedbackListSubtitle">
+            <div class="feedbackManage">
+                &nbsp;&nbsp;
+
+<span class="comment_actions">
+    
+    
+    
+    
+</span>
+
+
+            </div>
+            
+<a href="https://www.cnblogs.com/jdWu-d/p/12643822.html#4549026" class="layer">#2楼</a>
+<a name="4549026" id="comment_anchor_4549026"></a>
+ 
+<span class="comment_date">2020-04-13 09:34</span>
+
+ 
+        <a id="a_comment_author_4549026" href="https://www.cnblogs.com/umbrellar/" target="_blank">害羞的蘑菇</a>
+
+        </div>
+        <div class="feedbackCon">
+            
+<div id="comment_body_4549026" data-format-type="Markdown" class="blog_comment_body cnblogs-markdown">
+    <p>写的挺好的，方便借鉴。</p>
+
+</div>
+        <div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4549026, &#39;Digg&#39;, this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4549026, &#39;Bury&#39;, this.parentElement, false);">
+                反对(0)
+            </a>
+        </div>
+        <span id="comment_4549026_avatar" style="display:none">
+            https://pic.cnblogs.com/face/1434951/20190330000622.png
+        </span>
+
+        </div>
+    </div>
+    <div class="feedbackItem">
+        <div class="feedbackListSubtitle">
+            <div class="feedbackManage">
+                &nbsp;&nbsp;
+
+<span class="comment_actions">
+    
+    
+    
+    
+</span>
+
+
+            </div>
+            
+<a href="https://www.cnblogs.com/jdWu-d/p/12643822.html#4549484" class="layer">#3楼</a>
+<a name="4549484" id="comment_anchor_4549484"></a>
+ 
+<span class="comment_date">2020-04-13 17:07</span>
+
+ 
+        <a id="a_comment_author_4549484" href="https://www.cnblogs.com/fast-song/" target="_blank">丨秋风扫落叶</a>
+
+        </div>
+        <div class="feedbackCon">
+            
+<div id="comment_body_4549484" data-format-type="Markdown" class="blog_comment_body cnblogs-markdown">
+    <p>定时器他不香吗</p>
+
+</div>
+        <div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4549484, &#39;Digg&#39;, this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4549484, &#39;Bury&#39;, this.parentElement, false);">
+                反对(0)
+            </a>
+        </div>
+        <span id="comment_4549484_avatar" style="display:none">
+            https://pic.cnblogs.com/face/1575641/20190110163855.png
+        </span>
+
+        </div>
+    </div>
+    <div class="feedbackItem">
+        <div class="feedbackListSubtitle">
+            <div class="feedbackManage">
+                &nbsp;&nbsp;
+
+<span class="comment_actions">
+    
+    
+    
+    
+</span>
+
+
+            </div>
+            
+<a href="https://www.cnblogs.com/jdWu-d/p/12643822.html#4549567" class="layer">#4楼</a>
+<a name="4549567" id="comment_anchor_4549567"></a>
+[<span class="louzhu">楼主</span>] 
+<span class="comment_date">2020-04-13 18:20</span>
+
+ 
+        <a id="a_comment_author_4549567" href="https://www.cnblogs.com/jdWu-d/" target="_blank">他好像一条狗啊</a>
+
+        </div>
+        <div class="feedbackCon">
+            
+<div id="comment_body_4549567" data-format-type="Markdown" class="blog_comment_body cnblogs-markdown">
+    <p><a href="https://www.cnblogs.com/jdWu-d/p/12643822.html#4549026" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,4549026);">@</a>害羞的蘑菇<br>
+嗯，谢谢</p>
+
+</div>
+        <div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4549567, &#39;Digg&#39;, this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4549567, &#39;Bury&#39;, this.parentElement, false);">
+                反对(0)
+            </a>
+        </div>
+        <span id="comment_4549567_avatar" style="display:none">
+            https://pic.cnblogs.com/face/1782126/20190918151619.png
+        </span>
+
+        </div>
+    </div>
+    <div class="feedbackItem">
+        <div class="feedbackListSubtitle">
+            <div class="feedbackManage">
+                &nbsp;&nbsp;
+
+<span class="comment_actions">
+    
+    
+    
+    
+</span>
+
+
+            </div>
+            
+<a href="https://www.cnblogs.com/jdWu-d/p/12643822.html#4549570" class="layer">#5楼</a>
+<a name="4549570" id="comment_anchor_4549570"></a>
+[<span class="louzhu">楼主</span>] 
+<span class="comment_date">2020-04-13 18:20</span>
+
+ 
+        <a id="a_comment_author_4549570" href="https://www.cnblogs.com/jdWu-d/" target="_blank">他好像一条狗啊</a>
+
+        </div>
+        <div class="feedbackCon">
+            
+<div id="comment_body_4549570" data-format-type="Markdown" class="blog_comment_body cnblogs-markdown">
+    <p><a href="https://www.cnblogs.com/jdWu-d/p/12643822.html#4549484" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,4549484);">@</a>丨秋风扫落叶<br>
+怎么个定时器法，说出来我们讨论下，看哪种方法比较好</p>
+
+</div>
+        <div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4549570, &#39;Digg&#39;, this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4549570, &#39;Bury&#39;, this.parentElement, false);">
+                反对(0)
+            </a>
+        </div>
+        <span id="comment_4549570_avatar" style="display:none">
+            https://pic.cnblogs.com/face/1782126/20190918151619.png
+        </span>
+
+        </div>
+    </div>
+    <div class="feedbackItem">
+        <div class="feedbackListSubtitle">
+            <div class="feedbackManage">
+                &nbsp;&nbsp;
+
+<span class="comment_actions">
+    
+    
+    
+    
+</span>
+
+
+            </div>
+            
+<a href="https://www.cnblogs.com/jdWu-d/p/12643822.html#4550610" class="layer">#6楼</a>
+<a name="4550610" id="comment_anchor_4550610"></a>
+    <span id="comment-maxId" style="display: none">4550610</span>
+    <span id="comment-maxDate" style="display: none">2020/4/14 下午9:48:19</span>
+ 
+<span class="comment_date">2020-04-14 21:48</span>
+
+ 
+        <a id="a_comment_author_4550610" href="https://www.cnblogs.com/laozhang-is-phi/" target="_blank">老张的哲学</a>
+
+        </div>
+        <div class="feedbackCon">
+            
+<div id="comment_body_4550610" data-format-type="Markdown" class="blog_comment_body cnblogs-markdown">
+    <p>支持</p>
+
+</div>
+        <div class="comment_vote">
+            <span class="comment_error" style="color: red"></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4550610, &#39;Digg&#39;, this.parentElement, false);">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(4550610, &#39;Bury&#39;, this.parentElement, false);">
+                反对(0)
+            </a>
+        </div>
+        <span id="comment_4550610_avatar" style="display:none">
+            https://pic.cnblogs.com/face/1468246/20180817230353.png
+        </span>
+
+        </div>
+    </div>
+
+<div id="comment_pager_bottom">
+    
+</div>
+
+
+</div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/jdWu-d/p/12643822.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/jdWu-d/p/12643822.html#top">返回顶部</a></div>
+    <div id="comment_form_container" style="visibility: visible;"><div class="login_tips">
+    登录后才能发表评论，立即 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或
+    <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，
+    <a href="https://www.cnblogs.com/">访问</a> 网站首页
+</div>
+</div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"><a href="https://developer.aliyun.com/learning/21study01?utm_content=g_1000236191" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-阿里云21天&#39;)">【推荐】阿里云寒假充电季，防疫不停学，21天打卡进阶Java工程师</a><br><a href="https://developer.aliyun.com/learning/course/55?utm_content=g_1000235548" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-阿里2月大数据&#39;)">【推荐】阿里云专家领学，2021数仓之旅免费必修课，加入学习</a><br><a href="https://developer.aliyun.com/learning/trainingcamp/java/1?utm_content=g_1000236192" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-阿里云java训练营&#39;)">【推荐】阿里云Java训练营第一期：结合理论与实践，实现知识套现</a><br><a href="http://www.softbam.com/index.htm" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-ucancode&#39;)">【推荐】大型组态、工控、仿真、CADGIS 50万行VC++源码免费下载</a><br><a href="https://brands.cnblogs.com/aws/register" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-AWS&#39;)">【推荐】AWS携手博客园为开发者送福利，新用户立享12个月免费套餐</a><br><a href="https://brands.cnblogs.com/aerospike" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-品牌专区-Aerospike&#39;)">【推荐】第一个 NoSQL 数据库，在大规模和一致性之间找到了平衡</a><br><a href="https://brands.cnblogs.com/agora/p/2029" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-声网专区&#39;)">【推荐】Agora 教程 | 如何实现15mins自主搭建一个教育平台？</a><br></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="c_ad_block" style="">
+        <div id="div-gpt-ad-1592365906576-0" style="width: 300px; height: 250px;" data-google-query-id="CIOsgpnVzO4CFQjJfAodPlkDYg"><div id="google_ads_iframe_/1090369/C1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C1_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C1_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/saved_resource.html"></iframe></div></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block" style="">
+        <div id="div-gpt-ad-1592366332455-0" style="width: 468px; height: 60px;" data-google-query-id="CISsgpnVzO4CFQjJfAodPlkDYg"><div id="google_ads_iframe_/1090369/C2_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C2_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C2_0" width="468" height="60" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" data-google-container-id="2" style="border: 0px; vertical-align: bottom;" data-load-complete="true" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/saved_resource(1).html"></iframe></div></div>
+    </div>
+    <div id="under_post_kb">
+<div class="itnews c_ad_block">
+    <b>最新 IT 新闻</b>:
+    <br>
+ ·          <a href="https://news.cnblogs.com/n/687593/" target="_blank">联发科推首款毫米波5G基带：下载小胜高通</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/687592/" target="_blank">邀请码被炒到几百块 我们亲测了马斯克推的这个社交App</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/687591/" target="_blank">ES6地库撞塌墙 车主质疑刹车失灵！蔚来回应：地面太滑</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/687590/" target="_blank">张勇：蚂蚁暂缓上市、阿里反垄断调查 是冷静反思的重要机会</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/687589/" target="_blank">张勇首谈淘宝买菜：补贴是不可持续的商业模式</a>
+        <br>
+    » <a href="https://news.cnblogs.com/" title="IT 新闻" target="_blank">更多新闻...</a>
+</div></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+   </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem"><!--done-->
+<h3 class="catListTitle">公告</h3>
+
+<div id="blog-news">
+    
+
+    
+        
+        <div style="display: none" id="__document_write_ajax_div-1"></div><script type="text/javascript">window['__document_write_ajax_callbacks__']['1']();</script>
+    
+    
+        <div class="sideBar">
+            <div class="userName">他好像条狗啊</div>
+            <div class="autograph">达则兼济天下，穷则独善其身</div>
+        </div>
+        <div>
+            <ul class="nav">
+                <li><a href="https://www.cnblogs.com/">博客园</a></li>
+                <li><a href="https://www.cnblogs.com/jdWu-d/">首页</a></li>
+                <li><a href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+                <li><a href="https://msg.cnblogs.com/send/%E4%BB%96%E5%A5%BD%E5%83%8F%E4%B8%80%E6%9D%A1%E7%8B%97%E5%95%8A">联系</a></li>
+                <li><a href="https://i.cnblogs.com/">管理</a></li>
+            </ul>
+            <ul class="contact">
+                <li class="icon-QQ">
+                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=819155909&amp;site=qq&amp;menu=yes">
+        　　         <img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/o_191206073104QQ.png" alt="欢迎与我联系" title="欢迎与我联系">
+                    </a>
+                </li>
+                <li class="icon-mail">
+                    <a href="https://msg.cnblogs.com/send/%E4%BB%96%E5%A5%BD%E5%83%8F%E4%B8%80%E6%9D%A1%E7%8B%97%E5%95%8A">
+        　　        <img src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/o_191206073119邮箱.png" alt="欢迎与我联系" title="欢迎与我联系">
+                    </a>
+                </li>
+            </ul>
+        </div>
+       
+        <canvas id="Snow" width="1280" height="554"></canvas>
+        <script type="text/javascript">window['__document_write_ajax_callbacks__']['6']();</script><script type="text/javascript">window['__document_write_ajax_callbacks__']['7']();</script><script>window['__document_write_ajax_callbacks__']['2']();</script>
+
+        <div style="display: none" id="__document_write_ajax_div-3"></div><script>window['__document_write_ajax_callbacks__']['3']();</script>
+        
+        <!-- 九宫格浮动 -->
+        <div style="display: none" id="__document_write_ajax_div-4"></div><script>window['__document_write_ajax_callbacks__']['4']();</script>
+        <div class="base">
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+        </div>
+
+        <canvas id="Snow"></canvas>
+    
+
+
+
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/jdWu-d/">
+            他好像一条狗啊
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/jdWu-d/" title="入园时间：2019-08-29">
+            1年5个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/jdWu-d/followers/">
+            12
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/jdWu-d/followees/">
+            0
+        </a>
+        <div id="p_b_follow"></div>
+        <div style="display: none" id="__document_write_ajax_div-5"></div><script>window['__document_write_ajax_callbacks__']['5']();</script>
+    </div>
+</div>
+
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2021/01/03&#39;); return false;">&lt;</a>
+                            </td>
+                            <td align="center">2021年2月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2021/03/03&#39;); return false;">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    <tr>
+        <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+        <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+        <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+        <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+        <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+        <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+        <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+    </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">31</td>
+                        <td class="" align="center">
+                            1
+                        </td>
+                        <td class="" align="center">
+                            2
+                        </td>
+                        <td class="CalTodayDay" align="center">
+                            3
+                        </td>
+                        <td class="" align="center">
+                            4
+                        </td>
+                        <td class="" align="center">
+                            5
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        6
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            7
+                        </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                            <td class="" align="center">
+                                9
+                            </td>
+                            <td class="" align="center">
+                                10
+                            </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                            <td class="" align="center">
+                                12
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            13
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            14
+                        </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                            <td class="" align="center">
+                                16
+                            </td>
+                            <td class="" align="center">
+                                17
+                            </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                            <td class="" align="center">
+                                19
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            20
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            21
+                        </td>
+                            <td class="" align="center">
+                                22
+                            </td>
+                            <td class="" align="center">
+                                23
+                            </td>
+                            <td class="" align="center">
+                                24
+                            </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                            <td class="" align="center">
+                                26
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            27
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            28
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                1
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                2
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                3
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            6
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalOtherMonthDay" align="center">
+                            7
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                8
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                9
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                10
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                11
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                12
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            13
+                        </td>
+                </tr>
+    </tbody>
+</table></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            <div id="widget_my_google" class="div_my_zzk">
+                <input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block"><div class="catListLink">
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+    
+<li><a href="https://www.cnblogs.com/jdWu-d/p/" title="我的博客的随笔列表">我的随笔</a></li>
+<li><a href="https://www.cnblogs.com/jdWu-d/MyComments.html" title="我的发表过的评论列表">我的评论</a></li>
+<li><a href="https://www.cnblogs.com/jdWu-d/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li>
+<li><a href="https://www.cnblogs.com/jdWu-d/RecentComments.html" title="我的博客的评论列表">最新评论</a></li>
+<li><a href="https://www.cnblogs.com/jdWu-d/tag/" title="我的博客的标签列表">我的标签</a></li>
+
+</ul>
+</div>
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block"><div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+        <li>
+            <a href="https://www.cnblogs.com/jdWu-d/tag/Vue/">Vue<span class="tag-count">(13)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/jdWu-d/tag/%E5%8E%9F%E7%94%9Fjs/">原生js<span class="tag-count">(4)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/jdWu-d/tag/Axios/">Axios<span class="tag-count">(3)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/jdWu-d/tag/ElementUi/">ElementUi<span class="tag-count">(3)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/jdWu-d/tag/Nginx/">Nginx<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/jdWu-d/tag/Vue-cli3.0/">Vue-cli3.0<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/jdWu-d/tag/Vue-route/">Vue-route<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/jdWu-d/tag/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/">版本控制系统<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/jdWu-d/tag/React/">React<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/jdWu-d/tag/SVN/">SVN<span class="tag-count">(1)</span></a>
+        </li>
+    <li>
+        <a href="https://www.cnblogs.com/jdWu-d/tag/">更多</a>
+    </li>
+
+</ul>
+</div>
+
+</div>
+
+<!-- 积分与排名 -->
+<div id="sidebar_scorerank" class="sidebar-block"><div class="catListBlogRank">
+<h3 class="catListTitle">积分与排名</h3>
+<ul>
+	<li class="liScore">
+		积分 -	
+35457
+	</li>
+	<li class="liRank">
+		排名 -	
+30813
+	</li>
+</ul>
+</div>
+
+
+
+</div>
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+
+    <div id="sidebar_postcategory" class="catListPostCategory sidebar-block">
+        <h3 class="catListTitle">
+            
+随笔分类
+
+
+
+        </h3>
+
+        <ul>
+
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/category/1613912.html" rel="" target="">
+    Axios(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/category/1851546.html" rel="" target="">
+    CSS(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/category/1604652.html" rel="" target="">
+    ElementUi(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/category/1604655.html" rel="" target="">
+    Js(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/category/1886873.html" rel="" target="">
+    React(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/category/1604656.html" rel="" target="">
+    Vue(7)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/category/1604658.html" rel="" target="">
+    其他(3)
+</a>
+ 
+
+                </li>                
+            
+        </ul>
+
+
+    </div>    
+    <div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+        <h3 class="catListTitle">
+            
+随笔档案
+
+
+
+        </h3>
+
+        <ul>
+
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2021/01.html" rel="" target="">
+    2021年1月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2020/12.html" rel="" target="">
+    2020年12月(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2020/11.html" rel="" target="">
+    2020年11月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2020/10.html" rel="" target="">
+    2020年10月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2020/09.html" rel="" target="">
+    2020年9月(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2020/08.html" rel="" target="">
+    2020年8月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2020/07.html" rel="" target="">
+    2020年7月(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2020/06.html" rel="" target="">
+    2020年6月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2020/05.html" rel="" target="">
+    2020年5月(3)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2020/04.html" rel="" target="">
+    2020年4月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2020/03.html" rel="" target="">
+    2020年3月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2020/01.html" rel="" target="">
+    2020年1月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2019/12.html" rel="" target="">
+    2019年12月(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2019/11.html" rel="" target="">
+    2019年11月(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2019/10.html" rel="" target="">
+    2019年10月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/jdWu-d/archive/2019/09.html" rel="" target="">
+    2019年9月(4)
+</a>
+ 
+
+                </li>                
+            <li>
+                <a href="javascript:void(0)" onclick="sideColumnManager.loadMore(this)">更多</a>
+            </li>
+        </ul>
+
+
+    </div>    
+</div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block"><div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div class="RecentCommentBlock">
+        <ul>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/jdWu-d/p/11959800.html">1. Re:js对象的直接赋值、浅拷贝与深拷贝</a></li>
+                    <li class="recent_comment_body"><p>大兄弟博客有点锈哦, 特别是底栏的图片!!!</p>
+</li>
+                    <li class="recent_comment_author">--西西里cc</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/jdWu-d/p/11896668.html">2. Re:ElementUi中el-table分页效果</a></li>
+                    <li class="recent_comment_body">感觉这个🐟的插件有点喧宾夺主了，博客下全是获取插件的评论，还有各种私信的，这里统一告诉大家方法，我已经将js整理放在，请大家自行复制下载，然后在合适的地方引入，html中还需要添加 &lt;div id=...</li>
+                    <li class="recent_comment_author">--他好像一条狗啊</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/jdWu-d/p/11896668.html">3. Re:ElementUi中el-table分页效果</a></li>
+                    <li class="recent_comment_body">@流景闲草 已将方法告知，请注意查看博客园消息...</li>
+                    <li class="recent_comment_author">--他好像一条狗啊</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/jdWu-d/p/11896668.html">4. Re:ElementUi中el-table分页效果</a></li>
+                    <li class="recent_comment_body"><p><a href="https://www.cnblogs.com/jdWu-d/p/12643822.html" target="_blank">@他好像一条狗啊</a>  这个鱼能发我么？</p>
+</li>
+                    <li class="recent_comment_author">--流景闲草</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/jdWu-d/p/11896668.html">5. Re:ElementUi中el-table分页效果</a></li>
+                    <li class="recent_comment_body">@缚 确实很有意思，已私发给你了哈...</li>
+                    <li class="recent_comment_author">--他好像一条狗啊</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block"><div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/jdWu-d/p/11587805.html">
+                            1. 详解立即执行函数(function(){}()),(function(){})()(9653)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/jdWu-d/p/11959800.html">
+                            2. js对象的直接赋值、浅拷贝与深拷贝(4376)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/jdWu-d/p/12036528.html">
+                            3. Axios请求头中常见的Content-Type及其使用(3999)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/jdWu-d/p/11898666.html">
+                            4. 如何使ElementUi中的el-dropdown传入多参数(3954)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/jdWu-d/p/11896668.html">
+                            5. ElementUi中el-table分页效果(3394)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block"><div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/jdWu-d/p/11896668.html">
+                            1. ElementUi中el-table分页效果(9)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/jdWu-d/p/12643822.html">
+                            2. 基于OAuth2.0的token无感知刷新(6)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/jdWu-d/p/12036528.html">
+                            3. Axios请求头中常见的Content-Type及其使用(6)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/jdWu-d/p/11959800.html">
+                            4. js对象的直接赋值、浅拷贝与深拷贝(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/jdWu-d/p/11587805.html">
+                            5. 详解立即执行函数(function(){}()),(function(){})()(1)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+<div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">推荐排行榜</h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break: break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/jdWu-d/p/12643822.html">
+                                1. 基于OAuth2.0的token无感知刷新(8)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/jdWu-d/p/11587805.html">
+                                2. 详解立即执行函数(function(){}()),(function(){})()(6)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/jdWu-d/p/11898666.html">
+                                3. 如何使ElementUi中的el-dropdown传入多参数(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/jdWu-d/p/11896668.html">
+                                4. ElementUi中el-table分页效果(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/jdWu-d/p/11959800.html">
+                                5. js对象的直接赋值、浅拷贝与深拷贝(1)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div></div></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2021 他好像一条狗啊
+<br><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	<div class="footer-image"></div></div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <a href="https://github.com/jdWu7468" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<script>
+$(document).ready(function(){
+       $("#footer").append("<div class='footer-image'></div>");
+       $("#cnblogs_post_body").append("<p class='EOF'>__EOF__</p>");
+})
+</script>
+<style>
+.EOF{
+    font-family: "Microsoft YaHei",Lato,"PingFang SC",sans-serif;
+    margin: 10px auto;
+    padding: 0 20px;
+    line-height: 1.9em;
+    font-size: 1.2em;
+    letter-spacing: .015em;
+    font-weight: 700;
+    text-align: center;
+    color: #ddd;}
+</style>
+<!-- 鼠标烟花 -->
+<script src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/cursorEffects.js.下载"></script>
+<!--<script src="https://blog-static.cnblogs.com/files/jdWu-d/ghostCursor.js"></script>
+ <script>
+new ghostCursor();
+</script>-->
+<canvas width="1366" height="662" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+<!-- 滚动进度条 -->
+<div id="bottomProgressBar"></div>
+
+<script src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/Ribbon.js.下载"></script>
+
+<div id="jsi-flying-fish-container" class="container"><canvas width="1263" height="156"></canvas></div>
+  <script src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/fish.js.下载"></script>
+  <style>
+  @media only screen and (max-width: 767px){
+  #sidebar_search_box input[type=text]{width:calc(100% - 24px)}
+  }
+.container {
+    width: 100%;
+    position: fixed;
+    z-index: 8;
+    bottom: 0;
+    left: 0;
+}
+  </style>
+<!-- <script language="javascript" type="text/javascript">
+			jQuery(document).on('copy', function(e) {
+				var selected = window.getSelection();
+				var copyFooter = '<br>==============<br>著作权归作者所有。<br>' +
+					'商业转载请联系作者获得授权，非商业转载请注明出处。<br>' +
+					'作者：jdWu-d<br> 源地址：' + document.location.href +
+					'<br>来源：博客园cnblogs<br>© 版权声明：本文为博主原创文章，转载请附上博文链接！';
+				var md = $("#author_profile_follow  a")
+				if(!md){
+				  copyFooter = "";
+				}
+				var copyHolder = $('<div>', {
+					html: selected + copyFooter,
+					style: {
+						position: 'absolute',
+						left: '-99999px'
+					}
+				});
+
+				$('body').append(copyHolder);
+				selected.selectAllChildren(copyHolder[0]);
+				window.setTimeout(function() {
+					copyHolder.remove();
+				}, 0);
+			});
+</script>
+<script src="https://blog-static.cnblogs.com/files/jdWu-d/jquery.engine3D.js"></script>
+<script src="https://blog-static.cnblogs.com/files/jdWu-d/jquery.particlePhysics.js"></script>
+<script src="https://blog-static.cnblogs.com/files/jdWu-d/jquery.starfieldTagCloud.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+    //注意：这里是用的随笔分类做例子，你自己可以根据你自己情况任意设定。
+    $(".catListPostCategory>ul").wrap("<div class='wrap' ></div>").parent().css({ 'width': '100%', 'height': '239' });
+    var options = { 
+        "range": [-200, 300], 
+        "gravity": -10, 
+        "xPos": 0.5, 
+        "yPos": 0.5, 
+        "gravityVector": [0, 0, 1], 
+        "interval": 100, 
+        "hoverGravityFactor": 0 
+    };
+    jQuery("div.wrap").starfieldTagCloud(options);
+}); 
+</script>-->
+    </div><canvas width="1280" height="610" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas><canvas id="bgCanvas" width="1280" height="554" style="display: block; position: fixed; margin: 0px; padding: 0px; border: 0px; outline: 0px; left: 0px; top: 0px; width: 100%; height: 100%; z-index: -1; background-color: rgb(255, 255, 255);"></canvas>
+
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div><script type="text/javascript">
+var time;
+var normar_title = document.title;
+document.addEventListener('visibilitychange', function () {
+	if (document.visibilityState == 'hidden') {
+		clearTimeout(time);
+		document.title = '(*′Д`)つ))′?`)别忘了我';
+	} else {
+		document.title = '终于回来了呀(*´∇｀*)';
+		time = setTimeout(function () {
+			document.title = normar_title;
+        }, 2000);
+    }
+});
+</script><iframe id="google_osd_static_frame_8944315862803" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./基于OAuth2.0的token无感知刷新 - 他好像一条狗啊 - 博客园_files/saved_resource(2).html"></iframe></body></html>

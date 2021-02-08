@@ -273,3 +273,83 @@ https://www.bilibili.com/video/BV1qK411N7sr?from=search&seid=1764411668978302749
 ### 创建不同类型地图（超图）
 
 ![](D:\workspaces\git\github\KnowledgePoints\notes\acgis-webjs\images\acg-05.png)
+
+
+
+## arcgis本地配置
+
+修改init.js文件，在init.js里搜索[HOSTNAME_AND_PATH_TO_JSAPI] , 替换为127.0.0.1:8080/arcgis_js_api/library/4.18/ （以我本机上面的JS API放置的路径为例）效果如下：
+
+![](D:\workspaces\git\github\KnowledgePoints\notes\acgis-webjs\images\acg-07-本地部署.png)
+
+参考：https://www.sohu.com/a/213002551_740819
+
+https://www.cnblogs.com/jerry-liuyu/p/12716405.html
+
+demo
+
+```
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>Test Map</title>
+    <link rel="stylesheet" href="http://localhost:8080/arcgis_js_api/library/4.18/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="http://localhost:8080/arcgis_js_api/library/4.18/esri/themes/light/main.css" />
+    <style>
+        html,
+        body,
+        #viewDiv {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script src="http://localhost:8080/arcgis_js_api/library/4.18/dojo/dojo.js"></script>
+    <script>
+        var myMap, view;
+        require([
+            "esri/Basemap",
+            "esri/layers/TileLayer",
+            "esri/Map",
+            "esri/views/MapView"
+        ], function (Basemap, TileLayer, Map, MapView){
+            // --------------------------------------------------------------------
+            // If you do not have public internet access then use the Basemap class
+            // and point this URL to your own locally accessible cached service.
+            //
+            // Otherwise you can just use one of the named hosted ArcGIS services.
+            // https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer
+            // --------------------------------------------------------------------
+            var layer = new TileLayer({
+                url:"https://services.arcgisonline.com/arcgis/rest/services/World_Physical_Map/MapServer"
+               // url: "https://js.arcgis.com/arcgis/rest/services/Folder/Custom_Base_Map/MapServer"
+            });
+            var customBasemap = new Basemap({
+                baseLayers: [layer],
+                title: "Custom Basemap",
+                id: "myBasemap"
+            });
+            myMap = new Map({
+                basemap: customBasemap
+            });
+            view = new MapView({
+                center: [-111.87, 40.57], // long, lat
+                container: "viewDiv",
+                map: myMap,
+                zoom: 6
+            });
+        });
+    </script>
+</head>
+<body class="claro">
+<div id="viewDiv"></div>
+</body>
+</html>
+```
+
+
+

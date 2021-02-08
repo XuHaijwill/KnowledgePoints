@@ -1,0 +1,972 @@
+.newsItem .catListTitle{
+    display:none;
+}
+#header,#ad_t2,#widget_my_google,#under_post_news,.itnews,.c_ad_block{
+    display:none;
+}
+#green_channel {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: #c0c0c0 1px dashed;
+    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.syntaxhighlighter a, .syntaxhighlighter div, .syntaxhighlighter code, .syntaxhighlighter table, .syntaxhighlighter table td, .syntaxhighlighter table tr, .syntaxhighlighter table tbody, .syntaxhighlighter table thead, .syntaxhighlighter table caption, .syntaxhighlighter textarea {
+font-size: 14px!important;
+}
+#home {
+    opacity: 0.85;
+    margin: 0 auto;
+    min-width: 950px;
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+}
+#blogTitle h1 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Comic Sans MS";
+    line-height: 1.5em;
+    margin-top: 20px;
+    color: #515151;
+}
+#navList a:hover {
+    color: #4C9ED9;
+    text-decoration: none;
+}
+#navList a {
+    display: block;
+    width: 5em;
+    height: 22px;
+    float: left;
+    text-align: center;
+    padding-top: 18px;
+}
+#ad_under_post_holder #google_ad_c1,#google_ad_c2{ 
+    display: none !important;
+}
+body {
+    color: #000;
+    /*background: url(https://images.cnblogs.com/cnblogs_com/jdWu-d/1605360/o_191203033831timg1.jpg) fixed;  背景图片，现在弃用*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+    font-size: 12px;
+    min-height: 101%;
+}
+#topics .postTitle {
+    border: 0px;
+    font-size: 200%;
+    font-weight: bold;
+    float: left;
+    line-height: 1.5;
+    width: 100%;
+    padding-left: 5px;
+}
+
+/*评论区textarea及其按钮样式*/
+div.comment_textarea{
+width:100%
+}
+div.commentform p{
+    margin-bottom:10px;
+}
+.comment_btn {
+    padding: 5px 10px;
+    height: 35px;
+    width: 90px;
+    border: 0 none;
+    border-radius: 5px;
+    background: #ddd;
+    color: #999;
+    cursor:pointer;
+    font-family: "Lato", Helvetica Neue, Helvetica, Microsoft Yahei, 宋体, Arial, sans-serif;
+    text-shadow: 0 0 1px #fff;
+    display: inline !important;
+}
+.comment_btn:hover{
+    padding: 5px 10px;
+    height: 35px;
+    width: 90px;
+    border: 0 none;
+    border-radius: 5px;
+    background: #258fb8;
+    color: white;
+    cursor:pointer;
+    font-family: "Lato", Helvetica Neue, Helvetica, Microsoft Yahei, 宋体, Arial, sans-serif;
+    text-shadow: 0 0 1px #fff;
+    display: inline !important;
+}
+#commentform_title {
+    background-image:none;
+    background-repeat:no-repeat;
+    margin-bottom:10px;
+    padding:0;
+    font-size:24px;
+}
+#commentbox_opt,#commentbox_opt + p {
+    text-align:center;
+}
+.commentbox_title {
+    width: 100%;
+}
+#tbCommentBody {
+    font-family:'Microsoft Yahei', Microsoft Yahei, 宋体, sans-serif;
+    margin-top:10px;
+    background:white;
+    color:#333;
+    border:2px solid #fff;
+    box-shadow:inset 0 0 8px #aaa;
+    // padding:10px;
+    height:250px;
+    font-size:14px;
+    min-height:120px;
+    background: url(https://images.cnblogs.com/cnblogs_com/jdWu-d/1605360/o_191205090608comment.png) no-repeat  790px 0px;
+    box-sizing: border-box;
+}
+
+.feedback_area_title {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+.feedbackItem {
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: rgb(248, 248, 248);
+}
+.color_shine {
+    background: rgb(226, 242, 255);
+}
+.feedbackItem:hover {-webkit-animation-name: color_shine;-webkit-animation-duration: 2s;-webkit-animation-iteration-count: infinite;}
+    #comment_form .title {
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+
+/*回到顶部小火箭，暂时木有用*/
+#scrollTop div{
+    left:0;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    width:149px;
+    margin:0;
+    padding:0
+}
+#scrollTop .level-2{
+    background:url(https://images2015.cnblogs.com/blog/894443/201707/894443-20170716165243785-2122236756.png) no-repeat scroll -149px 0 transparent;
+    display:none;
+    height:250px;
+    opacity:0;
+    z-index:22
+}
+#scrollTop .level-3{
+    background:none repeat scroll 0 0 transparent;
+    cursor:pointer;
+    display:block;
+    height:150px;
+    z-index:2
+}
+#scrollTop{
+    background:url(https://images2015.cnblogs.com/blog/894443/201707/894443-20170716165243785-2122236756.png) no-repeat scroll 0 0 transparent;
+    cursor:default;
+    display:block;
+    height:180px;
+    overflow:hidden;
+    position:fixed;
+    right:280px;
+    top:20%;
+    width:149px;
+    z-index:11;
+    margin:-125px 0 0;
+    padding:0
+}
+
+/* 页脚 */
+#footer {
+    min-height: 100px;
+    _height: 15px;
+    position: absolute;
+    margin: 0;
+    margin-top: 300px;
+    left: 0;
+    right: 0;
+    background: #232323;
+    padding: 17px 0 27px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.footer-image {
+    background: url(https://images.cnblogs.com/cnblogs_com/jdWu-d/1605360/o_191206081244footer.png) no-repeat 50%;
+    height: 368px;
+    z-index: 1;
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    pointer-events: none;
+}
+
+/* 就那一个抖动的小表情 */
+.my-face {
+    animation: my-face 5s infinite ease-in-out;
+    display: inline-block;
+    margin: 0 5px;
+}
+@-webkit-keyframes my-face {
+    2% {
+        -webkit-transform: translate(0,1.5px) rotate(1.5deg);
+        -moz-transform: translate(0,1.5px) rotate(1.5deg);
+        -ms-transform: translate(0,1.5px) rotate(1.5deg);
+        -o-transform: translate(0,1.5px) rotate(1.5deg);
+        transform: translate(0,1.5px) rotate(1.5deg)
+    }
+    4% {
+        -webkit-transform: translate(0,-1.5px) rotate(-.5deg);
+        -moz-transform: translate(0,-1.5px) rotate(-.5deg);
+        -ms-transform: translate(0,-1.5px) rotate(-.5deg);
+        -o-transform: translate(0,-1.5px) rotate(-.5deg);
+        transform: translate(0,-1.5px) rotate(-.5deg)
+    }
+    6% {
+        -webkit-transform: translate(0,1.5px) rotate(-1.5deg);
+        -moz-transform: translate(0,1.5px) rotate(-1.5deg);
+        -ms-transform: translate(0,1.5px) rotate(-1.5deg);
+        -o-transform: translate(0,1.5px) rotate(-1.5deg);
+        transform: translate(0,1.5px) rotate(-1.5deg)
+    }
+    8% {
+        -webkit-transform: translate(0,-1.5px) rotate(-1.5deg);
+        -moz-transform: translate(0,-1.5px) rotate(-1.5deg);
+        -ms-transform: translate(0,-1.5px) rotate(-1.5deg);
+        -o-transform: translate(0,-1.5px) rotate(-1.5deg);
+        transform: translate(0,-1.5px) rotate(-1.5deg)
+    }
+    10% {
+        -webkit-transform: translate(0,2.5px) rotate(1.5deg);
+        -moz-transform: translate(0,2.5px) rotate(1.5deg);
+        -ms-transform: translate(0,2.5px) rotate(1.5deg);
+        -o-transform: translate(0,2.5px) rotate(1.5deg);
+        transform: translate(0,2.5px) rotate(1.5deg)
+    }
+    12% {
+        -webkit-transform: translate(0,-.5px) rotate(1.5deg);
+        -moz-transform: translate(0,-.5px) rotate(1.5deg);
+        -ms-transform: translate(0,-.5px) rotate(1.5deg);
+        -o-transform: translate(0,-.5px) rotate(1.5deg);
+        transform: translate(0,-.5px) rotate(1.5deg)
+    }
+    14% {
+        -webkit-transform: translate(0,-1.5px) rotate(1.5deg);
+        -moz-transform: translate(0,-1.5px) rotate(1.5deg);
+        -ms-transform: translate(0,-1.5px) rotate(1.5deg);
+        -o-transform: translate(0,-1.5px) rotate(1.5deg);
+        transform: translate(0,-1.5px) rotate(1.5deg)
+    }
+    16% {
+        -webkit-transform: translate(0,-.5px) rotate(-1.5deg);
+        -moz-transform: translate(0,-.5px) rotate(-1.5deg);
+        -ms-transform: translate(0,-.5px) rotate(-1.5deg);
+        -o-transform: translate(0,-.5px) rotate(-1.5deg);
+        transform: translate(0,-.5px) rotate(-1.5deg)
+    }
+    18% {
+        -webkit-transform: translate(0,.5px) rotate(-1.5deg);
+        -moz-transform: translate(0,.5px) rotate(-1.5deg);
+        -ms-transform: translate(0,.5px) rotate(-1.5deg);
+        -o-transform: translate(0,.5px) rotate(-1.5deg);
+        transform: translate(0,.5px) rotate(-1.5deg)
+    }
+    20% {
+        -webkit-transform: translate(0,-1.5px) rotate(2.5deg);
+        -moz-transform: translate(0,-1.5px) rotate(2.5deg);
+        -ms-transform: translate(0,-1.5px) rotate(2.5deg);
+        -o-transform: translate(0,-1.5px) rotate(2.5deg);
+        transform: translate(0,-1.5px) rotate(2.5deg)
+    }
+    22% {
+        -webkit-transform: translate(0,.5px) rotate(-1.5deg);
+        -moz-transform: translate(0,.5px) rotate(-1.5deg);
+        -ms-transform: translate(0,.5px) rotate(-1.5deg);
+        -o-transform: translate(0,.5px) rotate(-1.5deg);
+        transform: translate(0,.5px) rotate(-1.5deg)
+    }
+    24% {
+        -webkit-transform: translate(0,1.5px) rotate(1.5deg);
+        -moz-transform: translate(0,1.5px) rotate(1.5deg);
+        -ms-transform: translate(0,1.5px) rotate(1.5deg);
+        -o-transform: translate(0,1.5px) rotate(1.5deg);
+        transform: translate(0,1.5px) rotate(1.5deg)
+    }
+    26% {
+        -webkit-transform: translate(0,.5px) rotate(.5deg);
+        -moz-transform: translate(0,.5px) rotate(.5deg);
+        -ms-transform: translate(0,.5px) rotate(.5deg);
+        -o-transform: translate(0,.5px) rotate(.5deg);
+        transform: translate(0,.5px) rotate(.5deg)
+    }
+    28% {
+        -webkit-transform: translate(0,.5px) rotate(1.5deg);
+        -moz-transform: translate(0,.5px) rotate(1.5deg);
+        -ms-transform: translate(0,.5px) rotate(1.5deg);
+        -o-transform: translate(0,.5px) rotate(1.5deg);
+        transform: translate(0,.5px) rotate(1.5deg)
+    }
+    30% {
+        -webkit-transform: translate(0,-.5px) rotate(2.5deg);
+        -moz-transform: translate(0,-.5px) rotate(2.5deg);
+        -ms-transform: translate(0,-.5px) rotate(2.5deg);
+        -o-transform: translate(0,-.5px) rotate(2.5deg);
+        transform: translate(0,-.5px) rotate(2.5deg)
+    }
+    32% {
+        -webkit-transform: translate(0,1.5px) rotate(-.5deg);
+        -moz-transform: translate(0,1.5px) rotate(-.5deg);
+        -ms-transform: translate(0,1.5px) rotate(-.5deg);
+        -o-transform: translate(0,1.5px) rotate(-.5deg);
+        transform: translate(0,1.5px) rotate(-.5deg)
+    }
+    34% {
+        -webkit-transform: translate(0,1.5px) rotate(-.5deg);
+        -moz-transform: translate(0,1.5px) rotate(-.5deg);
+        -ms-transform: translate(0,1.5px) rotate(-.5deg);
+        -o-transform: translate(0,1.5px) rotate(-.5deg);
+        transform: translate(0,1.5px) rotate(-.5deg)
+    }
+    36% {
+        -webkit-transform: translate(0,-1.5px) rotate(2.5deg);
+        -moz-transform: translate(0,-1.5px) rotate(2.5deg);
+        -ms-transform: translate(0,-1.5px) rotate(2.5deg);
+        -o-transform: translate(0,-1.5px) rotate(2.5deg);
+        transform: translate(0,-1.5px) rotate(2.5deg)
+    }
+    38% {
+        -webkit-transform: translate(0,1.5px) rotate(-1.5deg);
+        -moz-transform: translate(0,1.5px) rotate(-1.5deg);
+        -ms-transform: translate(0,1.5px) rotate(-1.5deg);
+        -o-transform: translate(0,1.5px) rotate(-1.5deg);
+        transform: translate(0,1.5px) rotate(-1.5deg)
+    }
+    40% {
+        -webkit-transform: translate(0,-.5px) rotate(2.5deg);
+        -moz-transform: translate(0,-.5px) rotate(2.5deg);
+        -ms-transform: translate(0,-.5px) rotate(2.5deg);
+        -o-transform: translate(0,-.5px) rotate(2.5deg);
+        transform: translate(0,-.5px) rotate(2.5deg)
+    }
+    42% {
+        -webkit-transform: translate(0,2.5px) rotate(-1.5deg);
+        -moz-transform: translate(0,2.5px) rotate(-1.5deg);
+        -ms-transform: translate(0,2.5px) rotate(-1.5deg);
+        -o-transform: translate(0,2.5px) rotate(-1.5deg);
+        transform: translate(0,2.5px) rotate(-1.5deg)
+    }
+    44% {
+        -webkit-transform: translate(0,1.5px) rotate(.5deg);
+        -moz-transform: translate(0,1.5px) rotate(.5deg);
+        -ms-transform: translate(0,1.5px) rotate(.5deg);
+        -o-transform: translate(0,1.5px) rotate(.5deg);
+        transform: translate(0,1.5px) rotate(.5deg)
+    }
+    46% {
+        -webkit-transform: translate(0,-1.5px) rotate(2.5deg);
+        -moz-transform: translate(0,-1.5px) rotate(2.5deg);
+        -ms-transform: translate(0,-1.5px) rotate(2.5deg);
+        -o-transform: translate(0,-1.5px) rotate(2.5deg);
+        transform: translate(0,-1.5px) rotate(2.5deg)
+    }
+    48% {
+        -webkit-transform: translate(0,-.5px) rotate(.5deg);
+        -moz-transform: translate(0,-.5px) rotate(.5deg);
+        -ms-transform: translate(0,-.5px) rotate(.5deg);
+        -o-transform: translate(0,-.5px) rotate(.5deg);
+        transform: translate(0,-.5px) rotate(.5deg)
+    }
+    50% {
+        -webkit-transform: translate(0,.5px) rotate(.5deg);
+        -moz-transform: translate(0,.5px) rotate(.5deg);
+        -ms-transform: translate(0,.5px) rotate(.5deg);
+        -o-transform: translate(0,.5px) rotate(.5deg);
+        transform: translate(0,.5px) rotate(.5deg)
+    }
+    52% {
+        -webkit-transform: translate(0,2.5px) rotate(2.5deg);
+        -moz-transform: translate(0,2.5px) rotate(2.5deg);
+        -ms-transform: translate(0,2.5px) rotate(2.5deg);
+        -o-transform: translate(0,2.5px) rotate(2.5deg);
+        transform: translate(0,2.5px) rotate(2.5deg)
+    }
+    54% {
+        -webkit-transform: translate(0,-1.5px) rotate(1.5deg);
+        -moz-transform: translate(0,-1.5px) rotate(1.5deg);
+        -ms-transform: translate(0,-1.5px) rotate(1.5deg);
+        -o-transform: translate(0,-1.5px) rotate(1.5deg);
+        transform: translate(0,-1.5px) rotate(1.5deg)
+    }
+    56% {
+        -webkit-transform: translate(0,2.5px) rotate(2.5deg);
+        -moz-transform: translate(0,2.5px) rotate(2.5deg);
+        -ms-transform: translate(0,2.5px) rotate(2.5deg);
+        -o-transform: translate(0,2.5px) rotate(2.5deg);
+        transform: translate(0,2.5px) rotate(2.5deg)
+    }
+    58% {
+        -webkit-transform: translate(0,.5px) rotate(2.5deg);
+        -moz-transform: translate(0,.5px) rotate(2.5deg);
+        -ms-transform: translate(0,.5px) rotate(2.5deg);
+        -o-transform: translate(0,.5px) rotate(2.5deg);
+        transform: translate(0,.5px) rotate(2.5deg)
+    }
+    60% {
+        -webkit-transform: translate(0,2.5px) rotate(2.5deg);
+        -moz-transform: translate(0,2.5px) rotate(2.5deg);
+        -ms-transform: translate(0,2.5px) rotate(2.5deg);
+        -o-transform: translate(0,2.5px) rotate(2.5deg);
+        transform: translate(0,2.5px) rotate(2.5deg)
+    }
+    62% {
+        -webkit-transform: translate(0,-.5px) rotate(2.5deg);
+        -moz-transform: translate(0,-.5px) rotate(2.5deg);
+        -ms-transform: translate(0,-.5px) rotate(2.5deg);
+        -o-transform: translate(0,-.5px) rotate(2.5deg);
+        transform: translate(0,-.5px) rotate(2.5deg)
+    }
+    64% {
+        -webkit-transform: translate(0,-.5px) rotate(1.5deg);
+        -moz-transform: translate(0,-.5px) rotate(1.5deg);
+        -ms-transform: translate(0,-.5px) rotate(1.5deg);
+        -o-transform: translate(0,-.5px) rotate(1.5deg);
+        transform: translate(0,-.5px) rotate(1.5deg)
+    }
+    66% {
+        -webkit-transform: translate(0,1.5px) rotate(-.5deg);
+        -moz-transform: translate(0,1.5px) rotate(-.5deg);
+        -ms-transform: translate(0,1.5px) rotate(-.5deg);
+        -o-transform: translate(0,1.5px) rotate(-.5deg);
+        transform: translate(0,1.5px) rotate(-.5deg)
+    }
+    68% {
+        -webkit-transform: translate(0,-1.5px) rotate(-.5deg);
+        -moz-transform: translate(0,-1.5px) rotate(-.5deg);
+        -ms-transform: translate(0,-1.5px) rotate(-.5deg);
+        -o-transform: translate(0,-1.5px) rotate(-.5deg);
+        transform: translate(0,-1.5px) rotate(-.5deg)
+    }
+    70% {
+        -webkit-transform: translate(0,1.5px) rotate(.5deg);
+        -moz-transform: translate(0,1.5px) rotate(.5deg);
+        -ms-transform: translate(0,1.5px) rotate(.5deg);
+        -o-transform: translate(0,1.5px) rotate(.5deg);
+        transform: translate(0,1.5px) rotate(.5deg)
+    }
+    72% {
+        -webkit-transform: translate(0,2.5px) rotate(1.5deg);
+        -moz-transform: translate(0,2.5px) rotate(1.5deg);
+        -ms-transform: translate(0,2.5px) rotate(1.5deg);
+        -o-transform: translate(0,2.5px) rotate(1.5deg);
+        transform: translate(0,2.5px) rotate(1.5deg)
+    }
+    74% {
+        -webkit-transform: translate(0,-.5px) rotate(.5deg);
+        -moz-transform: translate(0,-.5px) rotate(.5deg);
+        -ms-transform: translate(0,-.5px) rotate(.5deg);
+        -o-transform: translate(0,-.5px) rotate(.5deg);
+        transform: translate(0,-.5px) rotate(.5deg)
+    }
+    76% {
+        -webkit-transform: translate(0,-.5px) rotate(2.5deg);
+        -moz-transform: translate(0,-.5px) rotate(2.5deg);
+        -ms-transform: translate(0,-.5px) rotate(2.5deg);
+        -o-transform: translate(0,-.5px) rotate(2.5deg);
+        transform: translate(0,-.5px) rotate(2.5deg)
+    }
+    78% {
+        -webkit-transform: translate(0,-.5px) rotate(1.5deg);
+        -moz-transform: translate(0,-.5px) rotate(1.5deg);
+        -ms-transform: translate(0,-.5px) rotate(1.5deg);
+        -o-transform: translate(0,-.5px) rotate(1.5deg);
+        transform: translate(0,-.5px) rotate(1.5deg)
+    }
+    80% {
+        -webkit-transform: translate(0,1.5px) rotate(1.5deg);
+        -moz-transform: translate(0,1.5px) rotate(1.5deg);
+        -ms-transform: translate(0,1.5px) rotate(1.5deg);
+        -o-transform: translate(0,1.5px) rotate(1.5deg);
+        transform: translate(0,1.5px) rotate(1.5deg)
+    }
+    82% {
+        -webkit-transform: translate(0,-.5px) rotate(.5deg);
+        -moz-transform: translate(0,-.5px) rotate(.5deg);
+        -ms-transform: translate(0,-.5px) rotate(.5deg);
+        -o-transform: translate(0,-.5px) rotate(.5deg);
+        transform: translate(0,-.5px) rotate(.5deg)
+    }
+    84% {
+        -webkit-transform: translate(0,1.5px) rotate(2.5deg);
+        -moz-transform: translate(0,1.5px) rotate(2.5deg);
+        -ms-transform: translate(0,1.5px) rotate(2.5deg);
+        -o-transform: translate(0,1.5px) rotate(2.5deg);
+        transform: translate(0,1.5px) rotate(2.5deg)
+    }
+    86% {
+        -webkit-transform: translate(0,-1.5px) rotate(-1.5deg);
+        -moz-transform: translate(0,-1.5px) rotate(-1.5deg);
+        -ms-transform: translate(0,-1.5px) rotate(-1.5deg);
+        -o-transform: translate(0,-1.5px) rotate(-1.5deg);
+        transform: translate(0,-1.5px) rotate(-1.5deg)
+    }
+    88% {
+        -webkit-transform: translate(0,-.5px) rotate(2.5deg);
+        -moz-transform: translate(0,-.5px) rotate(2.5deg);
+        -ms-transform: translate(0,-.5px) rotate(2.5deg);
+        -o-transform: translate(0,-.5px) rotate(2.5deg);
+        transform: translate(0,-.5px) rotate(2.5deg)
+    }
+    90% {
+        -webkit-transform: translate(0,2.5px) rotate(-.5deg);
+        -moz-transform: translate(0,2.5px) rotate(-.5deg);
+        -ms-transform: translate(0,2.5px) rotate(-.5deg);
+        -o-transform: translate(0,2.5px) rotate(-.5deg);
+        transform: translate(0,2.5px) rotate(-.5deg)
+    }
+    92% {
+        -webkit-transform: translate(0,.5px) rotate(-.5deg);
+        -moz-transform: translate(0,.5px) rotate(-.5deg);
+        -ms-transform: translate(0,.5px) rotate(-.5deg);
+        -o-transform: translate(0,.5px) rotate(-.5deg);
+        transform: translate(0,.5px) rotate(-.5deg)
+    }
+    94% {
+        -webkit-transform: translate(0,2.5px) rotate(.5deg);
+        -moz-transform: translate(0,2.5px) rotate(.5deg);
+        -ms-transform: translate(0,2.5px) rotate(.5deg);
+        -o-transform: translate(0,2.5px) rotate(.5deg);
+        transform: translate(0,2.5px) rotate(.5deg)
+    }
+    96% {
+        -webkit-transform: translate(0,-.5px) rotate(1.5deg);
+        -moz-transform: translate(0,-.5px) rotate(1.5deg);
+        -ms-transform: translate(0,-.5px) rotate(1.5deg);
+        -o-transform: translate(0,-.5px) rotate(1.5deg);
+        transform: translate(0,-.5px) rotate(1.5deg)
+    }
+    98% {
+        -webkit-transform: translate(0,-1.5px) rotate(-.5deg);
+        -moz-transform: translate(0,-1.5px) rotate(-.5deg);
+        -ms-transform: translate(0,-1.5px) rotate(-.5deg);
+        -o-transform: translate(0,-1.5px) rotate(-.5deg);
+        transform: translate(0,-1.5px) rotate(-.5deg)
+    }
+    0%,100% {
+        -webkit-transform: translate(0,0) rotate(0);
+        -moz-transform: translate(0,0) rotate(0);
+        -ms-transform: translate(0,0) rotate(0);
+        -o-transform: translate(0,0) rotate(0);
+        transform: translate(0,0) rotate(0)
+    }
+}
+
+/* 顶部滚动栏 */
+#bottomProgressBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 998;
+}
+
+/* header头部 */
+.main-header{
+    display: table;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    /*margin-bottom: 5rem;*/
+    text-align: center;
+    /*background: #222 url(https://files.cnblogs.com/files/bndong/top_bg4.gif) center center no-repeat;*/
+    /* background: #222 url(https://raw.githubusercontent.com/BNDong/Cnblogs-Theme-SimpleMemory/master/img/home_top_bg.jpg) center center no-repeat;*/
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    box-shadow: 0 1px 2px rgba(150,150,150,.7);
+}
+
+/* 主页header头部 */
+#notHomeTopCanvas {
+    display: none !important;
+  }
+.vertical {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+.inner {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.page-title, .sb-title {
+    margin: 10px 0 10px 0;
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    -webkit-animation: fade-in-down 1s;
+    animation: fade-in-down 1s both;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.5s;
+    text-shadow: 0 3px 6px rgba(0,0,0, 0.3);
+}
+.page-description {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.5em;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
+    font-family: "Merriweather","Open Sans","Microsoft Jhenghei","Microsoft Yahei",sans-seri;
+    color: rgba(255,255,255,0.8);
+    -webkit-animation: fade-in-down 0.9s;
+    animation: fade-in-down 0.9s both;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.3s;
+    text-shadow: 0 3px 6px rgba(0,0,0, 0.5);
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+    overflow: hidden;
+}
+.page-author {
+    margin: 0;
+    font-size: 1.4rem !important;
+    line-height: 1.3em;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
+    font-family: "Merriweather","Open Sans","Microsoft Jhenghei","Microsoft Yahei",sans-seri;
+    color: rgba(255,255,255,0.8);
+    -webkit-animation: fade-in-down 0.9s;
+    animation: fade-in-down 0.9s both;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.3s;
+    text-shadow: 0 3px 6px rgba(0,0,0, 0.5);
+    display: none;
+}
+.page-title {
+    font-size: 5rem;
+}
+.sb-title {
+    font-size: 4rem;
+}
+
+#loading{
+    background-color: rgb(240, 240, 240);
+    z-index: 1099;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 评论区*/
+.feedbackCon img:hover {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+}
+.feedbackCon img {
+    border-radius: 40px;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+@media screen and (max-width: 860px) {
+    .sb-title {
+        font-size: 2.5rem;
+    }
+    .post .postTitle {
+        display:none
+    }
+    .footer-image {
+        background: url(https://images.cnblogs.com/cnblogs_com/jdWu-d/1605360/o_191206081244footer.png) no-repeat 10%;
+    }
+}
+
+
+/* 侧边栏公告*/
+.sideBar{
+    padding:5px 0 65px 0;
+    writing-mode: vertical-lr;
+    border-left: solid #606975 2px;
+    transition: padding .8s ease 0s,background .8s ease 0s;
+}
+.sideBar:hover{
+    padding:20px 0 50px 0;
+    background:#606975;
+    color:#fff;
+}
+.userName{
+    margin-left:12px;
+    margin-right:12px;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: "HiraMinProN-W6","Source Han Serif CN","Source Han Serif SC","Source Han Serif TC",serif;
+}
+.autograph{
+    margin-left:12px;
+    margin-right:12px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: "HiraMinProN-W6","Source Han Serif CN","Source Han Serif SC","Source Han Serif TC",serif;
+}
+@media screen and (max-width: 860px) {
+ .sideBar {
+        width: 100%;
+        padding: 5px 0 65px 0;
+        writing-mode:horizontal-tb;
+        border-left: none;
+        transition: padding .8s ease 0s,background .8s ease 0s;
+    }
+.userName{
+        font-size:2rem;
+        text-align:center;
+        margin-bottom:5px
+   }
+.autograph{
+        font-size:1rem;
+        text-align:center
+   }
+}
+
+/* 导航栏 */
+.nav{
+margin-bottom:0px;
+}
+.nav li a{
+    padding:2px;
+    font-size: 18px;
+    color: #606975;
+    border-bottom: solid #606975 3px;
+    font-weight: bolder;
+    font-family: "HiraMinProN-W6","Source Han Serif CN","Source Han Serif SC","Source Han Serif TC",serif;
+    text-decoration:none!important;
+    border-bottom: solid #606975 3px !important;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease 0s,background-color .3s ease 0s;
+}
+.nav li a:hover{
+    color: #fff!important;
+    background-color:#606975;
+}
+.contact li{
+    display:inline
+}
+.contact li a{
+    text-decoration:none;
+    font-size:0px;
+    width:50px;
+    height:26px;
+}
+.icon-QQ a img{
+    width:25px;
+    height:25px;
+}
+.icon-mail a img{
+    width:26px;
+    height:26px;
+}
+
+#Snow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/*回到顶部小猫动画*/
+.cd-top {
+    position: fixed;
+    left: 25px;
+    top: -900px;
+    z-index: 99;
+    width: 70px;
+    height: 900px;
+    background: url(https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095655186-266655888.png) no-repeat center;
+    background-size: contain;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    opacity: 1
+}
+.cd-top.cd-is-visible {
+    opacity: 1;
+    top: -326px
+}
+.cd-top.cd-fade-out {
+    opacity: 1
+}
+.cd-top:hover {
+    opacity: 1
+}
+.cd-top span {
+    display: none;
+    color: #000;
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 50px;
+    text-align: center
+}
+@media screen and (max-width: 860px) {
+    .cd-top {
+        display: none;
+        height: 60px;
+        width: 50px
+    }
+    .cd-top span {
+        height: 10px;
+        width: 50px
+    }
+}
+.faa-parent.animated-hover:hover > .faa-spin, .faa-spin.animated, .faa-spin.animated-hover:hover {
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite
+}
+.faa-parent.animated-hover:hover > .faa-spin.faa-fast, .faa-spin.animated-hover.faa-fast:hover, .faa-spin.animated.faa-fast {
+    -webkit-animation: spin .7s linear infinite;
+    animation: spin .7s linear infinite
+}
+.faa-parent.animated-hover:hover > .faa-spin.faa-slow, .faa-spin.animated-hover.faa-slow:hover, .faa-spin.animated.faa-slow {
+    -webkit-animation: spin 2.2s linear infinite;
+    animation: spin 2.2s linear infinite
+}
+@-webkit-keyframes float {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    50% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px)
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+@keyframes float {
+    0% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+    }
+    50% {
+        -webkit-transform: translateY(-6px);
+        -ms-transform: translateY(-6px);
+        transform: translateY(-6px)
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+.faa-float.animated, .faa-float.animated-hover:hover, .faa-parent.animated-hover:hover > .faa-float {
+    -webkit-animation: float 2s linear infinite;
+    animation: float 2s linear infinite
+}
+.faa-float.animated-hover.faa-fast:hover, .faa-float.animated.faa-fast, .faa-parent.animated-hover:hover > .faa-float.faa-fast {
+    -webkit-animation: float 1s linear infinite;
+    animation: float 1s linear infinite
+}
+.faa-float.animated-hover.faa-slow:hover, .faa-float.animated.faa-slow, .faa-parent.animated-hover:hover > .faa-float.faa-slow {
+    -webkit-animation: float 3s linear infinite;
+    animation: float 3s linear infinite
+}
+
+/* 九宫格浮动 */
+.base {
+    height: 9em;
+    padding: 3em;
+    width: 9em;
+    transform: rotateX(45deg) rotateZ(45deg);
+    transform-style: preserve-3d;
+}
+.cube,.cube:after,.cube:before {
+    content: '';
+    float: left;
+    height: 3em;
+    position: absolute;
+    width: 3em;
+}
+.cube {
+    background-color: #05afd1;
+    position: relative;
+    transform: translateZ(3em);
+    transform-style: preserve-3d;
+    transition: .25s;
+    box-shadow: 10em 10em 1.5em rgba(0, 0, 0, 0.1);
+    animation: anim 1s infinite;
+}
+.cube:after {
+    background-color: #049dbc;
+    transform: rotateX(-90deg) translateY(3em);
+    transform-origin: 100% 100%;
+}
+.cube:before {
+    background-color: #048ca7;
+    transform: rotateY(90deg) translateX(3em);
+    transform-origin: 100% 0;
+}
+.cube:nth-child(1) {
+    animation-delay: 0.05s;
+}
+.cube:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.cube:nth-child(3) {
+    animation-delay: 0.15s;
+}
+.cube:nth-child(4) {
+    animation-delay: 0.2s;
+}
+.cube:nth-child(5) {
+    animation-delay: 0.25s;
+}
+.cube:nth-child(6) {
+    animation-delay: 0.3s;
+}
+.cube:nth-child(7) {
+    animation-delay: 0.35s;
+}
+.cube:nth-child(8) {
+    animation-delay: 0.4s;
+}
+.cube:nth-child(9) {
+    animation-delay: 0.45s;
+}
+@keyframes anim {
+    50% {
+        transform: translateZ(0.5em);
+    }
+}
