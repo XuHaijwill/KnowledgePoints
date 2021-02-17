@@ -12,7 +12,18 @@ https://start.spring.io/actuator/info
 
 https://gitee.com/debugxu/SpringCloud2020
 
+代码地址:
 
+D:\workspaces\resources\cloud2020
+
+https://github.com/XuHaijwill/springCloud
+
+链接：https://pan.baidu.com/s/1HyJfyzUD24RKONsd_tSqag 
+提取码：syl5 
+
+## IDEA 无法显示 Run Dashboard 的解决方法
+
+https://www.cnblogs.com/dalianpai/p/12258444.html
 
 ## 微服务架构的高并发问题
 
@@ -25,3 +36,5 @@ https://blog.csdn.net/liuhenghui5201/article/details/110291387?utm_medium=distri
 ## [谈谈微服务中的 API 网关（API Gateway）](https://www.cnblogs.com/savorboard/p/api-gateway.html)
 
 https://www.cnblogs.com/savorboard/p/api-gateway.html
+
+![](D:\workspaces\git\github\KnowledgePoints\notes\springcloud\imgs\修改配置001.png)
