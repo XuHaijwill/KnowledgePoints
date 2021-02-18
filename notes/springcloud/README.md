@@ -37,4 +37,8 @@ https://blog.csdn.net/liuhenghui5201/article/details/110291387?utm_medium=distri
 
 https://www.cnblogs.com/savorboard/p/api-gateway.html
 
-![](D:\workspaces\git\github\KnowledgePoints\notes\springcloud\imgs\修改配置001.png)
+![](imgs\修改配置001.png)
+
+## nacos学习指南
+
+学习地址：https://github.com/alibaba/nacos
