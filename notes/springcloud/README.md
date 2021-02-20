@@ -42,3 +42,30 @@ https://www.cnblogs.com/savorboard/p/api-gateway.html
 ## nacos学习指南
 
 学习地址：https://github.com/alibaba/nacos
+
+https://nacos.io/zh-cn/docs/deployment.html
+
+
+
+若依框架
+
+```
+切换存储方式
+目前默认采用的是本地存储，可以通过注解@Primary指定需要使用的文件接口。
+
+@Primary
+@Service
+public class LocalSysFileServiceImpl implements ISysFileService
+{
+    .....
+}
+
+本地文件存储：LocalSysFileServiceImpl.java
+
+Minio 文件存储：MinioSysFileServiceImpl.java
+
+FastDFS文件存储：FastDfsSysFileServiceImpl.java
+```
+
+
+
