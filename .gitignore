@@ -1,5 +1,6 @@
 /workspases/demo-Spring/.metadata/
 /workspases/demo-Spring/*.idea/
+<<<<<<< HEAD
 
 # Compiled class file
 *.class
@@ -30,3 +31,6 @@ hs_err_pid*
 overlays/*
 *.iml
 
+=======
+*.class
+>>>>>>> 14b285756361979d09d75fbaf6dd5649222ad7e0
