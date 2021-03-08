@@ -1,4 +1,6 @@
 /workspases/demo-Spring/.metadata/
+/workspases/demo-Spring/*.idea/
+*.class
 
 
 
