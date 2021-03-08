@@ -86,6 +86,7 @@ public class MybatisGenerator {
 pom文件中导入插件
 
 ```xml
+ <!-- 代码生成 -->
 <plugin>
 	<groupId>org.mybatis.generator</groupId>
 	<artifactId>mybatis-generator-maven-plugin</artifactId>
@@ -99,13 +100,66 @@ pom文件中导入插件
 
 配置运行
 
-![配置参数](D:\xhj\git\github\KnowledgePoints\notes\mybatis\img\mg01.png)
+![配置参数](img\mg01.png)
 
 点击运行即可
+
+mybatis-generator:generate -e
 
 ### FAQ
 
 1.代码不生成，无报错日志
 
-![](D:\xhj\git\github\KnowledgePoints\notes\mybatis\img\MG02.png)
+![](img\MG02.png)
 
+
+
+# mybatis-generator自定义注释生成
+
+https://blog.csdn.net/qq_21251983/article/details/50731368
+
+https://blog.csdn.net/qigc_0529/article/details/80704330
+
+
+
+# 基于MybatisGenerator扩展的 Model & Mapper & Service & Controller代码生成器
+
+https://blog.csdn.net/fenglibing/article/details/83384337?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&dist_request_id=4a06a2ad-8ee6-431c-a2ca-c4d8a9c27091&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control
+
+https://github.com/fenglibin/CodeGenerator
+
+```
+使用说明
+运行
+
+进入到 src/test/java 目录下
+找到CodeGeneratorMain类 为生成器的启动项
+直接 Run As Java Application 运行即可
+
+修改配置
+
+进入到 src/test/resources 目录下
+找到 generatorConfig.properties 文件
+修改对应的参数即可
+具体的注释信息可参考 /src/test/java/com/codegen/service/CodeGeneratorConfig.java 类
+
+自定义生成器
+
+参考目录src/test/java/com/codegen/generator下面相关的实现
+
+模板样式修改
+
+如果需要生成自己所需的 Controller & Service 样式
+进入到 src/test/resources/generator/template 目录下
+修改对应的ftl文件即可
+
+数据库表名规则
+
+表名支持单个单词的表名，如”table1“，已经根据下划线分隔的表名如“my_table1”，其它的没有测试。
+```
+
+
+
+## MyBatis中的collection两种使用方法
+
+https://blog.csdn.net/lzxomg/article/details/89739651?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&dist_request_id=e64c766f-ab2b-4701-bd46-95fbf10f3a1a&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control

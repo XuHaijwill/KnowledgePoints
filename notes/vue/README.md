@@ -201,13 +201,73 @@ https://element.eleme.cn/#/zh-CN/guide/design
 **项目后台vue_api_server启动**
 
 - shift+右键 打开PowerShell
-
 - npm install
-
 - node ./app.js
 
+### vue-element-admin
 
+https://panjiachen.gitee.io/vue-element-admin/#/permission/directive
+
+# 推荐五款Vue管理后台框架
+
+https://zhuanlan.zhihu.com/p/111009109
+
+### 文件上传组件
+
+[file-upload](https://gitee.com/y_project/RuoYi-Vue/tree/master/ruoyi-ui/src/components/FileUpload)
+
+# elementUI文件上传(附后端代码)
+
+https://blog.csdn.net/qq_42944520/article/details/95473985
+
+
+
+# springboot整合vue实现上传下载文件
+
+https://blog.csdn.net/yhhyhhyhhyhh/article/details/89888953?utm_medium=distribute.pc_relevant_download.none-task-blog-BlogCommendFromBaidu-1.nonecase&dist_request_id=c3db03ad-006e-40d5-b29d-a42abf042222&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-BlogCommendFromBaidu-1.nonecas
+
+
+
+# vue---组件引入及使用的几种方式
+
+在vue的项目开发过程中，基本都是基于组件化开发项目，总结下使用组件的几个点：
+
+
+
+# 封装Vue Element的upload上传组件
+
+https://www.cnblogs.com/tnnyang/p/13559362.html
+
+https://my.oschina.net/discussjava/blog/2249327
 
 
 
 STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+
+
+
+# 技术组件
+
+## ElementUI表格行编辑单元格编辑支持（输入框，选择框）Demo
+
+https://www.cnblogs.com/liruilong/p/13968212.html
+
+
+
+# 问题解决
+
+## vue 树形下拉框报错You need to use “loadOptions“ prop.解决方法
+
+vue date中修改对应loadOptions参数不为空即可
+
+```javascript
+  // 部门树选项
+      deptOptions: undefined,
+```
+
+改为：
+
+```javascript
+ // 部门树选项
+      deptOptions: [],
+```

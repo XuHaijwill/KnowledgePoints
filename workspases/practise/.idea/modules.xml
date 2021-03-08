@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaBaseDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaBaseDemo.iml" group="JavaBaseDemo" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaBaseDemo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaBaseDemo_main.iml" group="JavaBaseDemo" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaBaseDemo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaBaseDemo_test.iml" group="JavaBaseDemo" />
-      <module fileurl="file://$PROJECT_DIR$/rabbitmq-demo/rabbitmq-demo.iml" filepath="$PROJECT_DIR$/rabbitmq-demo/rabbitmq-demo.iml" />
     </modules>
   </component>
 </project>
