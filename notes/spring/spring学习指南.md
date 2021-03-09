@@ -129,3 +129,11 @@ org.springframework.beans.factory.support.DefaultSingletonBeanRegistry这个类�
 ## spring面试问题
 
 - spring的循环依赖如何解决（https://zhuanlan.zhihu.com/p/84267654）
+
+## spring学习资源
+
+https://javadoop.com/
+
+学习路径
+
+https://www.processon.com/view/link/5cb6c8a4e4b059e209fbf369#outline
