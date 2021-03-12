@@ -62,7 +62,7 @@ Thread、Runable、Callable
 
 ## 线程常用方法和线程的状态
 
-![](D:\project\KnowledgePoints\notes\javaBase\javabase\juc01.png)
+![](javabase\juc01.png)
 
 ### notify和notifyAll应该用谁？
 
@@ -91,3 +91,4 @@ java 进程命令
 jps
 
 jstack 2256
+

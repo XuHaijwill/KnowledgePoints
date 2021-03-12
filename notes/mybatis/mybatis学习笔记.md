@@ -163,3 +163,29 @@ https://github.com/fenglibin/CodeGenerator
 ## MyBatis中的collection两种使用方法
 
 https://blog.csdn.net/lzxomg/article/details/89739651?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&dist_request_id=e64c766f-ab2b-4701-bd46-95fbf10f3a1a&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.control
+
+
+
+# mapper-spring-boot-starter 应用研究
+
+
+
+https://www.jianshu.com/p/866cccd377b5?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+
+
+
+https://github.com/abel533/MyBatis-Spring-Boot
+
+官方文档
+
+https://github.com/abel533/Mapper
+
+
+
+https://my.oschina.net/hua0517/blog/4290515
+
+
+
+# 解决Springboot2.x+Mybatis提示Could not resolve type alias 'xxx'的问题
+
+https://www.jianshu.com/p/81e836106f81

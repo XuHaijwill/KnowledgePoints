@@ -129,3 +129,23 @@ org.springframework.beans.factory.support.DefaultSingletonBeanRegistry这个类�
 ## spring面试问题
 
 - spring的循环依赖如何解决（https://zhuanlan.zhihu.com/p/84267654）
+
+
+
+## 实际问题
+
+### SpringBoot指定额外需要扫描的包
+
+```
+我们都知道，SpringBoot主启动类标注了@SpringBootApplication注解，该注解引入了@ComponentScan注解
+所以默认的包扫描规则是，程序会自动扫描主启动类所在包及其子包
+
+但是在多模块项目开发中，有时候会遇到这样的需求：
+需要将公共模块的一个组件加入IOC容器，但是其所在包又不在默认扫描范围内
+
+解决办法两个：
+方法1：将公共模块中的该组件放在默认扫描的包下（包名一样）
+
+方法2：使用@ComponentScan额外指定待扫描的包，但是不能用在主启动类上，因为这样会覆盖掉默认的包扫描规则，可以在其他标注了@Configuration的地方配置@ComponentScan(basePackages = { "xxx.yyy"})进行额外指定，这样就能达到效果也不会覆盖默认的包扫描规则，亲试有效。
+```
+
