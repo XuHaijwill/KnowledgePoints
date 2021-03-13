@@ -1,5 +1,11 @@
 # SpringCloud学习
 
+## 本地测试
+
+java -Dserver.port=8718 -Dcsp.sentinel.dashboard.server=localhost:8718 -Dproject.name=sentinel-dashboard -Dcsp.sentinel.api.port=8719 -jar D:\workspaces\springcloud\docs\sentinel-dashboard-1.8.1.jar
+
+
+
 ## 常用地址
 
 https://spring.io/projects/spring-cloud
@@ -117,3 +123,29 @@ https://www.jianshu.com/p/14c089e487a6
 # SpringCloud之服务提供者和服务消费者
 
 https://blog.csdn.net/fanrenxiang/article/details/78274682
+
+# [Spring Cloud服务提供者与服务消费者怎么运作的？](https://segmentfault.com/a/1190000012522790)
+
+https://segmentfault.com/a/1190000012522790
+
+
+
+# Spring Cloud 系列之 Gateway 服务网关（一）
+
+https://www.cnblogs.com/mrhelloworld/p/gateway1.html
+
+
+
+# 微服务时代之网关相关技术选型及部署(nacos+gateway)
+
+https://www.cnblogs.com/ruanjianlaowang/p/11475279.html
+
+![](imgs\架构.png)
+
+![](imgs\集群2.png)
+
+
+
+# Spring Cloud Alibaba(四) Nacos Feign 客户端和负载均衡策略
+
+https://blog.csdn.net/Tang_5253/article/details/102661521?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&dist_request_id=a0ce4ba9-1b81-4e32-89d3-5b33092030ae&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control

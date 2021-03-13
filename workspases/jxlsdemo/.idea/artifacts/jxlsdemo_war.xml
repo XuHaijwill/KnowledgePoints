@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jxlsdemo:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>jxlsdemo</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="excel-java.war">
+      <element id="artifact" artifact-name="jxlsdemo:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="excel-java:war">
+    <output-path>$PROJECT_DIR$/../../../../../代码参考/learn-java-codes-master/code/excel-java/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>excel-java</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="excel-java.war">
+      <element id="artifact" artifact-name="excel-java:war exploded" />
+    </root>
+  </artifact>
+</component>

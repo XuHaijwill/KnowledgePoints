@@ -177,3 +177,18 @@ act_hi_varinst   历史变量表
 act_hi_identitylink  历史流程人员表
 ```
 
+# Springboot2.0 项目中TKmybatis和Activiti集成的问题
+
+https://blog.csdn.net/jiaoshaoping/article/details/80612637
+
+
+
+# Spring Data JPA 连接达梦数据库配置
+
+https://blog.csdn.net/Qiyeye/article/details/109491326
+
+
+
+# spring-data-jpa 连接达梦数据库（DM）文档
+
+https://blog.csdn.net/wllpeter/article/details/79486426

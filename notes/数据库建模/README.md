@@ -1,3 +1,9 @@
+# 使用指南
+
+# PD 导出SQL语句
+
+https://www.cnblogs.com/chencidi/archive/2011/01/10/1931675.html
+
 # 数据库建模
 
 http://www.360doc.com/content/11/0624/15/2617151_129276457.shtml
