@@ -244,7 +244,11 @@ dependencies {
 
 https://juejin.cn/post/6844904017772937229#heading-18
 
+https://github.com/fangjian0423/springmvc-source-minibook
 
+https://segmentfault.com/a/1190000021848063
+
+https://www.jianshu.com/p/b4d72a91e027
 
 # springboot
 
