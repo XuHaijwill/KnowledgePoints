@@ -22,3 +22,16 @@ http://jdk.java.net/archive/
 
 
 
+# Java8 lambda 的使用
+
+https://blog.csdn.net/bibiboyx/article/details/84257741
+
+# java8 lambda表达式
+
+https://www.cnblogs.com/kingsonfu/p/11047116.html
+
+https://objcoding.com/2019/03/04/lambda/
+
+# [JVM教程与调优] 了解JVM 堆内存溢出以及非堆内存溢出
+
+https://bbs.huaweicloud.com/blogs/157230
