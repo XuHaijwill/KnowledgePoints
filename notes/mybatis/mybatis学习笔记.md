@@ -189,3 +189,79 @@ https://my.oschina.net/hua0517/blog/4290515
 # 解决Springboot2.x+Mybatis提示Could not resolve type alias 'xxx'的问题
 
 https://www.jianshu.com/p/81e836106f81
+
+# 关于通用mapper中的的insertList()方法
+
+关于通用mapper中的的insertList()方法
+通用mapper中的insertList()方法有两个：
+
+1. tk.mybatis.mapper.common.special.InsertListMapper包下的insertList()方法：
+       使用该方法的实体类主键必须是自增的（需要在实体类中指出）。
+
+如果实体的主键名为’id’,同时主键自增。在不修改代码的情况下，使用insertList()方法实现的批量插入数据后通用mapper能自动回写主键值到实体对象中。
+如以下实体类和对应mapper：
+————————————————
+版权声明：本文为CSDN博主「虎口脱险OvO」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_40674098/article/details/96748544
+
+
+
+# mybatis关联查询
+
+```
+<resultMap id="BaseResultMap" type="com.sunny.customer.ewarn.ZhsfWtlElwnIndex">
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="CREATE_BY" jdbcType="VARCHAR" property="createBy" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+    <result column="DEL_FLAG" jdbcType="VARCHAR" property="delFlag" />
+    <result column="WTL_ELWN_ID" jdbcType="VARCHAR" property="wtlElwnId" />
+    <result column="STTP" jdbcType="VARCHAR" property="sttp" />
+    <result column="ADDVCD" jdbcType="VARCHAR" property="addvcd" />
+    <result column="ADDVNM" jdbcType="VARCHAR" property="addvnm" />
+    <result column="RVCD" jdbcType="VARCHAR" property="rvcd" />
+    <result column="STCDS" jdbcType="VARCHAR" property="stcds" />
+    <collection property="tableData" javaType="java.util.ArrayList" ofType="com.sunny.customer.ewarn.ZhsfWtlElwnValue"
+                select="com.sunny.customer.mapper.ewarn.ZhsfWtlElwnValueMapper.selectByWtlElwnId" column="id" />
+  </resultMap>
+```
+
+
+
+```
+ @Select("select t1.oid,t1.user_tel,t1.code,t1.user_pass,t1.user_name,t1.dept_Id,t1.salt, t1.user_pass from t_sys_user t1 where t1.code=#{code}")
+    @Results({
+            @Result(id = true, column = "oid", property = "oid"),
+            @Result(column = "USER_TEL", property = "userTel"),
+            @Result(column = "code", property = "code"),
+            @Result(column = "ukey", property = "ukey"),
+            @Result(column = "user_name", property = "username"),
+            @Result(column = "user_pass", property = "userpass"),
+            @Result(column = "dept_Id", property = "dept",
+                    one = @One(
+                            select = "com.sunny.framework.dao.IDeptMapper.selectDeptByDeptId",
+                            fetchType = FetchType.EAGER
+
+                    ))
+    })
+     User selectUserByCode(String code) throws Exception;
+     
+  
+@Select("select id,mockexam_section as section,id as sectionId"
+			+ " from t_p_qb_mockexam_section"
+			+ " where mockexam_charpter_id = #{charpterId} and is_delete = 0"
+			+ " order by mockexam_section_idx asc")
+@Results({
+@Result(property = "questionList",column = "sectionId",many = @Many(select = "com.zikaoshu.baseinfo.mapper.BaseinfoQuestionMapper.listQuestionResDto"))})
+List<SectionQuestionDto> listSectionQuestionDto(@Param("charpterId") Integer charpterId);
+	
+
+————————————————
+版权声明：本文为CSDN博主「CoderYin」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/CoderYin/article/details/90768007
+
+@Many联查（一对多）
+https://blog.csdn.net/Lonelyooacz/article/details/103358541?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.control&dist_request_id=&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.control
+```
+
