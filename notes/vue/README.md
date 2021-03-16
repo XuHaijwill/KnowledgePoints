@@ -271,3 +271,7 @@ vue date中修改对应loadOptions参数不为空即可
  // 部门树选项
       deptOptions: [],
 ```
+
+# element-ui中表单验证的三种方式
+
+https://segmentfault.com/a/1190000020410128
