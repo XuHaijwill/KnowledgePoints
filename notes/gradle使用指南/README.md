@@ -44,3 +44,6 @@ https://febers.github.io/Gradle-%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7%E8%AF%A6%E8
 
 
 
+阿里云镜像仓库地址
+
+https://maven.aliyun.com/mvn/guide
