@@ -192,3 +192,15 @@ https://blog.csdn.net/Qiyeye/article/details/109491326
 # spring-data-jpa 连接达梦数据库（DM）文档
 
 https://blog.csdn.net/wllpeter/article/details/79486426
+
+
+
+
+
+# 学习篇-Activiti-06-源码模块运行
+
+https://blog.csdn.net/u012365780/article/details/107225891
+
+# Activiti6源码分析以及实战课程
+
+https://blog.csdn.net/qq_30739519/article/details/81219422
