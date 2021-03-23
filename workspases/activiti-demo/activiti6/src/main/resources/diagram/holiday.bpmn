@@ -4,12 +4,12 @@
     <startEvent id="_2" name="StartEvent"></startEvent>
     <userTask id="_3" name="填写请假申请单" activiti:assignee="zhangsan"></userTask>
     <userTask id="_4" name="部门经理审批" activiti:assignee="lishi"></userTask>
-    <userTask id="_5" name="总经理审批" activiti:assignee="wangwu"></userTask>
     <endEvent id="_6" name="EndEvent"></endEvent>
     <sequenceFlow id="_7" sourceRef="_2" targetRef="_3"></sequenceFlow>
     <sequenceFlow id="_8" sourceRef="_3" targetRef="_4"></sequenceFlow>
-    <sequenceFlow id="_9" sourceRef="_4" targetRef="_5"></sequenceFlow>
-    <sequenceFlow id="_10" sourceRef="_5" targetRef="_6"></sequenceFlow>
+    <sequenceFlow id="_9" sourceRef="_4" targetRef="usertask1"></sequenceFlow>
+    <sequenceFlow id="_10" sourceRef="usertask1" targetRef="_6"></sequenceFlow>
+    <userTask id="usertask1" name="总经理审批" activiti:assignee="wangwu"></userTask>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_holiday">
     <bpmndi:BPMNPlane bpmnElement="holiday" id="BPMNPlane_holiday">
@@ -22,11 +22,11 @@
       <bpmndi:BPMNShape bpmnElement="_4" id="BPMNShape__4">
         <omgdc:Bounds height="91.0" width="156.0" x="295.0" y="270.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_5" id="BPMNShape__5">
-        <omgdc:Bounds height="91.0" width="166.0" x="275.0" y="420.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="_6" id="BPMNShape__6">
         <omgdc:Bounds height="35.0" width="35.0" x="300.0" y="600.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+        <omgdc:Bounds height="91.0" width="166.0" x="275.0" y="420.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="_7" id="BPMNEdge__7">
         <omgdi:waypoint x="297.0" y="80.0"></omgdi:waypoint>

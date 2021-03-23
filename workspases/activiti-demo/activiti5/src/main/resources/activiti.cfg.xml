@@ -10,7 +10,7 @@
     <!--数据源配置dbcp-->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://192.168.1.4:3308/test" />
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/activiti-test" />
         <property name="username" value="root" />
         <property name="password" value="Sunny_2020" />
     </bean>
