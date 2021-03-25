@@ -98,6 +98,10 @@ for (ZhsfWtlElwnIndex indexBean : indexList) {
 
 
 
+# 使用Java8 stream流对List进行遍历、过滤、查询、去重、排序、分组等
+
+https://blog.csdn.net/qq_42021376/article/details/109141670
+
 ```
 /**
  * 实时预警信息和时段数据数据进行拼接

@@ -19,7 +19,8 @@
         <log4j.version>1.2.12</log4j.version>
 
         <activiti.version>6.0.0</activiti.version>
-
+ 
+        <druid.version>1.2.4</druid.version>
 
     </properties>
 
@@ -108,6 +109,22 @@
             <artifactId>commons-dbcp</artifactId>
             <version>1.4</version>
         </dependency>
+        
+          <!-- 达梦数据库驱动包 -->
+        <dependency>
+            <groupId>com.dm</groupId>
+            <artifactId>Dm7JdbcDriver</artifactId>
+            <version>1.7</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/lib/Dm7JdbcDriver17.jar</systemPath>
+        </dependency>
+        
+          <!--阿里数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
 
     </dependencies>
     <repositories>

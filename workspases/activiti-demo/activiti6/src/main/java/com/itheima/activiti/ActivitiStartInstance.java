@@ -1,5 +1,8 @@
 package com.itheima.activiti;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngines;
 import org.activiti.engine.RuntimeService;
@@ -14,17 +17,26 @@ import org.activiti.engine.runtime.ProcessInstance;
          act_hi_identitylink   参与者信息
          act_hi_procinst   流程实例
          act_hi_taskinst   任务实例
+         
          act_ru_execution   执行表
          act_ru_identitylink   参与者信息
          act_ru_task  任务
  */
 public class ActivitiStartInstance {
+	
+	/**
+	 * 启动流程
+	 * @param args
+	 */
     public static void main(String[] args) {
         //1.得到ProcessEngine对象
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
 
         //2.得到RunService对象
         RuntimeService runtimeService = processEngine.getRuntimeService();
+        
+        Map<String, Object> variables = new HashMap<String, Object>();
+        variables.put("userId", "startId");
 
         //3.创建流程实例  流程定义的key需要知道 holiday
         ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("holiday");

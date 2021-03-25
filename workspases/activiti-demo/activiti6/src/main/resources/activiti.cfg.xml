@@ -8,12 +8,24 @@
 						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!--数据源配置dbcp-->
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+<!--   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/activiti-test" />
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/activiti6-test" />
         <property name="username" value="root" />
         <property name="password" value="Sunny_2020" />
-    </bean>
+    </bean>  -->
+  <!--    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="dm.jdbc.driver.DmDriver" />
+        <property name="url" value="jdbc:dm://192.168.1.39:5238/ACTIVITI6" />
+        <property name="username" value="ACTIVITI6" />
+        <property name="password" value="GZSF_2021" />
+    </bean>  -->
+       <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="dm.jdbc.driver.DmDriver" />
+        <property name="url" value="jdbc:dm://192.168.1.39:5238/GZSF" />
+        <property name="username" value="GZSF" />
+        <property name="password" value="GZSF_2021" />
+    </bean> 
     <!--activiti单独运行的ProcessEngine配置对象(processEngineConfiguration),使用单独启动方式
         默认情况下：bean的id=processEngineConfiguration
     -->
