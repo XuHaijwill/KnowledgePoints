@@ -28,3 +28,9 @@
 https://www.bilibili.com/video/BV1zb411M7NQ?from=search&seid=362817790379905194
 
 https://gitee.com/moxi159753/LearningNotes/tree/master/%E6%A0%A1%E6%8B%9B%E9%9D%A2%E8%AF%95/JUC
+
+# 分布式和微服务的区别？
+
+https://zhuanlan.zhihu.com/p/138645236
+
+https://www.zhihu.com/question/28253777
