@@ -370,3 +370,10 @@ https://bbs.csdn.net/topics/392479932
 视频聚合框架：leaflet.markercluster.js
 地址：https://www.npmjs.com/package/leaflet.markercluster
 
+
+
+
+
+# Java中调用ArcGIS Server REST API
+
+http://zhihu.geoscene.cn/article/1625
