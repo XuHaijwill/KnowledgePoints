@@ -128,3 +128,30 @@ public List<StPptnRVo> getStPptnRVoRainResultList(List<StPptnRVo> stPptnRVoList,
     return commonList;
 }
 ```
+
+
+
+```
+List<user> filter= users.stream()
+                          .filter(user -> user.getName().indexOf("月") > -1 || user.getEmail().indexOf("mu") > -1)
+                          .collect(Collectors.toList());
+collect.stream().forEach(user -> {
+    System.out.println(user.getName()+"======"+user.getEmail());
+});
+```
+
+```
+
+List<Integer> ages=new ArrayList<>();
+ages.add(20);
+ages.add(30);
+List<user> filterAges = users.stream().filter(user->ages.contains(user.getAge())).collect(Collectors.toList());
+filterAges.stream().forEach(user -> {
+    System.out.println(user.getName()+"======"+user.getEmail());
+});
+
+```
+
+
+
+
