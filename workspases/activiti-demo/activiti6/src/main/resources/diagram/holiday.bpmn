@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.activiti.org/test" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test" id="m1540200341676" name="">
+  <process id="holiday" name="请假流程" isExecutable="true" isClosed="false" processType="None">
+    <startEvent id="_2" name="StartEvent"></startEvent>
+    <userTask id="_3" name="填写请假申请单" activiti:assignee="zhangsan"></userTask>
+    <userTask id="_4" name="部门经理审批" activiti:assignee="lishi"></userTask>
+    <endEvent id="_6" name="EndEvent"></endEvent>
+    <sequenceFlow id="_7" sourceRef="_2" targetRef="_3"></sequenceFlow>
+    <sequenceFlow id="_8" sourceRef="_3" targetRef="_4"></sequenceFlow>
+    <sequenceFlow id="_9" sourceRef="_4" targetRef="usertask1"></sequenceFlow>
+    <sequenceFlow id="_10" sourceRef="usertask1" targetRef="_6"></sequenceFlow>
+    <userTask id="usertask1" name="总经理审批" activiti:assignee="wangwu"></userTask>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_holiday">
+    <bpmndi:BPMNPlane bpmnElement="holiday" id="BPMNPlane_holiday">
+      <bpmndi:BPMNShape bpmnElement="_2" id="BPMNShape__2">
+        <omgdc:Bounds height="35.0" width="35.0" x="280.0" y="45.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" id="BPMNShape__3">
+        <omgdc:Bounds height="101.0" width="166.0" x="255.0" y="140.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" id="BPMNShape__4">
+        <omgdc:Bounds height="91.0" width="156.0" x="295.0" y="270.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" id="BPMNShape__6">
+        <omgdc:Bounds height="35.0" width="35.0" x="300.0" y="600.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+        <omgdc:Bounds height="91.0" width="166.0" x="275.0" y="420.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_7" id="BPMNEdge__7">
+        <omgdi:waypoint x="297.0" y="80.0"></omgdi:waypoint>
+        <omgdi:waypoint x="338.0" y="140.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8" id="BPMNEdge__8">
+        <omgdi:waypoint x="338.0" y="241.0"></omgdi:waypoint>
+        <omgdi:waypoint x="373.0" y="270.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9" id="BPMNEdge__9">
+        <omgdi:waypoint x="373.0" y="361.0"></omgdi:waypoint>
+        <omgdi:waypoint x="358.0" y="420.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_10" id="BPMNEdge__10">
+        <omgdi:waypoint x="358.0" y="511.0"></omgdi:waypoint>
+        <omgdi:waypoint x="317.0" y="600.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
