@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.activiti.org/test" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test" id="m1540200341676" name="">
   <process id="holiday" name="请假流程" isExecutable="true" isClosed="false" processType="None">
-    <startEvent id="_2" name="StartEvent"></startEvent>
+    <startEvent id="_2" name="StartEvent" activiti:initiator="${userId}"></startEvent>
     <userTask id="_3" name="填写请假申请单" activiti:assignee="zhangsan"></userTask>
     <userTask id="_4" name="部门经理审批" activiti:assignee="lishi"></userTask>
     <endEvent id="_6" name="EndEvent"></endEvent>

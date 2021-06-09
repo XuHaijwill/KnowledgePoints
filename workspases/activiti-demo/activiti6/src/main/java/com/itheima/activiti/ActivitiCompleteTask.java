@@ -27,9 +27,12 @@ public class ActivitiCompleteTask {
         //3.查询当前用户的任务
         Task task = taskService.createTaskQuery()
                 .processDefinitionKey("holiday")
-                .taskAssignee("wangwu")
+                .taskAssignee("zhangsan")
                 .singleResult();
 
+        //任务转办
+         //taskService.delegateTask(task.getId(),"lijing");
+//        taskService.resolveTask(task.getId());
         //4.处理任务,结合当前用户任务列表的查询操作的话,任务ID:task.getId()
         taskService.complete(task.getId());
 

@@ -116,6 +116,10 @@ for (ZhsfWtlElwnIndex indexBean : indexList) {
 
 
 
+# 使用Java8 stream流对List进行遍历、过滤、查询、去重、排序、分组等
+
+https://blog.csdn.net/qq_42021376/article/details/109141670
+
 ```
 /**
  * 实时预警信息和时段数据数据进行拼接
@@ -142,8 +146,39 @@ public List<StPptnRVo> getStPptnRVoRainResultList(List<StPptnRVo> stPptnRVoList,
     return commonList;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```
 >>>>>>> 9bc8ed7790ff953b7a6f70cedb3efb6bcaceccce
 =======
 ```
 >>>>>>> 7e2633bc6f7c8403162f77411bedb01ece8ff81a
+=======
+```
+
+
+
+```
+List<user> filter= users.stream()
+                          .filter(user -> user.getName().indexOf("月") > -1 || user.getEmail().indexOf("mu") > -1)
+                          .collect(Collectors.toList());
+collect.stream().forEach(user -> {
+    System.out.println(user.getName()+"======"+user.getEmail());
+});
+```
+
+```
+
+List<Integer> ages=new ArrayList<>();
+ages.add(20);
+ages.add(30);
+List<user> filterAges = users.stream().filter(user->ages.contains(user.getAge())).collect(Collectors.toList());
+filterAges.stream().forEach(user -> {
+    System.out.println(user.getName()+"======"+user.getEmail());
+});
+
+```
+
+
+
+
+>>>>>>> 899715a8de62637b84a277482690b7618c017304

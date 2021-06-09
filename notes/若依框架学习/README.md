@@ -12,14 +12,6 @@ nacos >= 1.1.0
 sentinel >= 1.6.0
 ```
 
-1
-2
-3
-4
-5
-6
-7
-
 ## [#](https://doc.ruoyi.vip/ruoyi-cloud/document/hjbs.html#运行系统)运行系统
 
 ### [#](https://doc.ruoyi.vip/ruoyi-cloud/document/hjbs.html#后端运行)后端运行
@@ -39,13 +31,6 @@ db.url.0=jdbc:mysql://localhost:3306/ry-config?characterEncoding=utf8&connectTim
 db.user=root
 db.password=password
 ```
-
-1
-2
-3
-4
-5
-6
 
 提示
 

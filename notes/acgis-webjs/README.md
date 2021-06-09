@@ -365,3 +365,15 @@ https://bbs.csdn.net/topics/392479932
 自己做也不难，重点是要对数据在后台做聚合后才丢到前端显示，因为页面不可能真的展现千万个点。最简单的做法是把数据按坐标分层聚合，不同比例尺的地图对应不同层级的聚合数据。
 ```
 
+
+
+视频聚合框架：leaflet.markercluster.js
+地址：https://www.npmjs.com/package/leaflet.markercluster
+
+
+
+
+
+# Java中调用ArcGIS Server REST API
+
+http://zhihu.geoscene.cn/article/1625
